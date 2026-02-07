@@ -28,20 +28,39 @@ ITEM_NAME_TO_ID = {
     "Lord of Flies Loot": 17, # Common Event 255
     "Yellow Mage Loot": 18, # Common Event 256
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
-    
+
     # "Random Blood Magic": 4, Common Event 29 - probably not an item
     # "Greater Blood Magic": 4, Common Event 97 - probably not an item
 }
 
 # ITEM CLASSIFICATIONS
+# Type declarations from archipelago.js:
+# none: 0 - Considered "Filler" or "Junk" item. despite being called "none" in js it is called "filler" here?
+# progression: 1 - Item unlocks advancement of some sort, sometimes not necessary to clear the game but still required to progress something
+# useful: 2 - Item is considered "useful to have", worth discussing the difference between this and filler
+# trap: 4 - Item can inconvenience a player, Funger doesnt have any of these by default but we could make some maybe? (board with nail spawn?)
+# More info (perhaps not definitive): https://archipelago.miraheze.org/wiki/Item
 DEFAULT_ITEM_CLASSIFICATIONS = {
-    #"Key": ItemClassification.progression,
-    #"Sword": ItemClassification.progression | ItemClassification.useful,  # Items can have multiple classifications.
-    #"Shield": ItemClassification.progression,
-    #"Hammer": ItemClassification.progression,
-    #"Health Upgrade": ItemClassification.useful,
-    #"Confetti Cannon": ItemClassification.filler,
-    #"Math Trap": ItemClassification.trap,
+    "Random Minor Item": ItemClassification.filler,
+    "Random Minor Book": ItemClassification.useful, # Despite being a minor book it contains recipes and pinecone pig
+    "Random Rare Book": ItemClassification.useful,
+    "Random Food Item": ItemClassification.filler,
+    "Random Rare Item": ItemClassification.useful,
+    "Random Alchemy": ItemClassification.useful,
+    "Random Good Armor": ItemClassification.useful,
+    "Random Scroll Item": ItemClassification.useful,
+    "Random Rare Book (Ancient)": ItemClassification.useful,
+    "Random Minor Book (Ancient)": ItemClassification.filler, # Despite being ancient I think every book here is useless
+    "Soul Stone": ItemClassification.useful,
+    "Random Weapon": ItemClassification.useful,
+    "Random Minor Weapon": ItemClassification.useful,
+    "Nights Random Item": ItemClassification.filler, # TODO: look at where this is used?
+    "Guard Loot": ItemClassification.filler,
+    "Lizardman Loot": ItemClassification.useful,
+    "Lord of Flies Loot": ItemClassification.useful,
+    "Yellow Mage Loot": ItemClassification.useful,
+    # "Example Multi Item": ItemClassification.progression | ItemClassification.useful,  # Items can have multiple classifications.
+    # "Example Trap": ItemClassification.trap,
 }
 
 class APQuestItem(Item):
