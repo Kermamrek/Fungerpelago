@@ -9,6 +9,7 @@ if TYPE_CHECKING:
 
 # ITEM IDS
 ITEM_NAME_TO_ID = {
+    # RANDOM ITEMS
     "Random Minor Item": 1, # Common Event 23
     "Random Minor Book": 2, # Common Event 25
     "Random Rare Book": 3, # Common Event 26
@@ -28,9 +29,44 @@ ITEM_NAME_TO_ID = {
     "Lord of Flies Loot": 17, # Common Event 255
     "Yellow Mage Loot": 18, # Common Event 256
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
-
+    # FIXED ITEMS
+    "Torch": 19, # Ones on the cave walls
+    "Cube of depths": 20,
+    "Blue demon powder": 21,
+    "Book pages I": 22,
+    "Book pages II": 23,
+    "Book pages III": 24,
+    "Map #1": 25,
+    "Map #2": 26,
+    "Map #3": 27,
+    "Mockup book": 28,
+    "Gnome milk": 29,
+    "Bonesaw": 30,
+    "Lucky coin": 31,
+    "Scroll of transmutation": 32,
+    "Scroll of walking on water": 33,
+    # "Explosive vial": I am 95% sure a guaranteed explosive vial drop exists, just worth double checking first
+    # NOTE: what to do with king's crown? should ending S for the mercenary even be allowed? maybe its fine to have it be an apitem since you have to meet legarde anyways
+    # SOULS/ENEMY REWARDS
+    "Crow Mauler soul":
+    "Cavemother soul":
+    "Salmonsnake soul":
+    "Old Knight soul":
+    "Iron Shakespeare soul":
+    "Endless soul": # Required for an ending/gets you hexen skills
+    "Domination soul": # Required for an ending/gets you hexen skills
+    "Enlightened soul": # Required for an ending/gets you hexen skills
+    "Tormented soul": # Required for an ending/gets you hexen skills
+    "Ancient One soul": # Dont remember what this one comes from
+    "Crow emblem key":
+    # BOOKS/PAPERS
+    "Captain's diary 1":
     # "Random Blood Magic": 4, Common Event 29 - probably not an item
     # "Greater Blood Magic": 4, Common Event 97 - probably not an item
+
+    # Items deliberately NOT added:
+    # Black vials - they are more like things that are "crafted", you fill them up with the fluid
+
 }
 
 # ITEM CLASSIFICATIONS
