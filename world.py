@@ -10,7 +10,7 @@ from worlds.AutoWorld import World
 # Imports of your world's files must be relative.
 from . import items, locations, options, regions, rules, web_world
 
-class APQuestWorld(World):
+class FearAndHungerWorld(World):
     """
     Fear & Hunger is a survival horror dungeon crawler made in RPGMaker.
     A terrifying presence has entered the room...
@@ -18,10 +18,10 @@ class APQuestWorld(World):
 
     game = "Fear & Hunger"
 
-    web = web_world.APQuestWebWorld()
+    web = web_world.FearAndHungerWebWorld()
 
     options_dataclass = options.APQuestOptions
-    options: options.APQuestOptions
+    options: options.FearAndHungerOptions
 
     location_name_to_id = locations.LOCATION_NAME_TO_ID
     item_name_to_id = items.ITEM_NAME_TO_ID
@@ -41,7 +41,7 @@ class APQuestWorld(World):
     def create_items(self) -> None:
         items.create_all_items(self)
 
-    def create_item(self, name: str) -> items.APQuestItem:
+    def create_item(self, name: str) -> items.FearAndHungerItem:
         return items.create_item_with_correct_classification(self, name)
 
     # There may be data that the game client will need to modify the behavior of the game.
