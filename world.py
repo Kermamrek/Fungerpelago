@@ -10,7 +10,7 @@ from worlds.AutoWorld import World
 # Imports of your world's files must be relative.
 from . import items, locations, options, regions, rules, web_world
 
-class FearAndHungerWorld(World):
+class FungerWorld(World):
     """
     Fear & Hunger is a survival horror dungeon crawler made in RPGMaker.
     A terrifying presence has entered the room...
@@ -18,7 +18,7 @@ class FearAndHungerWorld(World):
 
     game = "Fear & Hunger"
 
-    web = web_world.FearAndHungerWebWorld()
+    web = web_world.FungerWebWorld()
 
     options_dataclass = options.APQuestOptions
     options: options.FearAndHungerOptions

@@ -164,5 +164,13 @@ ITEMS = {
     # "Ancient One soul": Don't include this one. You get it from killing the girl and she is required for the main ending
 }
 
-class FearAndHungerItem(Item):
+class FungerItem(Item):
     game = "Fear & Hunger"
+
+def create_item_with_correct_classification(world: FungerWorld, name: str) -> FungerItem:
+     classification = ITEMS[name]
+     return FungerItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
+     # It is perfectly normal and valid for an item's classification to differ based on the player's options.
+     # In our case, Health Upgrades are only relevant to logic (and thus labeled as "progression") in hard mode.
+     #if name == "Health Upgrade" and world.options.hard_mode:
+        #classification = ItemClassification.progression
