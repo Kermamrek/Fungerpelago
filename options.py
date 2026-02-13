@@ -11,7 +11,7 @@ from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
 class EndingChoice(Choice):
     """
     Which ending the player must complete to release all checks.
-    Generally, the endings go from longest to shortest, with ending A being the intended experience.
+    Generally, the endings go from longest to shortest, with ending A being the most complete experience.
     Choosing "Any" will let you get any ending, which is recommended for brand new players.
     """
 
