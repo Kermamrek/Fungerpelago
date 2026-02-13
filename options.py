@@ -26,6 +26,19 @@ class EndingChoice(Choice):
 
     default = ending_a
 
+class DifficultyChoice(Choice):
+    """
+    Which difficulty you will play on. Each difficulty has various changes to gameplay and mechanics.
+    You cannot save in Hard Mode. Fear & Hunger is recommended for new players.
+    """
+
+    display_name = "Difficulty"
+
+    fear_and_hunger = 0
+    terror_and_starvation = 1
+    hard_mode = 2
+
+
 class StartDash(Toggle):
     """
     Dash is a skill that lets you hold a button down to run faster.
@@ -48,14 +61,19 @@ class SkipCoinFlip(Toggle):
 # This is in the format "option_name_in_snake_case: OptionClassName".
 @dataclass
 class APQuestOptions(PerGameCommonOptions):
-    ending_choice: EndingChoice
+    ending: EndingChoice
+    difficulty: DifficultyChoice
     start_with_dash: StartDash
     skip_coin_flip: SkipCoinFlip
 
 option_groups = [
     OptionGroup(
-        "Gameplay Options",
-        [EndingChoice, StartDash],
+        "Important Gameplay Options",
+        [EndingChoice, DifficultyChoice],
+    ),
+    OptionGroup(
+        "Other Gameplay Options",
+        [StartDash],
     ),
     OptionGroup(
         "Quality of Life",
@@ -65,12 +83,14 @@ option_groups = [
 
 option_presets = {
     "Recommended": {
-        "ending_choice": EndingChoice.ending_a,
+        "ending": EndingChoice.ending_a,
+        "difficulty": DifficultyChoice.fear_and_hunger,
         "start_with_dash": True,
         "skip_coin_flip": False,
     },
     "Vanilla": {
-        "ending_choice": EndingChoice.ending_any,
+        "ending": EndingChoice.ending_any,
+        "difficulty": DifficultyChoice.fear_and_hunger,
         "start_with_dash": False,
         "skip_coin_flip": False,
     },
