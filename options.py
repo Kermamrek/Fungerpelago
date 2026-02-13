@@ -38,6 +38,8 @@ class DifficultyChoice(Choice):
     terror_and_starvation = 1
     hard_mode = 2
 
+    default = fear_and_hunger
+
 
 class StartDash(Toggle):
     """
