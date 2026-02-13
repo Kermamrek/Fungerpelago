@@ -11,7 +11,7 @@ class FungerWebWorld(WebWorld):
     # title, description, language, filepath, link, authors
     setup_en = Tutorial(
         "Multiworld Setup Guide",
-        "A guide to setting up APQuest for MultiWorld.",
+        "How to set up Fungerpelago.",
         "English",
         "setup_en.md",
         "setup/en",
