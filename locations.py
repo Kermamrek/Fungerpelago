@@ -22,6 +22,11 @@ LOCATIONS = {
         "Left Barrel (Left)": 6,
         "Left Barrel (Right)": 7,
     },
+    "Level 1: Left Entrance": {
+        "Entrance Barrel (Left)": 8,
+        "Entrance Barrel (Right)": 9,
+        "Dried Mushroom (Left Entrance)": 10,
+    },
 }
 
 class FungerLocation(Location):
@@ -35,9 +40,12 @@ def create_all_locations(world: FungerWorld) -> None:
     create_events(world)
 
 def create_regular_locations(world: FungerWorld) -> None:
+    # Using the RPGMaker map names as the region names
     fortress = world.get_region("Fortress")
+    level1_basement_a = world.get_region("Level 1: Left Entrance")
 
     fortress.add_locations(get_locations(LOCATIONS["Fortress"]), FungerLocation)
+    level1_basement_a.add_locations(get_locations(LOCATIONS["Level 1: Left Entrance"]), FungerLocation)
 
 # def create_events(world: FungerWorld) -> None:
 #     # Sometimes, the player may perform in-game actions that allow them to progress which are not related to Items.

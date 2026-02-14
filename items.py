@@ -176,9 +176,10 @@ def create_item_with_correct_classification(world: FungerWorld, name: str) -> Fu
 def create_all_items(world: FungerWorld) -> None:
 
     # Look at APQuest items.py for more info on filler items
-    # Right now this is just a hardcoded list of the first screen for testing
+    # Right now this is just a hardcoded list of the first two screens for testing
 
     itempool: list[Item] = [
+        # Fortress
         world.create_item("Random Food Item"),
         world.create_item("Random Food Item"),
         world.create_item("Random Food Item"),
@@ -186,6 +187,10 @@ def create_all_items(world: FungerWorld) -> None:
         world.create_item("Random Minor Item"),
         world.create_item("Random Minor Item"),
         world.create_item("Random Minor Item"),
+        # Level 1 Left Entrance
+        world.create_item("Random Food Item"),
+        world.create_item("Random Food Item"),
+        world.create_item("Dried mushroom"),
     ]
 
     world.multiworld.itempool += itempool
