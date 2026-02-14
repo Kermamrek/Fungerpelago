@@ -169,8 +169,6 @@ class FungerItem(Item):
 
 def create_item_with_correct_classification(world: FungerWorld, name: str) -> FungerItem:
      classification = ITEMS[name]
+     if name == "Torch" and (world.options.DifficultyChoice.terror_and_starvation || world.options.DifficultyChoice.hard_mode):
+        classification = ItemClassification.progression
      return FungerItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
-     # It is perfectly normal and valid for an item's classification to differ based on the player's options.
-     # In our case, Health Upgrades are only relevant to logic (and thus labeled as "progression") in hard mode.
-     #if name == "Health Upgrade" and world.options.hard_mode:
-        #classification = ItemClassification.progression
