@@ -7,7 +7,7 @@ from BaseClasses import ItemClassification, Location
 from . import items
 
 if TYPE_CHECKING:
-    from .world import APQuestWorld
+    from .world import FungerWorld
 
 # This is currently a test for the first room in the game, where you loot the barrels going into the dungeon.
 # A better solution will be found for the full game

@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 from BaseClasses import Item, ItemClassification
 
 if TYPE_CHECKING:
-    from .world import FearAndHungerWorld
+    from .world import FungerWorld
 
 # TODO: Do item IDs need to be static and pre-defined?
 
