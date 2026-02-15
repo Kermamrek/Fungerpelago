@@ -169,7 +169,7 @@ class FungerItem(Item):
 
 def create_item_with_correct_classification(world: FungerWorld, name: str) -> FungerItem:
      classification = ITEMS[name]
-     if name == "Torch" and (world.options.DifficultyChoice.terror_and_starvation || world.options.DifficultyChoice.hard_mode):
+     if name == "Torch" and (world.options.DifficultyChoice.terror_and_starvation or world.options.DifficultyChoice.hard_mode):
         classification = ItemClassification.progression
      return FungerItem(name, classification, ITEMS[name], world.player)
 
