@@ -9,6 +9,7 @@ Considerations:
 Items:
 
 * Empty scroll needs to be rebalanced. The plan is to remove most things that could make the game trivial, even if this slightly tampers with the original spirit of the game. To this end, the hints also need to be adjusted so no hint is given for invalid items.
+* Should we give the player 3 torches or so if they start in Terror & Starvation/Hard Mode? Or at least make it an option?
 
 Shops:
 
