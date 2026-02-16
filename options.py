@@ -44,7 +44,7 @@ class DifficultyChoice(Choice):
 
 class StartDash(Toggle):
     """
-    Dash is a skill that lets you hold a button down to run faster.
+    Dash is a skill that allows you to run faster.
     Characters can start with it, but you need to know the options to pick at the start of the game.
     This option ensures you have dash at the start of the game, by auto-picking the option for you.
     """
