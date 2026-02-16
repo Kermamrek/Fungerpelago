@@ -32,13 +32,9 @@ class FungerLocation(Location):
     game = "Fear & Hunger"
 
 
-def get_locations(location_names: list[str]) -> dict[str, int | None]:
-    return {location_name: LOCATIONS[location_name] for location_name in location_names}
-
-
 def create_all_locations(world: FungerWorld) -> None:
     create_regular_locations(world)
-    create_events(world)
+    # create_events(world)
 
 
 def create_regular_locations(world: FungerWorld) -> None:
@@ -46,8 +42,8 @@ def create_regular_locations(world: FungerWorld) -> None:
     fortress = world.get_region("Fortress")
     level1_basement_a = world.get_region("Level 1: Left Entrance")
 
-    fortress.add_locations(get_locations(LOCATIONS["Fortress"]), FungerLocation)
-    level1_basement_a.add_locations(get_locations(LOCATIONS["Level 1: Left Entrance"]), FungerLocation)
+    fortress.add_locations(LOCATIONS["Fortress"], FungerLocation)
+    level1_basement_a.add_locations(LOCATIONS["Level 1: Left Entrance"], FungerLocation)
 
 
 # def create_events(world: FungerWorld) -> None:

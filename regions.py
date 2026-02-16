@@ -23,7 +23,7 @@ def create_all_regions(world: FungerWorld) -> None:
     world.multiworld.regions += regions
 
 
-def connect_regions(world: APQuestWorld) -> None:
+def connect_regions(world: FungerWorld) -> None:
     fortress = world.get_region("Fortress")
     level1_basement_a = world.get_region("Level 1: Left Entrance")
 
