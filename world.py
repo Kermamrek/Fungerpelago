@@ -10,6 +10,7 @@ from worlds.AutoWorld import World
 # Imports of your world's files must be relative.
 from . import items, locations, options, regions, rules, web_world
 
+
 class FungerWorld(World):
     """
     Fear & Hunger is a survival horror dungeon crawler made in RPGMaker.

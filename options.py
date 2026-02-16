@@ -2,11 +2,11 @@ from dataclasses import dataclass
 
 from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
 
-
 # For further reading on options, you can also read the Options API Document:
 # https://github.com/ArchipelagoMW/Archipelago/blob/main/docs/options%20api.md
 # And APQuest example:
 # https://github.com/NewSoupVi/Archipelago/blob/apquest/worlds/apquest/options.py
+
 
 class EndingChoice(Choice):
     """
@@ -26,6 +26,7 @@ class EndingChoice(Choice):
 
     default = ending_a
 
+
 class DifficultyChoice(Choice):
     """
     Which difficulty you will play on. Each difficulty has various changes to gameplay and mechanics.
@@ -43,12 +44,13 @@ class DifficultyChoice(Choice):
 
 class StartDash(Toggle):
     """
-    Dash is a skill that lets you hold a button down to run faster.
+    Dash is a skill that allows you to run faster.
     Characters can start with it, but you need to know the options to pick at the start of the game.
     This option ensures you have dash at the start of the game, by auto-picking the option for you.
     """
 
     display_name = "Always Pick Dash"
+
 
 class SkipCoinFlip(Toggle):
     """
@@ -59,6 +61,7 @@ class SkipCoinFlip(Toggle):
 
     display_name = "Skip Item Coin Flips"
 
+
 # We must now define a dataclass inheriting from PerGameCommonOptions that we put all our options in.
 # This is in the format "option_name_in_snake_case: OptionClassName".
 @dataclass
@@ -67,6 +70,7 @@ class FungerOptions(PerGameCommonOptions):
     difficulty: DifficultyChoice
     start_with_dash: StartDash
     skip_coin_flip: SkipCoinFlip
+
 
 option_groups = [
     OptionGroup(

@@ -2,9 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from BaseClasses import ItemClassification, Location
-
-from . import items
+from BaseClasses import Location
 
 if TYPE_CHECKING:
     from .world import FungerWorld
@@ -29,6 +27,7 @@ LOCATIONS = {
     },
 }
 
+
 class FungerLocation(Location):
     game = "Fear & Hunger"
 
@@ -37,7 +36,8 @@ class FungerLocation(Location):
 
 def create_all_locations(world: FungerWorld) -> None:
     create_regular_locations(world)
-    create_events(world)
+    # create_events(world)
+
 
 def create_regular_locations(world: FungerWorld) -> None:
     # Using the RPGMaker map names as the region names
@@ -46,6 +46,7 @@ def create_regular_locations(world: FungerWorld) -> None:
 
     fortress.add_locations(LOCATIONS["Fortress"], FungerLocation)
     level1_basement_a.add_locations(LOCATIONS["Level 1: Left Entrance"], FungerLocation)
+
 
 # def create_events(world: FungerWorld) -> None:
 #     # Sometimes, the player may perform in-game actions that allow them to progress which are not related to Items.

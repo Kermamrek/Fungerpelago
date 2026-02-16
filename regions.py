@@ -2,14 +2,16 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from BaseClasses import Entrance, Region
+from BaseClasses import Region
 
 if TYPE_CHECKING:
     from .world import FungerWorld
 
+
 def create_and_connect_regions(world: FungerWorld) -> None:
     create_all_regions(world)
     connect_regions(world)
+
 
 def create_all_regions(world: FungerWorld) -> None:
     # Using the RPGMaker map names as the region names
@@ -21,7 +23,7 @@ def create_all_regions(world: FungerWorld) -> None:
     world.multiworld.regions += regions
 
 
-def connect_regions(world: APQuestWorld) -> None:
+def connect_regions(world: FungerWorld) -> None:
     fortress = world.get_region("Fortress")
     level1_basement_a = world.get_region("Level 1: Left Entrance")
 
