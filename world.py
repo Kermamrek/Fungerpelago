@@ -23,7 +23,11 @@ class FungerWorld(World):
     options_dataclass = options.FungerOptions
     options: options.FungerOptions
 
-    location_name_to_id = locations.LOCATIONS
+    location_name_to_id = {}
+    for region in locations.LOCATIONS:
+        for key, value in locations.LOCATIONS[region].items():
+            location_name_to_id[key] = value
+
     item_name_to_id = items.ITEMS
 
     # There is always one region that the generator starts from & assumes you can always go back to.
