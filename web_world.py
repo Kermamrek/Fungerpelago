@@ -10,6 +10,7 @@ class FungerWebWorld(WebWorld):
     theme = "stone"
 
     # title, description, language, filepath, link, authors
+    # For potential other languages, don't translate the title and description
     setup_en = Tutorial(
         "Multiworld Setup Guide",
         "How to set up Fungerpelago.",
@@ -19,17 +20,7 @@ class FungerWebWorld(WebWorld):
         ["Kerma"],
     )
 
-    # Leaving in case we add a finnish guide or something
-    # Do not translate the title and description!
-    # setup_de = Tutorial(
-    #     "Multiworld Setup Guide",
-    #     "A guide to setting up APQuest for MultiWorld.",
-    #     "German",
-    #     "setup_de.md",
-    #     "setup/de",
-    #     ["NewSoupVi"],
-    # )
-    tutorials = [setup_en]
+    tutorials = [setup_en]  # noqa: RUF012
 
     option_groups = option_groups
     options_presets = option_presets
