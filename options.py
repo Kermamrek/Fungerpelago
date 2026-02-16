@@ -2,11 +2,11 @@ from dataclasses import dataclass
 
 from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
 
-
 # For further reading on options, you can also read the Options API Document:
 # https://github.com/ArchipelagoMW/Archipelago/blob/main/docs/options%20api.md
 # And APQuest example:
 # https://github.com/NewSoupVi/Archipelago/blob/apquest/worlds/apquest/options.py
+
 
 class EndingChoice(Choice):
     """
@@ -25,6 +25,7 @@ class EndingChoice(Choice):
     ending_any = 5
 
     default = ending_a
+
 
 class DifficultyChoice(Choice):
     """
@@ -50,6 +51,7 @@ class StartDash(Toggle):
 
     display_name = "Always Pick Dash"
 
+
 class SkipCoinFlip(Toggle):
     """
     If an APItem is sent to you that would trigger a coin flip (bookshelf loot, etc), this option
@@ -59,6 +61,7 @@ class SkipCoinFlip(Toggle):
 
     display_name = "Skip Item Coin Flips"
 
+
 # We must now define a dataclass inheriting from PerGameCommonOptions that we put all our options in.
 # This is in the format "option_name_in_snake_case: OptionClassName".
 @dataclass
@@ -67,6 +70,7 @@ class FungerOptions(PerGameCommonOptions):
     difficulty: DifficultyChoice
     start_with_dash: StartDash
     skip_coin_flip: SkipCoinFlip
+
 
 option_groups = [
     OptionGroup(
