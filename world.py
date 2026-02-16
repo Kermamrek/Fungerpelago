@@ -20,8 +20,8 @@ class FungerWorld(World):
 
     web = web_world.FungerWebWorld()
 
-    options_dataclass = options.APQuestOptions
-    options: options.FearAndHungerOptions
+    options_dataclass = options.FungerOptions
+    options: options.FungerOptions
 
     location_name_to_id = locations.LOCATION_NAME_TO_ID
     item_name_to_id = items.ITEM_NAME_TO_ID
@@ -41,7 +41,7 @@ class FungerWorld(World):
     def create_items(self) -> None:
         items.create_all_items(self)
 
-    def create_item(self, name: str) -> items.FearAndHungerItem:
+    def create_item(self, name: str) -> items.FungerItem:
         return items.create_item_with_correct_classification(self, name)
 
     # There may be data that the game client will need to modify the behavior of the game.

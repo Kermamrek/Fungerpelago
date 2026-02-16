@@ -62,7 +62,7 @@ class SkipCoinFlip(Toggle):
 # We must now define a dataclass inheriting from PerGameCommonOptions that we put all our options in.
 # This is in the format "option_name_in_snake_case: OptionClassName".
 @dataclass
-class APQuestOptions(PerGameCommonOptions):
+class FungerOptions(PerGameCommonOptions):
     ending: EndingChoice
     difficulty: DifficultyChoice
     start_with_dash: StartDash
