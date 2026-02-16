@@ -168,6 +168,9 @@ ITEMS = {
 }
 
 
+ITEM_NAME_TO_ID = {item_name: index + 1 for index, item_name in enumerate(ITEMS)}
+
+
 class FungerItem(Item):
     game = "Fear & Hunger"
 
