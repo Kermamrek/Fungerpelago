@@ -56,5 +56,5 @@ class FungerWorld(World):
         # If you need access to the player's chosen options on the client side, there is a helper for that.
         # TODO: Change this and add in funger specific settings?
         return self.options.as_dict(
-            "hard_mode", "hammer", "extra_starting_chest", "confetti_explosiveness", "player_sprite"
+            "ending", "difficulty", "skip_coin_flip", "start_with_dash"
         )
