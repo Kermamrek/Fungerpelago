@@ -17,14 +17,14 @@ class EndingChoice(Choice):
 
     display_name = "Ending"
 
-    ending_a = 0
-    ending_b = 1
-    ending_c = 2
-    ending_d = 3
-    ending_e = 4
-    ending_any = 5
+    option_ending_a = 0
+    option_ending_b = 1
+    option_ending_c = 2
+    option_ending_d = 3
+    option_ending_e = 4
+    option_ending_any = 5
 
-    default = ending_a
+    default = option_ending_a
 
 
 class DifficultyChoice(Choice):
@@ -35,11 +35,11 @@ class DifficultyChoice(Choice):
 
     display_name = "Difficulty"
 
-    fear_and_hunger = 0
-    terror_and_starvation = 1
-    hard_mode = 2
+    option_fear_and_hunger = 0
+    option_terror_and_starvation = 1
+    option_hard_mode = 2
 
-    default = fear_and_hunger
+    default = option_fear_and_hunger
 
 
 class StartDash(Toggle):
@@ -89,14 +89,14 @@ option_groups = [
 
 option_presets = {
     "Recommended": {
-        "ending": EndingChoice.ending_a,
-        "difficulty": DifficultyChoice.fear_and_hunger,
+        "ending": EndingChoice.option_ending_a,
+        "difficulty": DifficultyChoice.option_fear_and_hunger,
         "start_with_dash": True,
         "skip_coin_flip": False,
     },
     "Vanilla": {
-        "ending": EndingChoice.ending_any,
-        "difficulty": DifficultyChoice.fear_and_hunger,
+        "ending": EndingChoice.option_ending_any,
+        "difficulty": DifficultyChoice.option_fear_and_hunger,
         "start_with_dash": False,
         "skip_coin_flip": False,
     },
