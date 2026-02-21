@@ -29,7 +29,7 @@ class FungerWorld(World):
         for key, value in locations.LOCATIONS[region].items():
             location_name_to_id[key] = value
 
-    item_name_to_id = items.ITEMS
+    item_name_to_id = items.ITEM_NAME_TO_ID
 
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
