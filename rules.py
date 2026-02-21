@@ -19,7 +19,7 @@ def set_all_rules(world: FungerWorld) -> None:
 
 def set_completion_condition(world: FungerWorld) -> None:
     world.multiworld.completion_condition[world.player] = lambda state: state.has_all(
-        ("Random Food Item", "Random Minor Item"), world.player
+        ("Dried mushroom"), world.player
     )
 
     # In our case, we went for the Victory event design pattern (see create_events() in locations.py).
