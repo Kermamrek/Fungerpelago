@@ -34,7 +34,7 @@ class FungerWorld(World):
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
     # TODO: Look into what "region" is best to use, is it the main menu or the first screen?
-    origin_region_name = "Menu"
+    origin_region_name = "Fortress"
 
     def create_regions(self) -> None:
         regions.create_and_connect_regions(self)
