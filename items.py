@@ -141,7 +141,9 @@ ITEMS = {
     "Green herb": ItemClassification.useful | ItemClassification.filler,
     "Blue herb": ItemClassification.useful | ItemClassification.filler,
     "Red herb": ItemClassification.useful | ItemClassification.filler,
-    "Dried mushroom": ItemClassification.useful | ItemClassification.filler,
+
+    "Dried mushroom": ItemClassification.progression, # Change this back to useful/filler once testing is done
+
     "Light blue vial": ItemClassification.useful,  # Trotur gift AND potential shop item
     "Catnip": ItemClassification.filler,
     "Glow mushroom": ItemClassification.filler,  # Can only be obtained via empty scroll
