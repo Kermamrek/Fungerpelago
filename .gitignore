@@ -1,1 +1,4 @@
 *.pyc
+fear&hunger/*
+!fear&hunger/www/js/libs/archipelago.js
+!fear&hunger/www/js/libs/archipelago-global-export.js
