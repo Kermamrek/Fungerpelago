@@ -1,8 +1,14 @@
 *.pyc
-fear&hunger/*
+fear&hunger/**/*.*
 !fear&hunger/www/js/libs/archipelago.js
 !fear&hunger/www/js/libs/archipelago-global-export.js
 !fear&hunger/www/js/plugins/Fungerpelago.js
 !fear&hunger/www/js/plugins.js
 !fear&hunger/www/index.html
 !fear&hunger/www/package.json
+!fear&hunger/www/data/CommonEvents.json
+!fear&hunger/www/data/MapInfos.json
+!fear&hunger/www/data/System.json
+!fear&hunger/www/data/Map002.json
+!fear&hunger/www/data/Map010.json
+!fear&hunger/www/data/Map072.json
