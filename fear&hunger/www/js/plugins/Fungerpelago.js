@@ -242,11 +242,12 @@ Rando.itemDoubleCheck = function(){
 }
 
 
-
+foundLocations = []
 
 gain = function(item) {//Run this as a script in game with the location name as the parameter.
 		foundLocations.push(item)
 		var get = -1;
+		console.log($gamePlayer.locationsRaw)
 		for(const i of $gamePlayer.locationsRaw){
 			if (i.locationName == item){
 				get = i.locationId;
