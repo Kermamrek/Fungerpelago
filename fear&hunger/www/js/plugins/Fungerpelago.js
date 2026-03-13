@@ -7,8 +7,8 @@ const itemGetEventID = 315; //display item name in game
 const itemSendEventID = 316; //display item name in game
 const itemListVarID = 421; //incoming item names are pushed to this vairable to display in game
 const sendListVarID = 435; //outgoing item names are pushed to this vairable to display in game
-const runItemGetSwitchID = 352; //if this switch is flipped, autorun event itemGetEventID.
-const runItemSendSwitchID = 353; //same
+const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event itemGetEventID.
+const runItemSendSwitchID = 3585; //same
 
 // switchName = { //if you want a check to flip a switch, put it in here
 // 	362: "OpenPhrase123",
