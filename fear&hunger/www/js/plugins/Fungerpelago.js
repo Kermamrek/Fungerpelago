@@ -1,12 +1,12 @@
 // TODO: Update these to funger values
 const gameName = "Fear & Hunger";
-const URLVarID = 434; //archipelago URL variable ID
-const codeVarID = 419; //archipelago 5 digits variable ID
-const slotVarID = 420; //archipelago slot name variable ID
-const itemGetEventID = 315; //display item name in game
-const itemSendEventID = 316; //display item name in game
-const itemListVarID = 421; //incoming item names are pushed to this vairable to display in game
-const sendListVarID = 435; //outgoing item names are pushed to this vairable to display in game
+const URLVarID = 408; //archipelago URL variable ID
+const codeVarID = 409; //archipelago 5 digits variable ID
+const slotVarID = 410; //archipelago slot name variable ID
+const itemGetEventID = 314; //the common event that will display any updated checks
+const itemSendEventID = 315; //
+const itemListVarID = 413; //incoming item names are pushed to this variable to display in game
+const sendListVarID = 414; //outgoing item names are pushed to this variable to display in game
 const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event itemGetEventID.
 const runItemSendSwitchID = 3585; //same
 

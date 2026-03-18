@@ -112,16 +112,15 @@ ITEMS = {
     "Jingasa kabuto": ItemClassification.useful,
     "Penance armor (body)": ItemClassification.useful,
     "Eastern silk robes": ItemClassification.useful,
-    # ACCESSORIES
     "Everwatching talisman": ItemClassification.useful,  # Enki drop
     "Charm of the Yggaegetsu": ItemClassification.useful,
     "Peculiar doll": ItemClassification.useful,
     "Cavewolf paw": ItemClassification.useful,
     "Ring of wraiths": ItemClassification.useful,
     "Monocle": ItemClassification.useful,
-    # STORE ITEMS
     "Sorceror's stone": ItemClassification.useful,
     "Soul devour necklace": ItemClassification.useful,
+    # STORE ITEMS
     "Elixir of mind": ItemClassification.useful,
     "Elixir of body": ItemClassification.useful,
     "Purifying talisman": ItemClassification.progression,

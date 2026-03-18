@@ -313,6 +313,11 @@ null,
 {"id":311,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
 {"id":312,"list":[{"code":230,"indent":0,"parameters":[1]},{"code":111,"indent":0,"parameters":[0,3153,0]},{"code":108,"indent":1,"parameters":["STARVATION MODE"]},{"code":356,"indent":1,"parameters":["Light on 77"]},{"code":111,"indent":1,"parameters":[1,398,0,0,2]},{"code":356,"indent":2,"parameters":["Fire radius 0 #FFFFFF"]},{"code":0,"indent":2,"parameters":[]},{"code":412,"indent":1,"parameters":[]},{"code":0,"indent":1,"parameters":[]},{"code":411,"indent":0,"parameters":[]},{"code":108,"indent":1,"parameters":["NORMAL MODE"]},{"code":356,"indent":1,"parameters":["Light off 77"]},{"code":111,"indent":1,"parameters":[1,398,0,0,2]},{"code":356,"indent":2,"parameters":["Fire radius 240 #FFFFFF"]},{"code":0,"indent":2,"parameters":[]},{"code":412,"indent":1,"parameters":[]},{"code":0,"indent":1,"parameters":[]},{"code":412,"indent":0,"parameters":[]},{"code":0,"indent":0,"parameters":[]}],"name":"TORCH_LIGHT_CHECK","switchId":79,"trigger":2},
 {"id":313,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
-{"id":314,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
-{"id":315,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
+{"id":314,"list":[{"code":355,"indent":0,"parameters":["$gameVariables._data[413][0]"]},{"code":101,"indent":0,"parameters":["",0,0,2]},{"code":401,"indent":0,"parameters":["You find \\c[2]\\v[413]\\c[2]!"]},{"code":0,"indent":0,"parameters":[]}],"name":"ARCHIPELAGO_Get","switchId":1,"trigger":0},
+{"id":315,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"ARCHIPELAGO_Send","switchId":1,"trigger":0},
+{"id":316,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":317,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":318,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":319,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":320,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
 ]
