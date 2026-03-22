@@ -18,144 +18,146 @@ if TYPE_CHECKING:
 # More info (perhaps not definitive): https://archipelago.miraheze.org/wiki/Item
 ITEMS = {
     # RANDOM ITEMS
-    "Random Minor Item": ItemClassification.filler,  # Common Event 23
-    "Random Minor Book": ItemClassification.useful,  # Common Event 25, despite being a minor book it contains recipes and pinecone pig
-    "Random Rare Book": ItemClassification.useful,  # Common Event 26
-    "Random Food Item": ItemClassification.filler,  # Common Event 52
-    "Random Rare Item": ItemClassification.useful,  # Common Event 58
-    "Random Alchemy": ItemClassification.useful,  # Common Event 68
-    "Random Good Armor": ItemClassification.useful,  # Common Event 141
-    "Random Scroll Item": ItemClassification.useful,  # Common Event 149
-    "Random Rare Book (Ancient)": ItemClassification.useful,  # Common Event 178
-    "Random Minor Book (Ancient)": ItemClassification.filler,  # Common Event 179, despite being ancient I think every book here is useless
-    "Soul Stone": ItemClassification.useful,  # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
-    "Random Weapon": ItemClassification.useful,  # Common Event 238
-    "Random Minor Weapon": ItemClassification.useful,  # Common Event 239
-    "Nights Random Item": ItemClassification.filler,  # Common Event 250 TODO: look at where this is used? Probably Dungeon Nights and can be ignored
-    "Guard Loot": ItemClassification.filler,  # Common Event 253
-    "Lizardman Loot": ItemClassification.useful,  # Common Event 254
-    "Lord of Flies Loot": ItemClassification.useful,  # Common Event 255
-    "Yellow Mage Loot": ItemClassification.useful,  # Common Event 256
+    "Random Minor Item": (Itemclassification.filler, 5001),  # Common Event 23
+    "Random Minor Book": (Itemclassification.useful, 5002), # Common Event 25, despite being a minor book it contains recipes and pinecone pig
+    "Random Rare Book": (Itemclassification.useful, 5003), # Common Event 26
+    "Random Food Item": (Itemclassification.filler, 5004), # Common Event 52
+    "Random Rare Item": (Itemclassification.useful, 5005), # Common Event 58
+    "Random Alchemy": (Itemclassification.useful, 5006),  # Common Event 68
+    "Random Good Armor": (Itemclassification.useful, 5007),  # Common Event 141
+    "Random Scroll Item": (Itemclassification.useful, 5008),  # Common Event 149
+    "Random Rare Book (Ancient)": (Itemclassification.useful, 5009),  # Common Event 178
+    "Random Minor Book (Ancient)": (Itemclassification.filler, 5010), # Common Event 179, despite being ancient I think every book here is useless
+    "Soul Stone": (Itemclassification.useful, 2115), # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
+    "Random Weapon": (Itemclassification.useful, 5011),  # Common Event 238
+    "Random Minor Weapon": (Itemclassification.useful, 5012), # Common Event 239
+    "Nights Random Item": (Itemclassification.filler, 5013), # Common Event 250 TODO: look at where this is used? Probably Dungeon Nights and can be ignored
+    "Guard Loot": (Itemclassification.filler, 5014),  # Common Event 253
+    "Lizardman Loot": (Itemclassification.useful, 5015),  # Common Event 254
+    "Lord of Flies Loot": (Itemclassification.useful, 5016), # Common Event 255
+    "Yellow Mage Loot": (Itemclassification.useful, 5017),  # Common Event 256
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
     # FIXED ITEMS
-    "Torch": ItemClassification.useful,  # Ones on the cave walls
-    "Cube of depths": ItemClassification.progression,
-    "Blue demon powder": ItemClassification.useful,
-    "Book pages I": ItemClassification.useful,
-    "Book pages II": ItemClassification.useful,
-    "Book pages III": ItemClassification.useful,
-    "Map #1": ItemClassification.progression,
-    "Map #2": ItemClassification.progression,
-    "Map #3": ItemClassification.progression,
-    "Mockup book": ItemClassification.progression,
-    "Bonesaw": ItemClassification.useful,
-    "Lucky coin": ItemClassification.useful,
-    "Scroll of transmutation": ItemClassification.useful,
-    "Scroll of walking on water": ItemClassification.progression,
-    "Stick": ItemClassification.filler,
-    "Explosive vial": ItemClassification.progression | ItemClassification.useful,
-    "Vault key": ItemClassification.progression,
-    "Rope": ItemClassification.progression,
-    "Skinning knife": ItemClassification.useful,
-    "Cell keys F3": ItemClassification.progression,
-    "2F key": ItemClassification.progression,
-    "King's passage key": ItemClassification.progression,
-    "Old passage key": ItemClassification.progression,
+    "Torch": (Itemclassification.useful, 2005),  # Ones on the cave walls
+    "Cube of depths": (Itemclassification.progression, 2119),
+    "Blue demon powder": (Itemclassification.useful, 2183),
+    "Book pages I": (Itemclassification.useful, 2184),
+    "Book pages II": (Itemclassification.useful, 2185),
+    "Book pages III": (Itemclassification.useful, 2186),
+    "Map #1": (Itemclassification.progression, 2162),
+    "Map #2": (Itemclassification.progression, 2163),
+    "Map #3": (Itemclassification.progression, 2188),
+    "Mockup book": (Itemclassification.progression, 2049),
+    "Bonesaw": (Itemclassification.useful, 2140),
+    "Lucky coin": (Itemclassification.useful, 2201),
+    "Scroll of transmutation": (Itemclassification.useful, 2164),
+    "Scroll of walking on water": (Itemclassification.progression, 2161),
+    "Stick": (Itemclassification.filler, 2027),
+    "Explosive vial": (Itemclassification.progression | ItemClassification.useful, 2079),
+    "Vault key": (Itemclassification.progression,
+    "Rope": (Itemclassification.progression, 2199),
+    "Skinning knife": (Itemclassification.useful, 2044),
+    "Cell keys F3": (Itemclassification.progression, 2048),
+    "2F key": (Itemclassification.progression, 2051),
+    "King's passage key": (Itemclassification.progression, 2180),
+    "Old passage key": (Itemclassification.progression, 2179),
     # SOULS/ENEMY REWARDS
     # Set these as multi-items since they're required for one person's S ending... will this break something?
-    "Crow Mauler soul": ItemClassification.progression | ItemClassification.useful,
-    "Cavemother soul": ItemClassification.progression | ItemClassification.useful,
-    "Salmonsnake soul": ItemClassification.progression | ItemClassification.useful,
-    "Old Knight soul": ItemClassification.progression | ItemClassification.useful,
-    "White angel soul": ItemClassification.progression | ItemClassification.useful,
-    "Black witch soul": ItemClassification.progression | ItemClassification.useful,
-    "Old guardian soul": ItemClassification.progression | ItemClassification.useful,
-    "Butterfly soul": ItemClassification.progression | ItemClassification.useful,
-    "Iron Shakespeare soul": ItemClassification.progression | ItemClassification.useful,
-    "Endless soul": ItemClassification.progression
-    | ItemClassification.useful,  # Required for an ending/gets you hexen skills
-    "Domination soul": ItemClassification.progression
-    | ItemClassification.useful,  # Required for an ending/gets you hexen skills
-    "Enlightened soul": ItemClassification.progression
-    | ItemClassification.useful,  # Required for an ending/gets you hexen skills
-    "Tormented soul": ItemClassification.progression
-    | ItemClassification.useful,  # Required for an ending/gets you hexen skills
-    "Crow emblem key": ItemClassification.progression,
+    "Crow Mauler soul": (Itemclassification.progression | ItemClassification.useful, 36),
+    "Salmonsnake soul": (Itemclassification.progression | ItemClassification.useful, 38),
+    "Cavemother soul": (Itemclassification.progression | ItemClassification.useful, 41),
+    "Old Knight soul": (Itemclassification.progression | ItemClassification.useful,
+    "Iron Shakespeare soul": (Itemclassification.progression | ItemClassification.useful, 37),
+    "White angel soul": (Itemclassification.progression | ItemClassification.useful, 39),
+    "Black witch soul": (Itemclassification.progression | ItemClassification.useful, 40),
+    "Butterfly soul": (Itemclassification.progression | ItemClassification.useful, 42),
+    "Old guardian soul": (Itemclassification.progression | ItemClassification.useful, 43),
+    "Endless soul": (Itemclassification.progression
+    | ItemClassification.useful, 2126), # Required for an ending/gets you hexen skills
+    "Domination soul": (Itemclassification.progression
+    | ItemClassification.useful, 2127), # Required for an ending/gets you hexen skills
+    "Enlightened soul": (Itemclassification.progression
+    | ItemClassification.useful, 2128), # Required for an ending/gets you hexen skills
+    "Tormented soul": (Itemclassification.progression
+    | ItemClassification.useful, 2129),  # Required for an ending/gets you hexen skills
+    "Crow emblem key": (Itemclassification.progression, 2148),
     # BOOKS/PAPERS
     # NOTE: (a large majority of these have been listed as filler due to not being important in any way. Would this mess something up?
-    "Captain's orders": ItemClassification.filler,
-    "List of inmates": ItemClassification.filler,
-    "Captain's diary 1": ItemClassification.filler,
-    "Torturer's notes 1": ItemClassification.filler,
-    "Captain's diary 2": ItemClassification.filler,
-    "Captain's diary 3": ItemClassification.filler,
-    "Book of Fears": ItemClassification.useful,
-    "Buckman's letter": ItemClassification.filler,
+    "Captain's orders": (Itemclassification.filler, 2018),
+    "List of inmates": (Itemclassification.filler, 2019),
+    "Captain's diary 1": (Itemclassification.filler, 2022),
+    "Torturer's notes 1": (Itemclassification.filler, 2035),
+    "Captain's diary 2": (Itemclassification.filler, 2081),
+    "Captain's diary 3": (Itemclassification.filler, 2082),
+    "Book of Fears": (Itemclassification.useful, 2098),
+    "Buckman's letter": (Itemclassification.filler, 2181),
     # WEAPONS
-    "Short sword": ItemClassification.useful,  # Gaunt knight drop
-    "Long sword": ItemClassification.useful,  # D'arce drop
-    "Dagger": ItemClassification.useful,
-    "Shark teeth": ItemClassification.useful,
-    "War scythe": ItemClassification.useful,  # Dragon thing in ancient city
-    "Claymore": ItemClassification.useful,  # Trading kid to pocketcat
-    "Eastern sword": ItemClassification.useful | ItemClassification.trap,
-    "Blue sin": ItemClassification.useful,
-    "Sergal spear": ItemClassification.useful,
-    "Miasma": ItemClassification.useful,
+    "Short sword": (ItemClassification.useful, 1001),  # Gaunt knight drop
+    "Claymore": (ItemClassification.useful, 1005),  # Trading kid to pocketcat
+    "Dagger": (ItemClassification.useful, 1006),
+    "Long sword": (ItemClassification.useful, 1007),  # D'arce drop
+    "Eastern sword": (ItemClassification.useful | ItemClassification.trap, 1008),
+    "Sergal spear": (ItemClassification.useful, 1016),
+    "Miasma": (ItemClassification.useful, 1020),
+    "Shark teeth": (ItemClassification.useful, 1032),
+    "War scythe": (Itemclassification.useful, 1036),  # Dragon thing in ancient city
+    "Blue sin": (ItemClassification.useful, 1049),
     # ARMOUR
-    "Stone crown": ItemClassification.progression
-    | ItemClassification.useful,  # Can take cube without pissing anyone off
-    "Iron mask": ItemClassification.useful,
-    "Gaunt bascinet": ItemClassification.useful,
-    "Red scarf": ItemClassification.useful,
-    "Penance armor (head)": ItemClassification.useful,
-    "Jingasa kabuto": ItemClassification.useful,
-    "Penance armor (body)": ItemClassification.useful,
-    "Eastern silk robes": ItemClassification.useful,
-    "Everwatching talisman": ItemClassification.useful,  # Enki drop
-    "Charm of the Yggaegetsu": ItemClassification.useful,
-    "Peculiar doll": ItemClassification.useful,
-    "Cavewolf paw": ItemClassification.useful,
-    "Ring of wraiths": ItemClassification.useful,
-    "Monocle": ItemClassification.useful,
-    "Sorceror's stone": ItemClassification.useful,
-    "Soul devour necklace": ItemClassification.useful,
+    "Stone crown": (Itemclassification.progression
+    | ItemClassification.useful, 11), # Can take cube without pissing anyone off
+    "Iron mask": (Itemclassification.useful, 31),
+    "Gaunt plate armor": (Itemclassification.useful, 33),
+    "Gaunt bascinet": (Itemclassification.useful, 34),
+    "Red scarf": (Itemclassification.useful, 44),
+    "Penance armor (body)": (Itemclassification.useful, 54),
+    "Penance armor (head)": (Itemclassification.useful, 55),
+    "Eastern silk robes": (Itemclassification.useful, 56),
+    "Jingasa kabuto": (Itemclassification.useful, 57),
+    # ACCESSORIES
+    "Peculiar doll": (Itemclassification.useful, 19),
+    "Everwatching talisman": (Itemclassification.useful, 20),  # Enki drop
+    "Cavewolf paw": (Itemclassification.useful, 26),
+    "Ring of wraiths": (Itemclassification.useful, 29),
+    "Monocle": (Itemclassification.useful, 50),
+    "Charm of the Yggaegetsu": (Itemclassification.useful, 58),
     # STORE ITEMS
-    "Elixir of mind": ItemClassification.useful,
-    "Elixir of body": ItemClassification.useful,
-    "Purifying talisman": ItemClassification.progression,
-    "Quill": ItemClassification.filler,
-    "Blue vial": ItemClassification.useful,
-    "Bottle of whiskey": ItemClassification.useful,
-    "Dried meat": ItemClassification.useful,
-    "Opium powder": ItemClassification.useful,
-    "Iron arrow": ItemClassification.filler,
-    "Alchemillia Vol. 1": ItemClassification.useful,
-    "Alchemillia Vol. 2": ItemClassification.useful,
-    "Recipes of the 15th century": ItemClassification.useful,
-    "Ancient book": ItemClassification.useful,
-    "Book of enlightenment": ItemClassification.useful,
-    "Book of forgotten memories": ItemClassification.useful,
+    "Sorceror's stone": (Itemclassification.useful, 27),
+    "Soul devour necklace": (Itemclassification.useful, 47),
+    "Elixir of mind": (Itemclassification.useful, 2166),
+    "Elixir of body": (Itemclassification.useful, 2167),
+    "Purifying talisman": (Itemclassification.progression, 2149),
+    "Quill": (Itemclassification.filler, 2087),
+    "Blue vial": (Itemclassification.useful, 2028),
+    "Bottle of whiskey": (Itemclassification.useful, 2030),
+    "Dried meat": (Itemclassification.useful, 2016),
+    "Opium powder": (Itemclassification.useful, 2072),
+    "Iron arrow": (Itemclassification.filler, 2075),
+    "Alchemillia Vol. 1": (Itemclassification.useful, 2133),
+    "Alchemillia Vol. 2": (Itemclassification.useful, 2013),
+    "Recipes of the 15th century": (Itemclassification.useful, 2003),
+    "Ancient book": (Itemclassification.useful, 2001),
+    "Book of enlightenment": (Itemclassification.useful, 2040),
+    "Book of forgotten memories": (Itemclassification.useful, 2002),
+    "Potion of full healing": (Itemclassification.trap, 2099),
+    "Potion of full sanity": (Itemclassification.trap, 2100),
+    "Potion of life": (Itemclassification.trap, 2101),
     # OTHER
-    "Green herb": ItemClassification.useful | ItemClassification.filler,
-    "Blue herb": ItemClassification.useful | ItemClassification.filler,
-    "Red herb": ItemClassification.useful | ItemClassification.filler,
+    "Green herb": (Itemclassification.useful | ItemClassification.filler, 2094),
+    "Blue herb": (Itemclassification.useful | ItemClassification.filler, 2095),
+    "Red herb": (Itemclassification.useful | ItemClassification.filler, 2132),
 
-    "Dried mushroom": ItemClassification.progression, # Change this back to useful/filler once testing is done
+    "Dried mushroom": (Itemclassification.progression, 2065), # Change this back to useful/filler once testing is done
 
-    "Light blue vial": ItemClassification.useful,  # Trotur gift AND potential shop item
-    "Catnip": ItemClassification.filler,
-    "Glow mushroom": ItemClassification.filler,  # Can only be obtained via empty scroll
-    "Yellow vial": ItemClassification.useful,
-    "Salmonsnake Meat": ItemClassification.useful,
-    "Potion of full healing": ItemClassification.trap,
-    "Potion of full sanity": ItemClassification.trap,
-    "Potion of life": ItemClassification.trap,
-    "Lesser soul": ItemClassification.progression | ItemClassification.useful,
-    "Gnome milk": ItemClassification.useful,
-    "Gnome egg": ItemClassification.useful,
-    "Scroll of pyromancy trick": ItemClassification.useful,  # Secret hideout loot
-    "Scroll of combustion": ItemClassification.useful,  # Secret hideout loot
+    "Light blue vial": (Itemclassification.useful, 2067), # Trotur gift AND potential shop item
+    "Catnip": (Itemclassification.filler, 2194),
+    "Glow mushroom": (Itemclassification.filler, 2066), # Can only be obtained via empty scroll
+    "Yellow vial": (Itemclassification.useful,
+    "Salmonsnake Meat": (Itemclassification.useful, 2091),
+    "Lesser soul": (Itemclassification.progression | ItemClassification.useful, 2116),
+    "Gnome milk": (Itemclassification.useful, 2057),
+    "Gnome egg": (Itemclassification.useful, 2060),
+    "Scroll of pyromancy trick": (Itemclassification.useful, 2159),  # Secret hideout loot
+    "Scroll of combustion": (Itemclassification.useful, 2160), # Secret hideout loot
     # "Random Blood Magic": Common Event 29 - probably not an item
     # "Greater Blood Magic": Common Event 97 - probably not an item
     # "Cloth Fragment": You can get these from every bed, should these be APItems? maybe a setting to enable/disable them or make them non-important? (see ttyd pit 100 trials)
