@@ -23,6 +23,22 @@ class CharacterChoice(Choice):
 
     default = option_mercenary
 
+
+class DifficultyChoice(Choice):
+    """
+    Which difficulty you will play on. Each difficulty has various changes to gameplay and mechanics.
+    You cannot save in Hard Mode. Fear & Hunger is recommended for new players.
+    """
+
+    display_name = "Difficulty"
+
+    option_fear_and_hunger = 0
+    option_terror_and_starvation = 1
+    option_hard_mode = 2
+
+    default = option_fear_and_hunger
+
+
 class EndingChoice(Choice):
     """
     Which ending the player must complete to release all checks.
@@ -42,21 +58,6 @@ class EndingChoice(Choice):
     option_ending_any = 6
 
     default = option_ending_a
-
-
-class DifficultyChoice(Choice):
-    """
-    Which difficulty you will play on. Each difficulty has various changes to gameplay and mechanics.
-    You cannot save in Hard Mode. Fear & Hunger is recommended for new players.
-    """
-
-    display_name = "Difficulty"
-
-    option_fear_and_hunger = 0
-    option_terror_and_starvation = 1
-    option_hard_mode = 2
-
-    default = option_fear_and_hunger
 
 
 class StartDash(Toggle):
@@ -84,8 +85,8 @@ class SkipCoinFlip(Toggle):
 @dataclass
 class FungerOptions(PerGameCommonOptions):
     character: CharacterChoice
-    ending: EndingChoice
     difficulty: DifficultyChoice
+    ending: EndingChoice
     start_with_dash: StartDash
     skip_coin_flip: SkipCoinFlip
 
@@ -93,7 +94,7 @@ class FungerOptions(PerGameCommonOptions):
 option_groups = [
     OptionGroup(
         "Important Gameplay Options",
-        [CharacterChoice, EndingChoice, DifficultyChoice],
+        [CharacterChoice, DifficultyChoice, EndingChoice],
     ),
     OptionGroup(
         "Other Gameplay Options",
@@ -108,15 +109,15 @@ option_groups = [
 option_presets = {
     "Recommended": {
         "character": CharacterChoice.option_knight,
-        "ending": EndingChoice.option_ending_a,
         "difficulty": DifficultyChoice.option_fear_and_hunger,
+        "ending": EndingChoice.option_ending_a,
         "start_with_dash": True,
         "skip_coin_flip": False,
     },
     "Vanilla": {
         "character": CharacterChoice.option_mercenary,
-        "ending": EndingChoice.option_ending_any,
         "difficulty": DifficultyChoice.option_fear_and_hunger,
+        "ending": EndingChoice.option_ending_any,
         "start_with_dash": False,
         "skip_coin_flip": False,
     },
