@@ -44,7 +44,9 @@ class EndingChoice(Choice):
     Which ending the player must complete to release all checks.
     Generally, the endings go from longest to shortest, with ending A being the most complete experience.
     Choosing "Any" will let you get any ending, which is recommended for brand new players.
-    Ending "S" varies based on the character chosen, and is only recommended for veterans.
+
+    Ending "S" MUST be played on "Hard Mode" difficulty, varies based on the character chosen,
+    and is only recommended for veterans.
     """
 
     display_name = "Ending"
