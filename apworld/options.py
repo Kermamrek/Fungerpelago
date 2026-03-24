@@ -7,12 +7,28 @@ from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
 # And APQuest example:
 # https://github.com/NewSoupVi/Archipelago/blob/apquest/worlds/apquest/options.py
 
+class CharacterChoice(Choice):
+    """
+    The character you will choose to play as.
+    This is dictated here instead of the in-game character select screen as some endings and items
+    require certain characters to be chosen.
+    """
+
+    display_name = "Character"
+
+    option_mercenary = 0
+    option_knight = 1
+    option_dark_priest = 2
+    option_outlander = 3
+
+    default = option_mercenary
 
 class EndingChoice(Choice):
     """
     Which ending the player must complete to release all checks.
     Generally, the endings go from longest to shortest, with ending A being the most complete experience.
     Choosing "Any" will let you get any ending, which is recommended for brand new players.
+    Ending "S" varies based on the character chosen, and is only recommended for veterans.
     """
 
     display_name = "Ending"
@@ -22,7 +38,8 @@ class EndingChoice(Choice):
     option_ending_c = 2
     option_ending_d = 3
     option_ending_e = 4
-    option_ending_any = 5
+    option_ending_s = 5
+    option_ending_any = 6
 
     default = option_ending_a
 
@@ -66,6 +83,7 @@ class SkipCoinFlip(Toggle):
 # This is in the format "option_name_in_snake_case: OptionClassName".
 @dataclass
 class FungerOptions(PerGameCommonOptions):
+    character: CharacterChoice
     ending: EndingChoice
     difficulty: DifficultyChoice
     start_with_dash: StartDash
@@ -75,7 +93,7 @@ class FungerOptions(PerGameCommonOptions):
 option_groups = [
     OptionGroup(
         "Important Gameplay Options",
-        [EndingChoice, DifficultyChoice],
+        [CharacterChoice, EndingChoice, DifficultyChoice],
     ),
     OptionGroup(
         "Other Gameplay Options",
@@ -89,12 +107,14 @@ option_groups = [
 
 option_presets = {
     "Recommended": {
+        "character": CharacterChoice.option_knight,
         "ending": EndingChoice.option_ending_a,
         "difficulty": DifficultyChoice.option_fear_and_hunger,
         "start_with_dash": True,
         "skip_coin_flip": False,
     },
     "Vanilla": {
+        "character": CharacterChoice.option_mercenary,
         "ending": EndingChoice.option_ending_any,
         "difficulty": DifficultyChoice.option_fear_and_hunger,
         "start_with_dash": False,
