@@ -20,7 +20,8 @@ class CharacterChoice(Choice):
     option_knight = 1
     option_dark_priest = 2
     option_outlander = 3
-    option_random = 4
+    # Annoyingly, "option_random" is reserved, so putting in an extra m until I can figure out alternative
+    option_randomm = 4
 
     default = option_mercenary
 
@@ -111,7 +112,7 @@ option_groups = [
 
 option_presets = {
     "Recommended": {
-        "character": CharacterChoice.option_random,
+        "character": CharacterChoice.option_randomm,
         "difficulty": DifficultyChoice.option_fear_and_hunger,
         "ending": EndingChoice.option_ending_a,
         "start_with_dash": True,
