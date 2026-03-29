@@ -1,54 +1,55 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, NamedTuple
+from dataclasses import dataclass, field
 
 from BaseClasses import Location
 
-if TYPE_CHECKING:
-    from .world import FungerWorld
+
+def generate_id():
+    global id_tracker
+    if "id_tracker" not in globals():
+        id_tracker = 0
+    id_tracker += 1
+    return id_tracker
 
 
-class LocationData(NamedTuple):
+@dataclass
+class LocationData:
     item_name: str
-    id: int
+    id: int = field(default_factory=generate_id)
 
 
-# This is currently a test for the first room in the game, where you loot the barrels going into the dungeon.
-# A better solution will be found for the full game
-# Test map name in rpgmaker is "Fortress"
-LOCATIONS = {
-    "Fortress": {
-        "Bottom Right Crate": LocationData("Random Minor Item", 1),
-        "Right Crate (Left)": LocationData("Random Minor Item", 2),
-        "Right Crate (Top)": LocationData("Random Minor Item", 3),
-        "Right Crate (Right)": LocationData("Random Minor Item", 4),
-        "Right Barrel": LocationData("Random Food Item", 5),
-        "Left Barrel (Left)": LocationData("Random Food Item", 6),
-        "Left Barrel (Right)": LocationData("Random Food Item", 7),
-    },
-    "Level 1: Left Entrance": {
-        "Entrance Barrel (Left)": LocationData("Random Food Item", 8),
-        "Entrance Barrel (Right)": LocationData("Random Food Item", 9),
-        "Dried Mushroom (Left Entrance)": LocationData("Dried mushroom", 10),
-    },
+@dataclass
+class RegionData:
+    locations: dict[str, LocationData]
+    connections: list[str] = field(default_factory=list)
+
+
+REGIONS = {
+    "Fortress": RegionData(
+        {
+            "Bottom Right Crate": LocationData("Random Minor Item"),
+            "Right Crate (Left)": LocationData("Random Minor Item"),
+            "Right Crate (Top)": LocationData("Random Minor Item"),
+            "Right Crate (Right)": LocationData("Random Minor Item"),
+            "Right Barrel": LocationData("Random Food Item"),
+            "Left Barrel (Left)": LocationData("Random Food Item"),
+            "Left Barrel (Right)": LocationData("Random Food Item"),
+        },
+        ["Level 1: Left Entrance"],
+    ),
+    "Level 1: Left Entrance": RegionData(
+        {
+            "Entrance Barrel (Left)": LocationData("Random Food Item"),
+            "Entrance Barrel (Right)": LocationData("Random Food Item"),
+            "Dried Mushroom (Left Entrance)": LocationData("Dried mushroom"),
+        }
+    ),
 }
 
 
 class FungerLocation(Location):
     game = "Fear & Hunger"
-
-
-def get_location_ids(region_name: str):
-    return {name: data.id for name, data in LOCATIONS[region_name].items()}
-
-
-def create_regular_locations(world: FungerWorld) -> None:
-    # Using the RPGMaker map names as the region names
-    fortress = world.get_region("Fortress")
-    level1_basement_a = world.get_region("Level 1: Left Entrance")
-
-    fortress.add_locations(get_location_ids("Fortress"), FungerLocation)
-    level1_basement_a.add_locations(get_location_ids("Level 1: Left Entrance"), FungerLocation)
 
 
 # def create_events(world: FungerWorld) -> None:

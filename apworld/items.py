@@ -1,17 +1,18 @@
 from __future__ import annotations
 
-from typing import NamedTuple
+from dataclasses import dataclass
 
 from BaseClasses import Item, ItemClassification
 
 
-class ItemData(NamedTuple):
+@dataclass
+class ItemData:
     classification: ItemClassification
     id: int
 
 
 # fmt: off
-ITEM_DATA = {
+ITEMS = {
     # RANDOM ITEMS
     "Random Minor Item": ItemData(ItemClassification.filler, 5001),  # Common Event 23
     "Random Minor Book": ItemData(ItemClassification.useful, 5002),  # Common Event 25, despite being a minor book it contains recipes and pinecone pig
