@@ -24,14 +24,8 @@ class FungerWorld(World):
     options_dataclass = options.FungerOptions
     options: options.FungerOptions
 
-    location_name_to_id = {}
-    for region in locations.LOCATIONS:
-        for key, value in locations.LOCATIONS[region].items():
-            location_name_to_id[key] = value
-
-    item_name_to_id = {}
-    for item_name, item in items.ITEMS.items():
-        item_name_to_id[item_name] = item[1]
+    location_name_to_id = {name: id for region in locations.LOCATIONS.values() for name, id in region.items()}
+    item_name_to_id = {name: item[1] for name, item in items.ITEMS.items()}
 
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
