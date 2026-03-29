@@ -25,7 +25,7 @@ class FungerWorld(World):
     options: options.FungerOptions
 
     location_name_to_id = {name: id for region in locations.LOCATIONS.values() for name, id in region.items()}  # noqa: RUF012
-    item_name_to_id = {name: item[1] for name, item in items.ITEMS.items()}  # noqa: RUF012
+    item_name_to_id = {name: data.id for name, data in items.ITEM_DATA.items()}  # noqa: RUF012
 
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
