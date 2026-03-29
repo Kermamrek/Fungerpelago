@@ -1,14 +1,14 @@
 from __future__ import annotations
 
-from collections import namedtuple
-from typing import TYPE_CHECKING
+from typing import NamedTuple
 
 from BaseClasses import Item, ItemClassification
 
-if TYPE_CHECKING:
-    from .world import FungerWorld
 
-ItemData = namedtuple("ItemData", ["classification", "id"])
+class ItemData(NamedTuple):
+    classification: ItemClassification
+    id: int
+
 
 # fmt: off
 ITEM_DATA = {
@@ -171,35 +171,3 @@ ITEM_DATA = {
 
 class FungerItem(Item):
     game = "Fear & Hunger"
-
-
-def create_item_with_correct_classification(world: FungerWorld, name: str) -> FungerItem:
-    classification, id = ITEM_DATA[name]
-    if name == "Torch" and (
-        world.options.DifficultyChoice.terror_and_starvation or world.options.DifficultyChoice.hard_mode
-    ):
-        classification = ItemClassification.progression
-    return FungerItem(name, classification, id, world.player)
-
-
-def create_all_items(world: FungerWorld) -> None:
-
-    # Look at APQuest items.py for more info on filler items
-    # Right now this is just a hardcoded list of the first two screens for testing
-
-    itempool: list[Item] = [
-        # Fortress
-        world.create_item("Random Food Item"),
-        world.create_item("Random Food Item"),
-        world.create_item("Random Food Item"),
-        world.create_item("Random Minor Item"),
-        world.create_item("Random Minor Item"),
-        world.create_item("Random Minor Item"),
-        world.create_item("Random Minor Item"),
-        # Level 1 Left Entrance
-        world.create_item("Random Food Item"),
-        world.create_item("Random Food Item"),
-        world.create_item("Dried mushroom"),
-    ]
-
-    world.multiworld.itempool += itempool

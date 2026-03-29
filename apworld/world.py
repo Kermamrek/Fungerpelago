@@ -5,6 +5,7 @@ from collections.abc import Mapping
 from typing import Any
 
 # Imports of base Archipelago modules must be absolute.
+from BaseClasses import ItemClassification
 from worlds.AutoWorld import World
 
 # Imports of your world's files must be relative.
@@ -24,7 +25,7 @@ class FungerWorld(World):
     options_dataclass = options.FungerOptions
     options: options.FungerOptions
 
-    location_name_to_id = {name: id for region in locations.LOCATIONS.values() for name, id in region.items()}  # noqa: RUF012
+    location_name_to_id = {name: data.id for region in locations.LOCATIONS.values() for name, data in region.items()}  # noqa: RUF012
     item_name_to_id = {name: data.id for name, data in items.ITEM_DATA.items()}  # noqa: RUF012
 
     # There is always one region that the generator starts from & assumes you can always go back to.
@@ -34,16 +35,25 @@ class FungerWorld(World):
 
     def create_regions(self) -> None:
         regions.create_and_connect_regions(self)
-        locations.create_all_locations(self)
+        locations.create_regular_locations(self)
+        # locations.create_events(self)
 
     def set_rules(self) -> None:
         rules.set_all_rules(self)
 
     def create_items(self) -> None:
-        items.create_all_items(self)
+        items = [
+            self.create_item(data.item_name) for region in locations.LOCATIONS.values() for data in region.values()
+        ]
+        self.multiworld.itempool += items
 
     def create_item(self, name: str) -> items.FungerItem:
-        return items.create_item_with_correct_classification(self, name)
+        classification, id = items.ITEM_DATA[name]
+        if name == "Torch" and (
+            self.options.DifficultyChoice.terror_and_starvation or self.options.DifficultyChoice.hard_mode
+        ):
+            classification = ItemClassification.progression
+        return items.FungerItem(name, classification, id, self.player)
 
     # There may be data that the game client will need to modify the behavior of the game.
     # This is what slot_data exists for. Upon every client connection, the slot's slot_data is sent to the client.

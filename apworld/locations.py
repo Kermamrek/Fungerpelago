@@ -1,29 +1,35 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, NamedTuple
 
 from BaseClasses import Location
 
 if TYPE_CHECKING:
     from .world import FungerWorld
 
+
+class LocationData(NamedTuple):
+    item_name: str
+    id: int
+
+
 # This is currently a test for the first room in the game, where you loot the barrels going into the dungeon.
 # A better solution will be found for the full game
 # Test map name in rpgmaker is "Fortress"
 LOCATIONS = {
     "Fortress": {
-        "Bottom Right Crate": 1,
-        "Right Crate (Left)": 2,
-        "Right Crate (Top)": 3,
-        "Right Crate (Right)": 4,
-        "Right Barrel": 5,
-        "Left Barrel (Left)": 6,
-        "Left Barrel (Right)": 7,
+        "Bottom Right Crate": LocationData("Random Minor Item", 1),
+        "Right Crate (Left)": LocationData("Random Minor Item", 2),
+        "Right Crate (Top)": LocationData("Random Minor Item", 3),
+        "Right Crate (Right)": LocationData("Random Minor Item", 4),
+        "Right Barrel": LocationData("Random Food Item", 5),
+        "Left Barrel (Left)": LocationData("Random Food Item", 6),
+        "Left Barrel (Right)": LocationData("Random Food Item", 7),
     },
     "Level 1: Left Entrance": {
-        "Entrance Barrel (Left)": 8,
-        "Entrance Barrel (Right)": 9,
-        "Dried Mushroom (Left Entrance)": 10,
+        "Entrance Barrel (Left)": LocationData("Random Food Item", 8),
+        "Entrance Barrel (Right)": LocationData("Random Food Item", 9),
+        "Dried Mushroom (Left Entrance)": LocationData("Dried mushroom", 10),
     },
 }
 
@@ -32,13 +38,8 @@ class FungerLocation(Location):
     game = "Fear & Hunger"
 
 
-# def get_locations(location_names: list[str]) -> dict[str, int | None]:
-# return {location_name: LOCATIONS[location_name] for location_name in location_names}
-
-
-def create_all_locations(world: FungerWorld) -> None:
-    create_regular_locations(world)
-    # create_events(world)
+def get_location_ids(region_name: str):
+    return {name: data.id for name, data in LOCATIONS[region_name].items()}
 
 
 def create_regular_locations(world: FungerWorld) -> None:
@@ -46,8 +47,8 @@ def create_regular_locations(world: FungerWorld) -> None:
     fortress = world.get_region("Fortress")
     level1_basement_a = world.get_region("Level 1: Left Entrance")
 
-    fortress.add_locations(LOCATIONS["Fortress"], FungerLocation)
-    level1_basement_a.add_locations(LOCATIONS["Level 1: Left Entrance"], FungerLocation)
+    fortress.add_locations(get_location_ids("Fortress"), FungerLocation)
+    level1_basement_a.add_locations(get_location_ids("Level 1: Left Entrance"), FungerLocation)
 
 
 # def create_events(world: FungerWorld) -> None:
