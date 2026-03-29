@@ -57,6 +57,4 @@ class FungerWorld(World):
     def fill_slot_data(self) -> Mapping[str, Any]:
         # If you need access to the player's chosen options on the client side, there is a helper for that.
         # TODO: Change this and add in funger specific settings?
-        return self.options.as_dict(
-            "ending", "difficulty", "skip_coin_flip", "start_with_dash"
-        )
+        return self.options.as_dict("ending", "difficulty", "skip_coin_flip", "start_with_dash")

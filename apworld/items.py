@@ -7,8 +7,6 @@ from BaseClasses import Item, ItemClassification
 if TYPE_CHECKING:
     from .world import FungerWorld
 
-# TODO: Do item IDs need to be static and pre-defined?
-
 # ITEM CLASSIFICATIONS
 # Type declarations from archipelago.js:
 # none: 0 - Considered "Filler" or "Junk" item. despite being called "none" in js it is called "filler" here?
@@ -19,22 +17,34 @@ if TYPE_CHECKING:
 ITEMS = {
     # RANDOM ITEMS
     "Random Minor Item": (ItemClassification.filler, 5001),  # Common Event 23
-    "Random Minor Book": (ItemClassification.useful, 5002), # Common Event 25, despite being a minor book it contains recipes and pinecone pig
-    "Random Rare Book": (ItemClassification.useful, 5003), # Common Event 26
-    "Random Food Item": (ItemClassification.filler, 5004), # Common Event 52
-    "Random Rare Item": (ItemClassification.useful, 5005), # Common Event 58
+    "Random Minor Book": (
+        ItemClassification.useful,
+        5002,
+    ),  # Common Event 25, despite being a minor book it contains recipes and pinecone pig
+    "Random Rare Book": (ItemClassification.useful, 5003),  # Common Event 26
+    "Random Food Item": (ItemClassification.filler, 5004),  # Common Event 52
+    "Random Rare Item": (ItemClassification.useful, 5005),  # Common Event 58
     "Random Alchemy": (ItemClassification.useful, 5006),  # Common Event 68
     "Random Good Armor": (ItemClassification.useful, 5007),  # Common Event 141
     "Random Scroll Item": (ItemClassification.useful, 5008),  # Common Event 149
     "Random Rare Book (Ancient)": (ItemClassification.useful, 5009),  # Common Event 178
-    "Random Minor Book (Ancient)": (ItemClassification.filler, 5010), # Common Event 179, despite being ancient I think every book here is useless
-    "Soul Stone": (ItemClassification.useful, 2115), # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
+    "Random Minor Book (Ancient)": (
+        ItemClassification.filler,
+        5010,
+    ),  # Common Event 179, despite being ancient I think every book here is useless
+    "Soul Stone": (
+        ItemClassification.useful,
+        2115,
+    ),  # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
     "Random Weapon": (ItemClassification.useful, 5011),  # Common Event 238
-    "Random Minor Weapon": (ItemClassification.useful, 5012), # Common Event 239
-    "Nights Random Item": (ItemClassification.filler, 5013), # Common Event 250 TODO: look at where this is used? Probably Dungeon Nights and can be ignored
+    "Random Minor Weapon": (ItemClassification.useful, 5012),  # Common Event 239
+    "Nights Random Item": (
+        ItemClassification.filler,
+        5013,
+    ),  # Common Event 250 TODO: look at where this is used? Probably Dungeon Nights and can be ignored
     "Guard Loot": (ItemClassification.filler, 5014),  # Common Event 253
     "Lizardman Loot": (ItemClassification.useful, 5015),  # Common Event 254
-    "Lord of Flies Loot": (ItemClassification.useful, 5016), # Common Event 255
+    "Lord of Flies Loot": (ItemClassification.useful, 5016),  # Common Event 255
     "Yellow Mage Loot": (ItemClassification.useful, 5017),  # Common Event 256
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
     # FIXED ITEMS
@@ -72,14 +82,22 @@ ITEMS = {
     "Black witch soul": (ItemClassification.progression | ItemClassification.useful, 40),
     "Butterfly soul": (ItemClassification.progression | ItemClassification.useful, 42),
     "Old guardian soul": (ItemClassification.progression | ItemClassification.useful, 43),
-    "Endless soul": (ItemClassification.progression
-    | ItemClassification.useful, 2126), # Required for an ending/gets you hexen skills
-    "Domination soul": (ItemClassification.progression
-    | ItemClassification.useful, 2127), # Required for an ending/gets you hexen skills
-    "Enlightened soul": (ItemClassification.progression
-    | ItemClassification.useful, 2128), # Required for an ending/gets you hexen skills
-    "Tormented soul": (ItemClassification.progression
-    | ItemClassification.useful, 2129),  # Required for an ending/gets you hexen skills
+    "Endless soul": (
+        ItemClassification.progression | ItemClassification.useful,
+        2126,
+    ),  # Required for an ending/gets you hexen skills
+    "Domination soul": (
+        ItemClassification.progression | ItemClassification.useful,
+        2127,
+    ),  # Required for an ending/gets you hexen skills
+    "Enlightened soul": (
+        ItemClassification.progression | ItemClassification.useful,
+        2128,
+    ),  # Required for an ending/gets you hexen skills
+    "Tormented soul": (
+        ItemClassification.progression | ItemClassification.useful,
+        2129,
+    ),  # Required for an ending/gets you hexen skills
     "Crow emblem key": (ItemClassification.progression, 2148),
     # BOOKS/PAPERS
     # NOTE: (a large majority of these have been listed as filler due to not being important in any way. Would this mess something up?
@@ -103,8 +121,10 @@ ITEMS = {
     "War scythe": (ItemClassification.useful, 1036),  # Dragon thing in ancient city
     "Blue sin": (ItemClassification.useful, 1049),
     # ARMOUR
-    "Stone crown": (ItemClassification.progression
-    | ItemClassification.useful, 11), # Can take cube without pissing anyone off
+    "Stone crown": (
+        ItemClassification.progression | ItemClassification.useful,
+        11,
+    ),  # Can take cube without pissing anyone off
     "Iron mask": (ItemClassification.useful, 31),
     "Gaunt plate armor": (ItemClassification.useful, 33),
     "Gaunt bascinet": (ItemClassification.useful, 34),
@@ -145,19 +165,17 @@ ITEMS = {
     "Green herb": (ItemClassification.useful | ItemClassification.filler, 2094),
     "Blue herb": (ItemClassification.useful | ItemClassification.filler, 2095),
     "Red herb": (ItemClassification.useful | ItemClassification.filler, 2132),
-
-    "Dried mushroom": (ItemClassification.progression, 2065), # Change this back to useful/filler once testing is done
-
-    "Light blue vial": (ItemClassification.useful, 2067), # Trotur gift AND potential shop item
+    "Dried mushroom": (ItemClassification.progression, 2065),  # Change this back to useful/filler once testing is done
+    "Light blue vial": (ItemClassification.useful, 2067),  # Trotur gift AND potential shop item
     "Catnip": (ItemClassification.filler, 2194),
-    "Glow mushroom": (ItemClassification.filler, 2066), # Can only be obtained via empty scroll
+    "Glow mushroom": (ItemClassification.filler, 2066),  # Can only be obtained via empty scroll
     "Yellow vial": (ItemClassification.useful, 2033),
     "Salmonsnake Meat": (ItemClassification.useful, 2091),
     "Lesser soul": (ItemClassification.progression | ItemClassification.useful, 2116),
     "Gnome milk": (ItemClassification.useful, 2057),
     "Gnome egg": (ItemClassification.useful, 2060),
     "Scroll of pyromancy trick": (ItemClassification.useful, 2159),  # Secret hideout loot
-    "Scroll of combustion": (ItemClassification.useful, 2160), # Secret hideout loot
+    "Scroll of combustion": (ItemClassification.useful, 2160),  # Secret hideout loot
     # "Random Blood Magic": Common Event 29 - probably not an item
     # "Greater Blood Magic": Common Event 97 - probably not an item
     # "Cloth Fragment": You can get these from every bed, should these be APItems? maybe a setting to enable/disable them or make them non-important? (see ttyd pit 100 trials)
@@ -169,6 +187,7 @@ ITEMS = {
     # Black vials - they are more like things that are "crafted", you fill them up with the fluid
     # "Ancient One soul": Don't include this one. You get it from killing the girl and she is required for the main ending
 }
+
 
 class FungerItem(Item):
     game = "Fear & Hunger"

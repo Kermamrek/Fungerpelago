@@ -31,8 +31,10 @@ LOCATIONS = {
 class FungerLocation(Location):
     game = "Fear & Hunger"
 
+
 # def get_locations(location_names: list[str]) -> dict[str, int | None]:
-    # return {location_name: LOCATIONS[location_name] for location_name in location_names}
+# return {location_name: LOCATIONS[location_name] for location_name in location_names}
+
 
 def create_all_locations(world: FungerWorld) -> None:
     create_regular_locations(world)

@@ -7,6 +7,7 @@ from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
 # And APQuest example:
 # https://github.com/NewSoupVi/Archipelago/blob/apquest/worlds/apquest/options.py
 
+
 class CharacterChoice(Choice):
     """
     The character you will choose to play as.
