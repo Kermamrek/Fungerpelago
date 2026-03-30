@@ -241,6 +241,64 @@ Rando.itemDoubleCheck = function(){
 	})
 }
 
+fungerRandomizeItem = function(itemType) {
+	// The common events listed are only for reference, since this function replaces them more or less
+	switch(itemType){
+		// Random Minor Item - Common Event 23
+		case 5001:
+			break;
+		// Random Minor Book - Common Event 25
+		case 5002:
+			break;
+		// Random Rare Book - Common Event 26
+		case 5003:
+			break;
+		// Random Food Item - Common Event 52
+		case 5004:
+			break;
+		// Random Rare Item - Common Event 58
+		case 5005:
+			break;
+		// Random Alchemy - Common Event 68
+		case 5006:
+			break;
+		// Random Good Armor - Common Event 141
+		case 5007:
+			break;
+		// Random Scroll Item - Common Event 149
+		case 5008:
+			break;
+		// Random Rare Book (Ancient) - Common Event 178
+		case 5009:
+			break;
+		// Random Minor Book (Ancient) - Common Event 179
+		case 5010:
+			break;
+		// Random Weapon - Common Event 238
+		case 5011:
+			break;
+		// Random Minor Weapon - Common Event 239
+		case 5012:
+			break;
+		// case 5013:
+			// break;
+		// Guard Loot - Common Event 253
+		case 5014:
+			break;
+		// Lizardman Loot - Common Event 254
+		case 5015:
+			break;
+		// Lord of Flies Loot - Common Event 255
+		case 5016:
+			break;
+		// Yellow Mage Loot - Common Event 256
+		case 5017:
+			break;
+		default:
+			break;
+	}
+	// TODO: after switch is resolved, run check for items again somehow? is it possible or will the code have to be copied here?
+}
 
 foundLocations = []
 
