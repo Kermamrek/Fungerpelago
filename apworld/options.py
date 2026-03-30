@@ -63,16 +63,6 @@ class EndingChoice(Choice):
     default = option_ending_a
 
 
-class StartDash(Toggle):
-    """
-    Dash is a skill that allows you to run faster.
-    Characters can start with it, but you need to know the options to pick at the start of the game.
-    This option ensures you have dash at the start of the game, by auto-picking the option for you.
-    """
-
-    display_name = "Always Pick Dash"
-
-
 class SkipCoinFlip(Toggle):
     """
     If an APItem is sent to you that would trigger a coin flip (bookshelf loot, etc), this option
@@ -90,7 +80,6 @@ class FungerOptions(PerGameCommonOptions):
     character: CharacterChoice
     difficulty: DifficultyChoice
     ending: EndingChoice
-    start_with_dash: StartDash
     skip_coin_flip: SkipCoinFlip
 
 
@@ -98,10 +87,6 @@ option_groups = [
     OptionGroup(
         "Important Gameplay Options",
         [CharacterChoice, DifficultyChoice, EndingChoice],
-    ),
-    OptionGroup(
-        "Other Gameplay Options",
-        [StartDash],
     ),
     OptionGroup(
         "Quality of Life",
@@ -112,16 +97,14 @@ option_groups = [
 option_presets = {
     "Recommended": {
         "character": CharacterChoice.option_mercenary,
-        "difficulty": DifficultyChoice.option_fear_and_hunger,
+        "difficulty": DifficultyChoice.option_terror_and_starvation,
         "ending": EndingChoice.option_ending_a,
-        "start_with_dash": True,
         "skip_coin_flip": False,
     },
     "Vanilla": {
         "character": CharacterChoice.option_mercenary,
         "difficulty": DifficultyChoice.option_fear_and_hunger,
         "ending": EndingChoice.option_ending_any,
-        "start_with_dash": False,
         "skip_coin_flip": False,
     },
 }
