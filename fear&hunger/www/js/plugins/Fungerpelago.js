@@ -241,8 +241,20 @@ Rando.itemDoubleCheck = function(){
 	})
 }
 
+getRand = function(drop, max) {
+	return Math.floor(drop * max) + 1
+}
+
 fungerRandomizeItem = function(itemType) {
 	// The common events listed are only for reference, since this function replaces them more or less
+
+	// TODO: make seeded randomizer with this var, the seed for archipelago is client.room.seedName
+	// AFAIK javascript does not have a seeded random. https://github.com/davidbau/seedrandom does what we want,
+	// but need to double check license to see if using it would create license diffs
+
+	rng = new Math.seedrandom(client.room.seedName);
+	drop = rng();
+
 	switch(itemType){
 		// Random Minor Item - Common Event 23
 		case 5001:
