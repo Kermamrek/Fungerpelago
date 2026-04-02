@@ -2,6 +2,7 @@
 fear&hunger/**/*.*
 !fear&hunger/www/js/libs/archipelago.js
 !fear&hunger/www/js/libs/archipelago-global-export.js
+!fear&hunger/www/js/libs/seedrandom.js
 !fear&hunger/www/js/plugins/Fungerpelago.js
 !fear&hunger/www/js/plugins.js
 !fear&hunger/www/index.html
