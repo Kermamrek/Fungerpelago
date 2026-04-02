@@ -10,6 +10,11 @@ const sendListVarID = 414; //outgoing item names are pushed to this variable to 
 const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event itemGetEventID.
 const runItemSendSwitchID = 3585; //same
 
+/* 5 Tinderboxes, Cloth Fragment, Glass Vial, Tobacco, Pipe, Opium Powder (50% fail), Bottle of Whiskey (50% fail),  
+
+*/
+const randomMinorItems = []
+
 // switchName = { //if you want a check to flip a switch, put it in here
 // 	362: "OpenPhrase123",
 // 	363: "test2"
@@ -242,7 +247,7 @@ Rando.itemDoubleCheck = function(){
 }
 
 getRand = function(drop, max) {
-	return Math.floor(drop * max) + 1
+	return Math.floor(drop * max) + 1;
 }
 
 fungerRandomizeItem = function(itemType) {
@@ -254,11 +259,49 @@ fungerRandomizeItem = function(itemType) {
 
 	rng = new Math.seedrandom(client.room.seedName);
 	drop = rng();
+	roll = 0;
+	itemResult = 0;
 
 	switch(itemType){
 		// Random Minor Item - Common Event 23
 		case 5001:
-			break;
+			// First we go through the items that have "better odds" under certain conditions
+			// "Cloth Fragment Would Be Nice" - run common event 214 here somehow?
+			if ($gameSwitches._data[2064]) {
+				roll = getRand(drop, 5);
+				if (roll != 1) {
+					itemResult = 2;
+					break;
+				}
+				// "White Vial Would Be Nice" - run common event 215 here somehow?
+			} else if ($gameSwitches._data[2066]) {
+				roll = getRand(drop, 5);
+				if (roll != 1) {
+					itemResult = 25;
+					break;
+				}
+				// "Torch Would Be Nice" - run common event 219 here somehow?
+			} else if ($gameSwitches._data[3175]) {
+				roll = getRand(drop, 2);
+				if (roll != 1) {
+					itemResult = 46;
+					break;
+				}
+			}
+			// End of "Better odds" items
+			while (itemResult == 0) {
+				roll = getRand(drop, 48);
+				// Some items have "worse odds", coin flip for those here
+
+				switch(roll){
+					case 6:
+						roll = getRand(drop, 2);
+						if (roll == 1) {
+							break;
+						}
+				}
+				break;
+			}
 		// Random Minor Book - Common Event 25
 		case 5002:
 			break;
