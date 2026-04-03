@@ -21,13 +21,16 @@ class LocationData:
 
 @dataclass
 class RegionData:
-    locations: dict[str, LocationData]
+    name: str
+    locations: dict[str, LocationData] | None = None
+    variants: dict[str, dict[str, LocationData]] | None = None
     connections: list[str] = field(default_factory=list)
 
 
-REGIONS = {
-    "Fortress": RegionData(
-        {
+REGIONS = [
+    RegionData(
+        "Fortress",
+        locations={
             "Bottom Right Crate": LocationData("Random Minor Item"),
             "Right Crate (Left)": LocationData("Random Minor Item"),
             "Right Crate (Top)": LocationData("Random Minor Item"),
@@ -36,16 +39,25 @@ REGIONS = {
             "Left Barrel (Left)": LocationData("Random Food Item"),
             "Left Barrel (Right)": LocationData("Random Food Item"),
         },
-        ["Level 1: Left Entrance"],
+        connections=["Level 1 - Stairway"],
     ),
-    "Level 1: Left Entrance": RegionData(
-        {
+    RegionData(
+        "Level 1 - Stairway",
+        locations={
             "Entrance Barrel (Left)": LocationData("Random Food Item"),
             "Entrance Barrel (Right)": LocationData("Random Food Item"),
             "Dried Mushroom (Left Entrance)": LocationData("Dried mushroom"),
-        }
+        },
+        connections=["Level 2 - Basement"],
     ),
-}
+    RegionData(
+        "Level 2 - Basement",
+        variants={
+            "A": {},
+            "B": {},
+        },
+    ),
+]
 
 
 class FungerLocation(Location):

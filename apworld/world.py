@@ -29,14 +29,14 @@ class FungerWorld(World):
     options_dataclass = FungerOptions
     options: FungerOptions
 
-    # ruff: disable[RUF012]
-    location_name_to_id = {
-        location_name: location_data.id
-        for region_data in REGIONS.values()
-        for location_name, location_data in region_data.locations.items()
-    }
-    item_name_to_id = {item_name: item_data.id for item_name, item_data in ITEMS.items()}
-    # ruff: enable[RUF012]
+    location_name_to_id = {}  # noqa: RUF012
+    for region_data in REGIONS:
+        variants = [region_data.locations] if region_data.locations else region_data.variants.values()
+        for locations in variants:
+            for location_name, location_data in locations.items():
+                location_name[location_name] = location_data.id
+
+    item_name_to_id = {item_name: item_data.id for item_name, item_data in ITEMS.items()}  # noqa: RUF012
 
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
@@ -44,15 +44,19 @@ class FungerWorld(World):
     origin_region_name = "Fortress"
 
     def create_regions(self) -> None:
-        regions = [Region(region_name, self.player, self.multiworld) for region_name in REGIONS.keys()]
+        regions = [Region(region_data.name, self.player, self.multiworld) for region_data in REGIONS]
         self.multiworld.regions += regions
 
-        for region_name, region_data in REGIONS.items():
-            region = self.get_region(region_name)
+        for region_data in REGIONS:
+            region = self.get_region(region_data.name)
 
             for to_name in region_data.connections:
                 to_region = self.get_region(to_name)
-                region.connect(to_region, f"{region_name} to {to_name}")
+                region.connect(to_region, f"{region_data.name} to {to_name}")
+
+            if region_data.variants:
+                variant = self.random.choice(list(region_data.variants.keys()))
+                region_data.locations = region_data.variants[variant]
 
             region.add_locations(
                 {location_name: location_data.id for location_name, location_data in region_data.locations.items()}
@@ -66,8 +70,8 @@ class FungerWorld(World):
     def create_items(self) -> None:
         items = [
             self.create_item(location_data.item_name)
-            for region_data in REGIONS.values()
-            for location_data in region_data.values()
+            for region_data in REGIONS
+            for location_data in region_data.locations.values()
         ]
         self.multiworld.itempool += items
 
