@@ -39,7 +39,7 @@ REGIONS = [
             "Left Barrel (Left)": LocationData("Random Food Item"),
             "Left Barrel (Right)": LocationData("Random Food Item"),
         },
-        connections=["Level 1 - Stairway"],
+        connections=["Level 1 - Stairway", "Level 1 - Entrance"],
     ),
     RegionData(
         "Level 1 - Stairway",
@@ -55,6 +55,18 @@ REGIONS = [
         variants={
             "A": {},
             "B": {},
+        },
+        connections=["Flip side - Basement", "Level 3 - Basement"],
+    ),
+    RegionData("Flip side - Basement"),  # TODO: Can only enter once
+    RegionData("Level 3 - Basement"),
+    RegionData(
+        "Level 1 - Entrance",
+        variants={
+            "A": {},
+            "B": {},
+            "C": {},
+            "D": {},
         },
     ),
 ]
