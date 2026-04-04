@@ -9,11 +9,7 @@ const itemListVarID = 413; //incoming item names are pushed to this variable to 
 const sendListVarID = 414; //outgoing item names are pushed to this variable to display in game
 const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event itemGetEventID.
 const runItemSendSwitchID = 3585; //same
-
-/* 5 Tinderboxes, Cloth Fragment, Glass Vial, Tobacco, Pipe, Opium Powder (50% fail), Bottle of Whiskey (50% fail),  
-
-*/
-const randomMinorItems = []
+const randomItemResultID = 415;
 
 // switchName = { //if you want a check to flip a switch, put it in here
 // 	362: "OpenPhrase123",
@@ -243,6 +239,9 @@ Rando.itemDoubleCheck = function(){
 				$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 			}
 		}
+		if (get > 5000){
+			fungerRandomizeItem(get);
+		}
 	})
 }
 
@@ -254,105 +253,102 @@ fungerRandomizeItem = function(itemType) {
 	// The common events listed are only for reference, since this function replaces them more or less
 
 	// TODO: make seeded randomizer with this var, the seed for archipelago is client.room.seedName
-	// AFAIK javascript does not have a seeded random. https://github.com/davidbau/seedrandom does what we want,
-	// but need to double check license to see if using it would create license diffs
+	// Right now the seeded randomizer work is commented out, at some point it will be reintroduced
 
-	rng = new Math.seedrandom(client.room.seedName);
-	drop = rng();
-	roll = 0;
-	itemResult = 0;
+	// rng = new Math.seedrandom(client.room.seedName);
+	// drop = rng();
+	// roll = 0;
+	// itemResult = 0;
 
 	switch(itemType){
 		// Random Minor Item - Common Event 23
 		case 5001:
-			// First we go through the items that have "better odds" under certain conditions
-			// "Cloth Fragment Would Be Nice" - run common event 214 here somehow?
-			if ($gameSwitches._data[2064]) {
-				roll = getRand(drop, 5);
-				if (roll != 1) {
-					itemResult = 2;
-					break;
-				}
-				// "White Vial Would Be Nice" - run common event 215 here somehow?
-			} else if ($gameSwitches._data[2066]) {
-				roll = getRand(drop, 5);
-				if (roll != 1) {
-					itemResult = 25;
-					break;
-				}
-				// "Torch Would Be Nice" - run common event 219 here somehow?
-			} else if ($gameSwitches._data[3175]) {
-				roll = getRand(drop, 2);
-				if (roll != 1) {
-					itemResult = 46;
-					break;
-				}
-			}
-			// End of "Better odds" items
-			while (itemResult == 0) {
-				roll = getRand(drop, 48);
-				// Some items have "worse odds", coin flip for those here
-
-				switch(roll){
-					case 6:
-						roll = getRand(drop, 2);
-						if (roll == 1) {
-							break;
-						}
-				}
-				break;
-			}
+			// This contains the seeded randomizer work as well, copy and paste as needed to other cases, changing the max number
+			// $gameVariables._data[itemListVarID].push(getRand(drop, 48));
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(23);
+			break;
 		// Random Minor Book - Common Event 25
 		case 5002:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(25);
 			break;
 		// Random Rare Book - Common Event 26
 		case 5003:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(26);
 			break;
 		// Random Food Item - Common Event 52
 		case 5004:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(52);
 			break;
 		// Random Rare Item - Common Event 58
 		case 5005:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(58);
 			break;
 		// Random Alchemy - Common Event 68
 		case 5006:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(68);
 			break;
 		// Random Good Armor - Common Event 141
 		case 5007:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(141);
 			break;
 		// Random Scroll Item - Common Event 149
 		case 5008:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(149);
 			break;
 		// Random Rare Book (Ancient) - Common Event 178
 		case 5009:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(178);
 			break;
 		// Random Minor Book (Ancient) - Common Event 179
 		case 5010:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(179);
 			break;
 		// Random Weapon - Common Event 238
 		case 5011:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(238);
 			break;
 		// Random Minor Weapon - Common Event 239
 		case 5012:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(239);
 			break;
 		// case 5013:
 			// break;
 		// Guard Loot - Common Event 253
 		case 5014:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(253);
 			break;
 		// Lizardman Loot - Common Event 254
 		case 5015:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(254);
 			break;
 		// Lord of Flies Loot - Common Event 255
 		case 5016:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(255);
 			break;
 		// Yellow Mage Loot - Common Event 256
 		case 5017:
+			SceneManager.pop();
+			$gameTemp.reserveCommonEvent(256);
 			break;
 		default:
+			console.log("ERROR: FungerRandomizeItem was called with improper ID")
 			break;
 	}
-	// TODO: after switch is resolved, run check for items again somehow? is it possible or will the code have to be copied here?
 }
 
 foundLocations = []
