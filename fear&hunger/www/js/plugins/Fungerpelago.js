@@ -132,6 +132,9 @@ Rando.checkForItems = function(){
 						if (get == 3000){
 							randomItemGet();
 						}
+						if (get > 5000){
+							fungerRandomizeItem(get);
+						}
 						$gameSwitches.setValue(runItemGetSwitchID,true);
 						$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 					} else {
@@ -165,6 +168,9 @@ Rando.checkForItems = function(){
 									$gamePlayer.APItemsReceived[playerId][item.locationId] = false;
 									Rando.itemDoubleCheck();
 								}
+							}
+							if (get > 5000){
+								fungerRandomizeItem(get);
 							}
 					}
 				//}
@@ -265,84 +271,70 @@ fungerRandomizeItem = function(itemType) {
 		case 5001:
 			// This contains the seeded randomizer work as well, copy and paste as needed to other cases, changing the max number
 			// $gameVariables._data[itemListVarID].push(getRand(drop, 48));
-			SceneManager.pop();
+
+			// SceneManager.pop();
 			$gameTemp.reserveCommonEvent(23);
 			break;
 		// Random Minor Book - Common Event 25
 		case 5002:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(25);
 			break;
 		// Random Rare Book - Common Event 26
 		case 5003:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(26);
 			break;
 		// Random Food Item - Common Event 52
 		case 5004:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(52);
 			break;
 		// Random Rare Item - Common Event 58
 		case 5005:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(58);
 			break;
 		// Random Alchemy - Common Event 68
 		case 5006:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(68);
 			break;
 		// Random Good Armor - Common Event 141
 		case 5007:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(141);
 			break;
 		// Random Scroll Item - Common Event 149
 		case 5008:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(149);
 			break;
 		// Random Rare Book (Ancient) - Common Event 178
 		case 5009:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(178);
 			break;
 		// Random Minor Book (Ancient) - Common Event 179
 		case 5010:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(179);
 			break;
 		// Random Weapon - Common Event 238
 		case 5011:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(238);
 			break;
 		// Random Minor Weapon - Common Event 239
 		case 5012:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(239);
 			break;
 		// case 5013:
 			// break;
 		// Guard Loot - Common Event 253
 		case 5014:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(253);
 			break;
 		// Lizardman Loot - Common Event 254
 		case 5015:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(254);
 			break;
 		// Lord of Flies Loot - Common Event 255
 		case 5016:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(255);
 			break;
 		// Yellow Mage Loot - Common Event 256
 		case 5017:
-			SceneManager.pop();
 			$gameTemp.reserveCommonEvent(256);
 			break;
 		default:
@@ -408,13 +400,8 @@ gain = function(item) {//Run this as a script in game with the location name as 
 					$gameParty._receivedItemName = $dataSkills[id - 4000].name;
 					$gameVariables._data[itemListVarID].push($dataSkills[id - 4000].name);
 				}
-				if (id > 5000){//this is for errors I think?? Ask Sawer about it
-					console.log('Archipelago');
-					if (Archipelago[id - 5000]){
-						$gameVariables._data[itemListVarID].push('\\i[193]' + Archipelago[id - 5000].name);
-					} else {
-						$gameVariables._data[itemListVarID].push('\\i[193] Archipelago Item');
-					}
+				if (get > 5000){
+					fungerRandomizeItem(get);
 				}
 				$gameTemp.reserveCommonEvent(itemGetEventID);
 			}
