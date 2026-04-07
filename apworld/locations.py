@@ -53,7 +53,34 @@ REGIONS = [
     RegionData(
         "Level 2 - Basement",
         variants={
-            "A": {},
+            "A": {
+                locations={
+                    "Rune Room Dried Mushroom (West)": LocationData("Dried Mushroom"),
+                    "Rune Room Dried Mushroom (North)": LocationData("Dried Mushroom"),
+                    "Rune Room Dried Mushroom (Northeast)": LocationData("Dried Mushroom"),
+                    "Rune Room Dried Mushroom (East)": LocationData("Dried Mushroom"),
+                    "Hallway Dried Mushroom": LocationData("Dried Mushroom"),
+                    "Miasma": LocationData("Miasma"),
+                    "Rune Room Barrel (1)":  LocationData("Random Food Item"),
+                    "Rune Room Barrel (2)":  LocationData("Random Food Item"),
+                    "Rune Room Barrel (3)":  LocationData("Random Food Item"),
+                    "Rune Room Crate":  LocationData("Random Minor Item"),
+                    "Rune Room Blue Herb":  LocationData("Blue Herb"),
+                    "Rune Room Green Herb":  LocationData("Green Herb"),
+                    "Keg Room Barrel (Left)":  LocationData("Random Food Item"),
+                    "Keg Room Barrel (Right)":  LocationData("Random Food Item"),
+                    # Note: Change the description text/pickup text for this one?
+                    "Keg Room Rotten Meat":  LocationData("Rotten meat"),
+                    "Vertical Hallway Crate (1)":  LocationData("Random Minor Item"),
+                    "Vertical Hallway Crate (2)":  LocationData("Random Minor Item"),
+                    "Vertical Hallway Crate (3)":  LocationData("Random Minor Item"),
+                    "Vertical Hallway Crate (Right)":  LocationData("Random Minor Item"),
+                    "Corpse Pile Hallway Crate":  LocationData("Random Minor Item"),
+                    "Corpse Pile Hallway Barrel (Left)":  LocationData("Random Food Item"),
+                    "Corpse Pile Hallway Barrel (Right)":  LocationData("Random Food Item"),
+                    # TODO: Armour racks/Weapon Racks/the chest are not common events. They have not been added in because of that, fix them first
+                }
+            },
             "B": {},
         },
         connections=["Flip side - Basement", "Level 3 - Basement"],

@@ -155,6 +155,7 @@ ITEMS = {
     "Gnome egg": ItemData(ItemClassification.useful, 2060),
     "Scroll of pyromancy trick": ItemData(ItemClassification.useful, 2159),  # Secret hideout loot
     "Scroll of combustion": ItemData(ItemClassification.useful, 2160),  # Secret hideout loot
+    "Rotten meat": ItemData(ItemClassification.filler | ItemClassification.trap, 2021),
 
     # "Random Blood Magic": Common Event 29 - probably not an item
     # "Greater Blood Magic": Common Event 97 - probably not an item
