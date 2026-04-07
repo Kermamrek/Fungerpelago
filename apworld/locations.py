@@ -94,7 +94,20 @@ REGIONS = [
         #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
         # }
     ),
-    RegionData("Level 3 - Basement"),
+    RegionData(
+        "Level 3 - Basement",
+        locations = {
+
+        },
+        connections=["Level 3 - Prison"],
+        ),
+    RegionData(
+        "Level 3 - Prison",
+        variants={
+            "A": {},
+            "B": {},
+            "C": {},
+        }),
     RegionData(
         "Level 1 - Entrance",
         variants={
