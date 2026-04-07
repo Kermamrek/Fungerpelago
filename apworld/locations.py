@@ -85,7 +85,15 @@ REGIONS = [
         },
         connections=["Flip side - Basement", "Level 3 - Basement"],
     ),
-    RegionData("Flip side - Basement"),  # TODO: Can only enter once
+    RegionData( # TODO: Can only enter once, items not added yet in RPGMaker
+        "Flip side - Basement" #,
+        # locations = {
+        #     "Flipside Basement - Room 3 Barrel (Left)": LocationData("Random Food Item"),
+        #     "Flipside Basement - Room 3 Barrel (Right)": LocationData("Random Food Item"),
+        #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
+        #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
+        # }
+    ),
     RegionData("Level 3 - Basement"),
     RegionData(
         "Level 1 - Entrance",
