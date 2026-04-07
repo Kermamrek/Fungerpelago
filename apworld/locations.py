@@ -58,34 +58,34 @@ REGIONS = [
             "C": {},
             "D": {},
         },
-        connections=["Level 1 - Gallows Courtyard"]
+        connections=["Level 1 - Courtyard"]
     ),
     RegionData(
-        "Level 1 - Gallows Courtyard",
+        "Level 1 - Courtyard",
         variants={
             "A": {},
             "B": {},
         },
-        connections=["Level 1 - Interior"],
+        connections=["Level 1 - Inner hall"],
     ),
     RegionData(
-        "Level 1 - Interior",
+        "Level 1 - Inner hall",
         variants={
             "A": {},
             "B": {},
             "C": {},
         },
-        connections=["Level 2 - Gore Hallway", "Level 1 - Alll-mer Courtyard"],
+        connections=["Level 2 - Blood pit", "Level 1 - Backyard"],
     ),
     RegionData(
-        "Level 1 - Alll-mer Courtyard",
+        "Level 1 - Backyard",
         locations={
 
         },
-        connections=["Level 1 - Tree of the Depths"],
+        connections=["Level 1 - Hidden backyard"],
     ),
     RegionData(
-        "Level 1 - Tree of the Depths",
+        "Level 1 - Hidden backyard",
         locations={
 
         },
@@ -140,10 +140,10 @@ REGIONS = [
         locations = {
 
         },
-        connections=["Level 3 - Prison"],
+        connections=["Level 3 - Prisons"],
         ),
     RegionData(
-        "Level 3 - Prison",
+        "Level 3 - Prisons",
         variants={
             "A": {},
             "B": {},
