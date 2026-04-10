@@ -53,7 +53,38 @@ REGIONS = [
     RegionData(
         "Level 1 - Entrance",
         variants={
-            "A": {},
+            "A": {
+                # List of things that need proper implementation:
+                # Captains Orders/List of Inmates
+                # Do we make the girl a drop or just let the player get her?
+                # Shelf (Glass/Tinderboxes)
+                # Shelf (in kitchen, on right)
+                # Chest
+                # Kitchen Table
+                # Crate that is in the storeroom that has a weird RNG tree
+                # Decide what to do with beds
+                # Bookshelves that aren't the minor bookshelf
+                # Enemies
+                "Entrance Crate (1)":  LocationData("Random Minor Item"),
+                "Entrance Crate (2)":  LocationData("Random Minor Item"),
+                "Entrance Crate (3)":  LocationData("Random Minor Item"),
+                "Entrance Crate (4)":  LocationData("Random Minor Item"),
+                "Storeroom Crate":  LocationData("Random Minor Item"),
+                "Storeroom Shelf":  LocationData("Random Minor Item"),
+                "Storeroom Barrel":  LocationData("Random Food Item"),
+                "Hallway Crate (1)":  LocationData("Random Minor Item"),
+                "Hallway Crate (2)":  LocationData("Random Minor Item"),
+                "Hallway Crate (3)":  LocationData("Random Minor Item"),
+                "Hallway Crate (4)":  LocationData("Random Minor Item"),
+                "Hallway Crate (5)":  LocationData("Random Minor Item"),
+                "Statue Crate":  LocationData("Random Minor Item"),
+                "Hidden Room Barrel (1)":  LocationData("Random Food Item"),
+                "Hidden Room Barrel (2)":  LocationData("Random Food Item"),
+                "Hidden Room Crate":  LocationData("Random Minor Item"),
+                "Library Minor Bookshelf":  LocationData("Random Minor Book"),
+                "Library Mockup Bookshelf":  LocationData("Mockup book"),
+                "Kitchen Shelf (1)":  LocationData("Random Minor Item"),
+            },
             "B": {},
             "C": {},
             "D": {},
