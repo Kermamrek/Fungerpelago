@@ -94,8 +94,18 @@ REGIONS = [
     RegionData(
         "Level 1 - Courtyard",
         variants={
-            "A": {},
-            "B": {},
+            "A": {
+                "Courtyard Green Herb":  LocationData("Green herb"),
+                "Courtyard Blue Herb":  LocationData("Blue herb"),
+                "Courtyard Stick":  LocationData("Green herb"),
+            },
+            "B": {
+                "Courtyard Green Herb":  LocationData("Green herb"),
+                "Courtyard Blue Herb":  LocationData("Blue herb"),
+                "Courtyard Stick":  LocationData("Green herb"),
+                "Courtyard Barrel (1)":  LocationData("Random Food Item"),
+                "Courtyard Barrel (2)":  LocationData("Random Food Item"),
+            },
         },
         connections=["Level 1 - Inner hall"],
     ),
