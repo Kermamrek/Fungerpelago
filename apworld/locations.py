@@ -65,6 +65,7 @@ REGIONS = [
                 # Decide what to do with beds
                 # Bookshelves that aren't the minor bookshelf
                 # Enemies
+                # Meat piles on table
                 "Entrance Crate (1)":  LocationData("Random Minor Item"),
                 "Entrance Crate (2)":  LocationData("Random Minor Item"),
                 "Entrance Crate (3)":  LocationData("Random Minor Item"),
@@ -85,7 +86,38 @@ REGIONS = [
                 "Library Mockup Bookshelf":  LocationData("Mockup book"),
                 "Kitchen Shelf (1)":  LocationData("Random Minor Item"),
             },
-            "B": {},
+            "B": {
+                # List of things that need proper implementation:
+                # Captains Orders/List of Inmates
+                # Do we make the girl a drop or just let the player get her?
+                # Shelf (Glass/Tinderboxes)
+                # Shelf (in kitchen, on right)
+                # Chest
+                # Kitchen Table
+                # Crate that is in the storeroom that has a weird RNG tree
+                # Decide what to do with beds
+                # Bookshelves that aren't the minor bookshelf
+                # Enemies
+                # Meat piles on table
+                "West Hallway Crate (1)":  LocationData("Random Minor Item"),
+                "West Hallway Crate (2)":  LocationData("Random Minor Item"),
+                "West Hallway Crate (3)":  LocationData("Random Minor Item"),
+                "West Hallway Crate (4)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (1)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (2)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (3)":  LocationData("Random Minor Item"),
+                "North Hallway Crate (1)":  LocationData("Random Minor Item"),
+                "North Hallway Crate (2)":  LocationData("Random Minor Item"),
+                "North Hallway Crate (3)":  LocationData("Random Minor Item"),
+                "North Hallway Crate (4)":  LocationData("Random Minor Item"),
+                "North Hallway Barrel":  LocationData("Random Food Item"),
+                "Northeast Hallway Barrel (1)":  LocationData("Random Food Item"),
+                "Northeast Hallway Barrel (2)":  LocationData("Random Food Item"),
+                "Hidden Room Barrel (1)":  LocationData("Random Food Item"),
+                "Hidden Room Barrel (2)":  LocationData("Random Food Item"),
+                "Hidden Room Crate":  LocationData("Random Minor Item"),
+                # Unfinished, haven't done any "rooms" yet
+            },
             "C": {},
             "D": {},
         },
@@ -97,12 +129,12 @@ REGIONS = [
             "A": {
                 "Courtyard Green Herb":  LocationData("Green herb"),
                 "Courtyard Blue Herb":  LocationData("Blue herb"),
-                "Courtyard Stick":  LocationData("Green herb"),
+                "Courtyard Stick":  LocationData("Stick"),
             },
             "B": {
                 "Courtyard Green Herb":  LocationData("Green herb"),
                 "Courtyard Blue Herb":  LocationData("Blue herb"),
-                "Courtyard Stick":  LocationData("Green herb"),
+                "Courtyard Stick":  LocationData("Stick"),
                 "Courtyard Barrel (1)":  LocationData("Random Food Item"),
                 "Courtyard Barrel (2)":  LocationData("Random Food Item"),
             },
@@ -121,14 +153,28 @@ REGIONS = [
     RegionData(
         "Level 1 - Backyard",
         locations={
-
+            "Backyard Stick":  LocationData("Stick"),
+            # Weird huge conditional tree on the dagger but it might not be that relevant?
+            # "Backyard Dagger": LocationData("Dagger"),
+            "Orgy Stick":  LocationData("Stick"),
+            "Orgy Red Herb":  LocationData("Stick"),
+            "Backyard Blue Herb (West)":  LocationData("Blue herb"),
+            "Backyard Blue Herb (East)":  LocationData("Blue herb"),
+            "Backyard Green Herb":  LocationData("Green herb"),
+            "Backyard Barrel (1)":  LocationData("Random Food Item"),
+            "Backyard Barrel (2)":  LocationData("Random Food Item"),
+            "Backyard Barrel (3)":  LocationData("Random Food Item"),
+            "Backyard Crate":  LocationData("Random Minor Item"),
+            "Butterfly Soul":  LocationData("Butterfly soul"),
         },
         connections=["Level 1 - Hidden backyard"],
     ),
     RegionData(
         "Level 1 - Hidden backyard",
         locations={
-
+            # Dog has no loot
+            "Hidden Backyard Stick (1)":  LocationData("Stick"),
+            "Hidden Backyard Stick (2)":  LocationData("Stick"),
         },
         connections=["Tree of the Depths - Thicket Level 1"],
     ),
