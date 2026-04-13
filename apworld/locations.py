@@ -177,7 +177,45 @@ REGIONS = [
                 "Library Minor Bookshelf":  LocationData("Random Minor Book"),
                 "Captain's Crate":  LocationData("Random Minor Item"),
             },
-            "D": {},
+            "D": {
+                # List of things that need proper implementation:
+                # Captains Orders/List of Inmates
+                # Do we make the girl a drop or just let the player get her?
+                # Shelf (Glass/Tinderboxes)
+                # Shelf (in kitchen, on right)
+                # Chest
+                # Kitchen Table
+                # Crate that is in the storeroom that has a weird RNG tree
+                # Decide what to do with beds
+                # Bookshelves that aren't the minor bookshelf
+                # Enemies
+                # Meat piles on table
+                "Book of Fears":  LocationData("Book of Fears"),
+                "Entrance Storeroom Crate (1)":  LocationData("Random Minor Item"),
+                "Entrance Storeroom Crate (2)":  LocationData("Random Minor Item"),
+                "Entrance Storeroom Barrel":  LocationData("Random Food Item"),
+                "Entrance Crate (1)":  LocationData("Random Minor Item"),
+                "Entrance Crate (2)":  LocationData("Random Minor Item"),
+                "Entrance Crate (3)":  LocationData("Random Minor Item"),
+                "Kitchen Crate (1)":  LocationData("Random Minor Item"),
+                "Kitchen Crate (2)":  LocationData("Random Minor Item"),
+                "Kitchen Crate (3)":  LocationData("Random Minor Item"),
+                "Kitchen Barrel (1)":  LocationData("Random Food Item"),
+                "Kitchen Barrel (2)":  LocationData("Random Food Item"),
+                "Storeroom Crate (1)":  LocationData("Random Minor Item"),
+                "Storeroom Barrel":  LocationData("Random Food Item"),
+                "Storeroom Shelf":  LocationData("Random Minor Item"),
+                "Hallway Crate (1)":  LocationData("Random Minor Item"),
+                "Hallway Crate (2)":  LocationData("Random Minor Item"),
+                "North Hallway Shelf":  LocationData("Random Minor Item"),
+                "North Hallway Barrel":  LocationData("Random Food Item"),
+                "Captain's Barrel":  LocationData("Random Food Item"),
+                "Captain's Bookshelf":  LocationData("Random Minor Book"),
+                "Library Mockup Bookshelf":  LocationData("Mockup book"),
+                "Hidden Room Barrel (1)":  LocationData("Random Food Item"),
+                "Hidden Room Barrel (2)":  LocationData("Random Food Item"),
+                "Hidden Room Crate":  LocationData("Random Minor Item"),
+            },
         },
         connections=["Level 1 - Courtyard"]
     ),
