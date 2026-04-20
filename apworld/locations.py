@@ -248,6 +248,7 @@ REGIONS = [
                 # does the human hydra do anything?
                 # Enemies, etc
                 # Should we make the sacrifice a location? (same for the praying and orgy?)
+                # berserk set
                 # Double check to see if anything is missing
 
                 "Rondon Flag (1)":  LocationData("Cloth fragment"),
@@ -261,14 +262,14 @@ REGIONS = [
                 "Library Hallway Crate (1)":  LocationData("Random Minor Item"),
                 "Library Hallway Crate (2)":  LocationData("Random Minor Item"),
                 "Library Hallway Crate (3)":  LocationData("Random Minor Item"),
-                "Library Hallway Barrel":  LocationData("Random Minor Food"),
+                "Library Hallway Barrel":  LocationData("Random Food Item"),
                 "Library Bookshelf (1)":  LocationData("Random Minor Book"),
                 "Library Bookshelf (2)":  LocationData("Random Minor Book"),
                 "Library Bookshelf (3)":  LocationData("Random Minor Book"),
                 "Library Bookshelf (4)":  LocationData("Random Minor Book"),
                 "Book Pages I":  LocationData("Book pages I"),
-                "Torture Hallway Barrel":  LocationData("Random Minor Food"),
-                "Trortur Room Barrel":  LocationData("Random Minor Food"),
+                "Torture Hallway Barrel":  LocationData("Random Food Item"),
+                "Trortur Room Barrel":  LocationData("Random Food Item"),
 
             },
             "B": {
@@ -279,6 +280,7 @@ REGIONS = [
                 # does the human hydra do anything?
                 # Enemies, etc
                 # Should we make the sacrifice a location? (same for the praying and orgy?)
+                # berserk set
                 # Double check to see if anything is missing
 
                 "Rondon Flag (1)":  LocationData("Cloth fragment"),
@@ -290,8 +292,8 @@ REGIONS = [
                 "Hydra Hallway Crate (2)":  LocationData("Random Minor Item"),
                 "Library Hallway Crate (1)":  LocationData("Random Minor Item"),
                 "Library Hallway Crate (2)":  LocationData("Random Minor Item"),
-                "Torture Hallway Barrel":  LocationData("Random Minor Food"),
-                "Trortur Room Barrel":  LocationData("Random Minor Food"),
+                "Torture Hallway Barrel":  LocationData("Random Food Item"),
+                "Trortur Room Barrel":  LocationData("Random Food Item"),
                 "Torture Room Skinning Knife":  LocationData("Skinning knife"),
                 "Torture Room Bonesaw":  LocationData("Bonesaw"),
                 "Trortur Room Skinning Knife":  LocationData("Skinning knife"),
@@ -301,8 +303,42 @@ REGIONS = [
                 "Library Bookshelf (4)":  LocationData("Random Minor Book"),
                 "Library Bookshelf (5)":  LocationData("Random Minor Book"),
                 "Library Bookshelf (6)":  LocationData("Random Minor Book"),
+                "Book Pages I":  LocationData("Book pages I"),
             },
-            "C": {},
+            "C": {
+                # List of things that need proper implementation:
+                # Captain's desk doesn't have conditionals but gives a key and diary at the same time, does this work?
+                # Buckman stuff, not sure if it gives any items though
+                # Bookcase in captain's room and library
+                # does the human hydra do anything?
+                # Enemies, etc
+                # Should we make the sacrifice a location? (same for the praying and orgy?)
+                # berserk set
+                # Double check to see if anything is missing
+                # There's a silent hill 2 reference with the crow here, would it be cool to add a reference if the game is in the server? is SH2 in archipelago?
+                "East Hallway Crate (1)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (2)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (3)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (4)":  LocationData("Random Minor Item"),
+                "East Hallway Crate (5)":  LocationData("Random Minor Item"),
+                "East Hallway Barrel":  LocationData("Random Food Item"),
+                # Second shelf is inaccessible but event still exists
+                "Captain's Inner Room Shelf":  LocationData("Random Minor Item"),
+                "Captain's Inner Room Crate":  LocationData("Random Minor Item"),
+                "Captain's Inner Room Barrel":  LocationData("Random Food Item"),
+                "Library Bookshelf (1)":  LocationData("Random Minor Book"),
+                "Library Bookshelf (2)":  LocationData("Random Minor Book"),
+                "Library Bookshelf (3)":  LocationData("Random Minor Book"),
+                "Library Bookshelf (4)":  LocationData("Random Minor Book"),
+                "Library Bookshelf (5)":  LocationData("Random Minor Book"),
+                "Library Bookshelf (6)":  LocationData("Random Minor Book"),
+                "Book Pages I":  LocationData("Book pages I"),
+                "Iron Maiden Room Crate (1)":  LocationData("Random Minor Item"),
+                "Iron Maiden Room Crate (2)":  LocationData("Random Minor Item"),
+                "Torture Room Bonesaw":  LocationData("Bonesaw"),
+                "Torture Room Skinning Knife":  LocationData("Skinning knife"),
+                "Trortur Room Skinning Knife":  LocationData("Skinning knife"),
+            },
         },
         connections=["Level 2 - Blood pit", "Level 1 - Backyard"],
     ),
