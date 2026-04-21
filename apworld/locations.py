@@ -250,7 +250,7 @@ REGIONS = [
                 # Should we make the sacrifice a location? (same for the praying and orgy?)
                 # berserk set
                 # Double check to see if anything is missing
-
+                # CHANGE SCROLL HINT BOOKS
                 "Rondon Flag (1)":  LocationData("Cloth fragment"),
                 "Rondon Flag (2)":  LocationData("Cloth fragment"),
                 "Captain's Inner Room Shelf (1)":  LocationData("Random Minor Item"),
@@ -282,7 +282,7 @@ REGIONS = [
                 # Should we make the sacrifice a location? (same for the praying and orgy?)
                 # berserk set
                 # Double check to see if anything is missing
-
+                # CHANGE SCROLL HINT BOOKS
                 "Rondon Flag (1)":  LocationData("Cloth fragment"),
                 "Rondon Flag (2)":  LocationData("Cloth fragment"),
                 "Sacrifice Room Bookshelf (1)":  LocationData("Random Minor Book"),
@@ -316,6 +316,7 @@ REGIONS = [
                 # berserk set
                 # Double check to see if anything is missing
                 # There's a silent hill 2 reference with the crow here, would it be cool to add a reference if the game is in the server? is SH2 in archipelago?
+                # CHANGE SCROLL HINT BOOKS
                 "East Hallway Crate (1)":  LocationData("Random Minor Item"),
                 "East Hallway Crate (2)":  LocationData("Random Minor Item"),
                 "East Hallway Crate (3)":  LocationData("Random Minor Item"),
@@ -447,7 +448,44 @@ REGIONS = [
     RegionData(
         "Level 3 - Basement",
         locations = {
+            # List of things that need proper implementation:
+            # Shakespeare drops, and the bed crow mauler drop?
+            # Bed
+            # Armory room is completely untouched due to everything being complicated
+            # I noticed the "miasma spots" here, I don't fully know how they work, do they need to be reworked?
 
+            # Even though there are three crates in this room, they all share the same switch?
+            "Moss Room Crate":  LocationData("Random Minor Item"),
+            "Moss Room Barrel (1)":  LocationData("Random Food Item"),
+            "Moss Room Barrel (2)":  LocationData("Random Food Item"),
+            "Moss Room Barrel (3)":  LocationData("Random Food Item"),
+            "Moss Room Dried Mushroom": LocationData("Dried Mushroom"),
+            "Shakespeare Room Dried Mushroom (1)": LocationData("Dried Mushroom"),
+            "Shakespeare Room Dried Mushroom (2)": LocationData("Dried Mushroom"),
+            "Shakespeare Room Dried Mushroom (3)": LocationData("Dried Mushroom"),
+            "Shakespeare Room Dried Mushroom (4)": LocationData("Dried Mushroom"),
+            "Shakespeare Room Barrel (1)": LocationData("Random Food Item"),
+            "Shakespeare Room Barrel (2)": LocationData("Random Food Item"),
+            "Shakespeare Room Barrel (3)": LocationData("Random Food Item"),
+            "Shakespeare Room Barrel (4)": LocationData("Random Food Item"),
+            "Shakespeare Room Barrel (5)": LocationData("Random Food Item"),
+            "Shakespeare Room Barrel (6)": LocationData("Random Food Item"),
+            "Shakespeare Room Crate (1)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (2)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (3)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (4)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (5)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (6)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (7)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (8)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (9)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (10)": LocationData("Random Minor Item"),
+            "Shakespeare Room Crate (11)": LocationData("Random Minor Item"),
+            "Shakespeare Room Blue Herb": LocationData("Blue herb"),
+            "Shakespeare Room Red Herb": LocationData("Red herb"),
+            "Maiden Statue Barrel": LocationData("Random Food Item"),
+            "North Room Crate (1)": LocationData("Random Minor Item"),
+            "North Room Crate (2)": LocationData("Random Minor Item"),
         },
         connections=["Level 3 - Prisons"],
         ),
