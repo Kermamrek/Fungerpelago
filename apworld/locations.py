@@ -489,13 +489,13 @@ REGIONS = [
         },
         connections=["Level 3 - Prisons"],
         ),
-    RegionData(
-        "Level 3 - Prisons",
-        variants={
-            "A": {},
-            "B": {},
-            "C": {},
-        }),
+    # RegionData(
+    #     "Level 3 - Prisons",
+    #     variants={
+    #         "A": {},
+    #         "B": {},
+    #         "C": {},
+    #     }),
 ]
 
 
