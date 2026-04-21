@@ -489,13 +489,34 @@ REGIONS = [
         },
         connections=["Level 3 - Prisons"],
         ),
-    # RegionData(
-    #     "Level 3 - Prisons",
-    #     variants={
-    #         "A": {},
-    #         "B": {},
-    #         "C": {},
-    #     }),
+    RegionData(
+        "Level 3 - Prisons",
+        variants={
+            "A": {
+                # List of things that need proper implementation:
+                # beds
+                # enemies
+                # what is the weird passageway that is blocked off by rocks?
+                # chest
+                "Cell Secret Crate (1)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (2)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (3)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (4)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (5)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (6)": LocationData("Random Minor Item"),
+                "Cell Secret Barrel (1)": LocationData("Random Food Item"),
+                "Cell Secret Barrel (2)": LocationData("Random Food Item"),
+                "Prison Crate (1)": LocationData("Random Minor Item"),
+                "Prison Crate (2)": LocationData("Random Minor Item"),
+                "Prison Crate (3)": LocationData("Random Minor Item"),
+                "Prison Crate (4)": LocationData("Random Minor Item"),
+                "Prison Barrel (1)": LocationData("Random Food Item"),
+                "Prison Barrel (2)": LocationData("Random Food Item"),
+                # do captains room
+            },
+            "B": {},
+            "C": {},
+        }),
 ]
 
 
