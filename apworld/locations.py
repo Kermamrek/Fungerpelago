@@ -498,6 +498,9 @@ REGIONS = [
                 # enemies
                 # what is the weird passageway that is blocked off by rocks?
                 # chest
+                # random rare book on the table
+                # check back stairwell, haven't added those in yet because its evented a bit weird
+                # doll
                 "Cell Secret Crate (1)": LocationData("Random Minor Item"),
                 "Cell Secret Crate (2)": LocationData("Random Minor Item"),
                 "Cell Secret Crate (3)": LocationData("Random Minor Item"),
@@ -512,10 +515,99 @@ REGIONS = [
                 "Prison Crate (4)": LocationData("Random Minor Item"),
                 "Prison Barrel (1)": LocationData("Random Food Item"),
                 "Prison Barrel (2)": LocationData("Random Food Item"),
-                # do captains room
+                "Prison Captain's Barrel (1)": LocationData("Random Food Item"),
+                "Prison Captain's Barrel (2)": LocationData("Random Food Item"),
+                "Prison Captain's Barrel (3)": LocationData("Random Food Item"),
+                "Prison Captain's Barrel (4)": LocationData("Random Food Item"),
+                "Prison Captain's Barrel (5)": LocationData("Random Food Item"),
+                "Prison Captain's Crate (1)": LocationData("Random Minor Item"),
+                "Prison Captain's Crate (2)": LocationData("Random Minor Item"),
+                "Prison Captain's Crate (3)": LocationData("Random Minor Item"),
+                "Prison Captain's Crate (4)": LocationData("Random Minor Item"),
+                "Prison Captain's Crate (5)": LocationData("Random Minor Item"),
+                "Prison Captain's Shelf (1)": LocationData("Random Minor Item"),
+                "Prison Captain's Shelf (2)": LocationData("Random Minor Item"),
+                "Prison Captain's Diary": LocationData("Captain's diary 2"),
+                "Prison Rondon Flag (1)":  LocationData("Cloth fragment"),
+                "Prison Rondon Flag (2)":  LocationData("Cloth fragment"),
             },
-            "B": {},
-            "C": {},
+            "B": {
+                # List of things that need proper implementation:
+                # beds
+                # enemies
+                # what is the weird passageway that is blocked off by rocks?
+                # chest
+                # random rare book on the table
+                # check back stairwell, haven't added those in yet because its evented a bit weird
+                # doll
+
+                "Cell Secret Crate (1)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (2)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (3)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (4)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (5)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (6)": LocationData("Random Minor Item"),
+                "Cell Secret Barrel (1)": LocationData("Random Food Item"),
+                "Cell Secret Barrel (2)": LocationData("Random Food Item"),
+                "Prison Crate (1)": LocationData("Random Minor Item"),
+                "Prison Crate (2)": LocationData("Random Minor Item"),
+                "Prison Crate (3)": LocationData("Random Minor Item"),
+                "Prison Crate (4)": LocationData("Random Minor Item"),
+                "Prison Crate (5)": LocationData("Random Minor Item"),
+                "Prison Crate (6)": LocationData("Random Minor Item"),
+                "Prison Crate (7)": LocationData("Random Minor Item"),
+                "Prison Barrel (1)": LocationData("Random Food Item"),
+                "Prison Barrel (2)": LocationData("Random Food Item"),
+                "Prison Storeroom Crate (1)": LocationData("Random Minor Item"),
+                "Prison Storeroom Crate (2)": LocationData("Random Minor Item"),
+                "Prison Storeroom Crate (3)": LocationData("Random Minor Item"),
+                "Prison Storeroom Crate (4)": LocationData("Random Minor Item"),
+                "Prison Storeroom Crate (5)": LocationData("Random Minor Item"),
+                "Prison Storeroom Crate (6)": LocationData("Random Minor Item"),
+                "Prison Storeroom Crate (7)": LocationData("Random Minor Item"),
+                "Prison Storeroom Barrel (1)": LocationData("Random Food Item"),
+                "Prison Storeroom Barrel (2)": LocationData("Random Food Item"),
+                "Prison Captain's Crate (1)": LocationData("Random Minor Item"),
+                "Prison Captain's Crate (2)": LocationData("Random Minor Item"),
+                "Prison Captain's Shelf (1)": LocationData("Random Minor Item"),
+                "Prison Captain's Shelf (2)": LocationData("Random Minor Item"),
+                "Prison Captain's Diary": LocationData("Captain's diary 2"),
+            },
+            "C": {
+                # List of things that need proper implementation:
+                # beds
+                # enemies
+                # what is the weird passageway that is blocked off by rocks?
+                # chest
+                # random rare book on the table
+                # check back stairwell, haven't added those in yet because its evented a bit weird
+                # doll
+
+                # the hidden cell in this variant has a weird/glitchy looking inaccessible crate and barrel? haven't added it yet, check to see if you can get it
+                "Cell Secret Crate (1)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (2)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (3)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (4)": LocationData("Random Minor Item"),
+                "Cell Secret Crate (5)": LocationData("Random Minor Item"),
+                "Cell Secret Barrel (1)": LocationData("Random Food Item"),
+                "Cell Secret Barrel (2)": LocationData("Random Food Item"),
+                "Prison Captain's Crate (1)": LocationData("Random Minor Item"),
+                "Prison Captain's Crate (2)": LocationData("Random Minor Item"),
+                "Prison Captain's Shelf (1)": LocationData("Random Minor Item"),
+                "Prison Captain's Shelf (2)": LocationData("Random Minor Item"),
+                "Prison Captain's Diary": LocationData("Captain's diary 2"),
+                "Prison Crate (1)": LocationData("Random Minor Item"),
+                "Prison Crate (2)": LocationData("Random Minor Item"),
+                "Prison Crate (3)": LocationData("Random Minor Item"),
+                "Prison Crate (4)": LocationData("Random Minor Item"),
+                "Prison Crate (5)": LocationData("Random Minor Item"),
+                "Prison Crate (6)": LocationData("Random Minor Item"),
+                "Prison Barrel (1)": LocationData("Random Food Item"),
+                "Prison Barrel (2)": LocationData("Random Food Item"),
+                "Prison Barrel (3)": LocationData("Random Food Item"),
+                "Prison Barrel (4)": LocationData("Random Food Item"),
+                "Prison Barrel (5)": LocationData("Random Food Item"),
+            },
         }),
 ]
 
