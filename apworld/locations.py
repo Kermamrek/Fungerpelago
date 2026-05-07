@@ -368,7 +368,68 @@ REGIONS = [
             "Hidden Backyard Stick (1)": LocationData("Stick"),
             "Hidden Backyard Stick (2)": LocationData("Stick"),
         },
-        connections=["Tree of the Depths - Thicket Level 1"],
+        connections=["Level 2 - Thicket"],
+    ),
+    RegionData(
+        "Level 2 - Thicket",
+        locations={
+            # Chest needs to be implemented. variants as well
+        },
+        connections=["Level 3 - Thicket"],
+    ),
+    RegionData(
+        "Level 3 - Thicket",
+        variants={
+            # Chests and enemies needs to be implemented
+            "A": {
+                "West Branch Urn (1)": LocationData("Random Minor Item"),
+                "West Branch Urn (2)": LocationData("Random Minor Item"),
+                "East Branch Urn (1)": LocationData("Random Minor Item"),
+                "East Branch Urn (2)": LocationData("Random Minor Item"),
+                "Thicket Lucky Coin": LocationData("Lucky coin"),
+            },
+            "B": {
+                "West Branch Urn (1)": LocationData("Random Minor Item"),
+                "West Branch Urn (2)": LocationData("Random Minor Item"),
+                "North Branch Urn (1)": LocationData("Random Minor Item"),
+                "North Branch Urn (2)": LocationData("Random Minor Item"),
+                "Thicket Lucky Coin": LocationData("Lucky coin"),
+            },
+            # "C": {
+            #     # not in use?
+            #     "West Branch Urn (1)": LocationData("Random Minor Item"),
+            #     "West Branch Urn (2)": LocationData("Random Minor Item"),
+            #     "North Branch Urn (1)": LocationData("Random Minor Item"),
+            #     "North Branch Urn (2)": LocationData("Random Minor Item"),
+            # },
+        },
+        connections=["Level 4 - Thicket"],
+    ),
+    RegionData(
+        "Level 4 - Thicket",
+        variants={
+            "A": {
+                # Chests, sword and enemies needs to be implemented
+                "East Branch Urn (1)": LocationData("Random Minor Item"),
+                "East Branch Urn (2)": LocationData("Random Minor Item"),
+                # Soul stone can be made inaccessible by failing coin flip?
+                "Thicket Soul Stone": LocationData("Soul stone"),
+                "Center Branch Urn": LocationData("Random Minor Item"),
+                "South Branch Urn": LocationData("Random Minor Item"),
+            },
+            "B": {
+                # Chests, sword and enemies needs to be implemented
+                "East Branch Urn (1)": LocationData("Random Minor Item"),
+                "East Branch Urn (2)": LocationData("Random Minor Item"),
+                # Soul stone can be made inaccessible by failing coin flip?
+                "Thicket Soul Stone": LocationData("Soul stone"),
+                "Center Branch Urn": LocationData("Random Minor Item"),
+                "South Branch Urn": LocationData("Random Minor Item"),
+                "West Branch Urn": LocationData("Random Minor Item"),
+            },
+            # Thicket C exists but again isn't used?
+        },
+        connections=["Tree of the Depths - Thicket Level 3"],
     ),
     RegionData(
         "Level 2 - Basement",
