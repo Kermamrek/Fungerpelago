@@ -340,7 +340,8 @@ REGIONS = [
                 "Trortur Room Skinning Knife": LocationData("Skinning knife"),
             },
         },
-        connections=["Level 2 - Blood pit", "Level 1 - Backyard"],
+        connections=["Level 1 - Backyard"],
+        # Add level 2- blood pit when added
     ),
     RegionData(
         "Level 1 - Backyard",
@@ -368,15 +369,16 @@ REGIONS = [
             "Hidden Backyard Stick (1)": LocationData("Stick"),
             "Hidden Backyard Stick (2)": LocationData("Stick"),
         },
-        connections=["Level 2 - Thicket"],
-    ),
-    RegionData(
-        "Level 2 - Thicket",
-        locations={
-            # Chest needs to be implemented. variants as well
-        },
         connections=["Level 3 - Thicket"],
+        # CHANGE TO LEVEL 2 THICKET WHEN CHEST IMPLEMENTED
     ),
+    # RegionData(
+    #     "Level 2 - Thicket",
+    #     locations={
+    #         # Chest needs to be implemented. variants as well
+    #     },
+    #     connections=["Level 3 - Thicket"],
+    # ),
     RegionData(
         "Level 3 - Thicket",
         variants={
@@ -429,7 +431,7 @@ REGIONS = [
             },
             # Thicket C exists but again isn't used?
         },
-        connections=["Tree of the Depths - Thicket Level 3"],
+        #connections=["Tree of the Depths - Thicket Level 3"],
     ),
     RegionData(
         "Level 2 - Basement",
@@ -490,17 +492,18 @@ REGIONS = [
                 # TODO: Armour racks/Weapon Racks/the chest are not common events. They have not been added in because of that, fix them first
             },
         },
-        connections=["Flip side - Basement", "Level 3 - Basement"],
+        connections=["Level 3 - Basement"],
+        # Add flip side basement
     ),
-    RegionData(  # TODO: Can only enter once, items not added yet in RPGMaker
-        "Flip side - Basement"  # ,
-        # locations = {
-        #     "Flipside Basement - Room 3 Barrel (Left)": LocationData("Random Food Item"),
-        #     "Flipside Basement - Room 3 Barrel (Right)": LocationData("Random Food Item"),
-        #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
-        #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
-        # }
-    ),
+    # RegionData(  # TODO: Can only enter once, items not added yet in RPGMaker
+    #     "Flip side - Basement"  # ,
+    #     # locations = {
+    #     #     "Flipside Basement - Room 3 Barrel (Left)": LocationData("Random Food Item"),
+    #     #     "Flipside Basement - Room 3 Barrel (Right)": LocationData("Random Food Item"),
+    #     #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
+    #     #     "Flipside Basement - Room 5 Crate (Left)": LocationData("Random Minor Item"),
+    #     # }
+    # ),
     RegionData(
         "Level 3 - Basement",
         locations={

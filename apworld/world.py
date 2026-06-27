@@ -34,7 +34,7 @@ class FungerWorld(World):
         variants = [region_data.locations] if region_data.locations else region_data.variants.values()
         for locations in variants:
             for location_name, location_data in locations.items():
-                location_name[location_name] = location_data.id
+                location_name_to_id[location_name] = location_data.id
 
     item_name_to_id = {item_name: item_data.id for item_name, item_data in ITEMS.items()}  # noqa: RUF012
 

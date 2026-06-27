@@ -156,10 +156,10 @@ ITEMS = {
     "Scroll of pyromancy trick": ItemData(ItemClassification.useful, 2159),  # Secret hideout loot
     "Scroll of combustion": ItemData(ItemClassification.useful, 2160),  # Secret hideout loot
     "Rotten meat": ItemData(ItemClassification.filler | ItemClassification.trap, 2021),
+    "Cloth fragment": ItemData(ItemClassification.useful | ItemClassification.filler, 2008),
 
     # "Random Blood Magic": Common Event 29 - probably not an item
     # "Greater Blood Magic": Common Event 97 - probably not an item
-    # "Cloth Fragment": You can get these from every bed, should these be APItems? maybe a setting to enable/disable them or make them non-important? (see ttyd pit 100 trials)
     # "Captain's diary 1 (3)": odd one, look at item 0032- same name but different diary entry
     # "Eclipse talisman": # Talk to a yellow mage, but can be done multiple times... should this be in?
     # S ending items... Spirit Anchor, King's crown, etc
