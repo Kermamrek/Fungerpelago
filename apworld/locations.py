@@ -431,7 +431,7 @@ REGIONS = [
             },
             # Thicket C exists but again isn't used?
         },
-        #connections=["Tree of the Depths - Thicket Level 3"],
+        # connections=["Tree of the Depths - Thicket Level 3"],
     ),
     RegionData(
         "Level 2 - Basement",
@@ -586,8 +586,8 @@ REGIONS = [
                 "Prison Captain's Shelf (1)": LocationData("Random Minor Item"),
                 "Prison Captain's Shelf (2)": LocationData("Random Minor Item"),
                 "Prison Captain's Diary": LocationData("Captain's diary 2"),
-                "Prison Rondon Flag (1)":  LocationData("Cloth fragment"),
-                "Prison Rondon Flag (2)":  LocationData("Cloth fragment"),
+                "Prison Rondon Flag (1)": LocationData("Cloth fragment"),
+                "Prison Rondon Flag (2)": LocationData("Cloth fragment"),
             },
             "B": {
                 # List of things that need proper implementation:
@@ -598,7 +598,6 @@ REGIONS = [
                 # random rare book on the table
                 # check back stairwell, haven't added those in yet because its evented a bit weird
                 # doll
-
                 "Cell Secret Crate (1)": LocationData("Random Minor Item"),
                 "Cell Secret Crate (2)": LocationData("Random Minor Item"),
                 "Cell Secret Crate (3)": LocationData("Random Minor Item"),
@@ -640,7 +639,6 @@ REGIONS = [
                 # random rare book on the table
                 # check back stairwell, haven't added those in yet because its evented a bit weird
                 # doll
-
                 # the hidden cell in this variant has a weird/glitchy looking inaccessible crate and barrel? haven't added it yet, check to see if you can get it
                 "Cell Secret Crate (1)": LocationData("Random Minor Item"),
                 "Cell Secret Crate (2)": LocationData("Random Minor Item"),
@@ -666,7 +664,8 @@ REGIONS = [
                 "Prison Barrel (4)": LocationData("Random Food Item"),
                 "Prison Barrel (5)": LocationData("Random Food Item"),
             },
-        }),
+        },
+    ),
 ]
 
 

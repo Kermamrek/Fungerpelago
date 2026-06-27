@@ -31,10 +31,13 @@ class FungerWorld(World):
 
     location_name_to_id = {}  # noqa: RUF012
     for region_data in REGIONS:
-        variants = [region_data.locations] if region_data.locations else region_data.variants.values()
-        for locations in variants:
-            for location_name, location_data in locations.items():
-                location_name_to_id[location_name] = location_data.id
+        if region_data.locations:
+            for location_name, location_data in region_data.locations.items():
+                location_name_to_id[f"{region_data.name}: {location_name}"] = location_data.id
+        else:
+            for variant_name, locations in region_data.variants.items():
+                for location_name, location_data in locations:
+                    location_name_to_id[f"{region_data.name} ({variant_name}): {location_name}"] = location_data.id
 
     item_name_to_id = {item_name: item_data.id for item_name, item_data in ITEMS.items()}  # noqa: RUF012
 
@@ -54,12 +57,17 @@ class FungerWorld(World):
                 to_region = self.get_region(to_name)
                 region.connect(to_region, f"{region_data.name} to {to_name}")
 
+            region_name = region_data.name
             if region_data.variants:
                 variant = self.random.choice(list(region_data.variants.keys()))
                 region_data.locations = region_data.variants[variant]
+                region_name = f"{region_data.name} ({variant})"
 
             region.add_locations(
-                {location_name: location_data.id for location_name, location_data in region_data.locations.items()}
+                {
+                    f"{region_name}: {location_name}": location_data.id
+                    for location_name, location_data in region_data.locations.items()
+                }
             )
 
         # create_events(self)
