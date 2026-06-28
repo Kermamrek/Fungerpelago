@@ -679,18 +679,23 @@ REGIONS = [
         connections=["level7_A"],
     ),
     RegionData(
-        "Staircase",
-        variants={
-            "A": {
-
-            },
-            "B": {
-
-            },
-            "C": {
-
-            },
+        "level7_A",
+        locations={
+            # Enemies need to be added still
+            # Enki is here, not sure if stuff needs to be done with him
+            # Legarde is also here, I don't think he should be a check as it could make beating certain endings incredibly easy
+            # The book of enlightenment does not work on hard mode. Maybe add an alternate use to it? Can we make it able to give archipelago hints?
+            "Staircase Crate": LocationData("Random Minor Item"),
+            "Entry Room Crate (1)": LocationData("Random Minor Item"),
+            "Entry Room Crate (2)": LocationData("Random Minor Item"),
+            "Entry Room Barrel": LocationData("Random Food Item"),
+            "Enki Room Book of Enlightenment": LocationData("Book of enlightenment"),
+            "West Hallway Crate": LocationData("Random Minor Item"),
+            "West Hallway Barrel": LocationData("Random Food Item"),
+            "East Hallway Barrel (1)": LocationData("Random Food Item"),
+            "East Hallway Barrel (2)": LocationData("Random Food Item"),
         },
+        connections=["Ancient_tomb"],
     ),
 ]
 
