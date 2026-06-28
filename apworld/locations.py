@@ -719,6 +719,27 @@ REGIONS = [
             "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
         },
     ),
+    RegionData(
+        "Mahabre_tomb",
+        locations={
+            # Chest and maybe enemies need to be added
+            "Locked Room Urn (1)": LocationData("Random Minor Item"),
+            "Locked Room Urn (2)": LocationData("Random Minor Item"),
+            "Left Wing Urn (1)": LocationData("Random Minor Item"),
+            "Left Wing Urn (2)": LocationData("Random Minor Item"),
+        },
+        connections=["Passageway", "Mahabre_tomb_gods"],
+    ),
+    RegionData(
+        "Mahabre_tomb_gods",
+        locations={
+            # Tons of bookshelves that need to be added, and lady of moon?
+            "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
+            "Scroll Storage Room Urn (2)": LocationData("Random Minor Item"),
+            "Scroll Storage Room Urn (3)": LocationData("Random Minor Item"),
+            "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
+        },
+    ),
 ]
 
 
