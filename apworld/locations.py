@@ -752,6 +752,17 @@ REGIONS = [
         # Ancient passage is not an error, its mahabre interiors
         connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
     ),
+    RegionData(
+        "Passageway",
+        locations={
+            "Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
+            "Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
+            "Mahabre Entrance Urn (3)": LocationData("Random Minor Item"),
+            "Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
+        },
+        # Ancient passage is not an error, its mahabre interiors
+        connections=["Mahabre_inside1", "Center_square"],
+    ),
 ]
 
 
