@@ -665,6 +665,32 @@ REGIONS = [
                 "Prison Barrel (5)": LocationData("Random Food Item"),
             },
         },
+        connections=["Staircase"],
+    ),
+    RegionData(
+        "Staircase",
+        locations={
+            # Hanging corpse has no loot but moonless marks it
+            # Eastern ghost appears here
+            "Chair Room Crate (1)": LocationData("Random Minor Item"),
+            "Chair Room Crate (2)": LocationData("Random Minor Item"),
+            "Chair Room Barrel": LocationData("Random Food Item"),
+        },
+        connections=["level7_A"],
+    ),
+    RegionData(
+        "Staircase",
+        variants={
+            "A": {
+
+            },
+            "B": {
+
+            },
+            "C": {
+
+            },
+        },
     ),
 ]
 
