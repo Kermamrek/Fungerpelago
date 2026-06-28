@@ -740,6 +740,18 @@ REGIONS = [
             "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
         },
     ),
+    RegionData(
+        "Ancient_Passageway",
+        locations={
+            "Old Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
+            "Old Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
+            "Old Mahabre Entrance Urn (3)": LocationData("Random Minor Item"),
+            "Old Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
+            "Old Mahabre Entrance Dried Mushroom": LocationData("Random Minor Item"),
+        },
+        # Ancient passage is not an error, its mahabre interiors
+        connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
+    ),
 ]
 
 
