@@ -674,6 +674,32 @@ REGIONS = [
         connections=["Staircase"],
     ),
     RegionData(
+        "Level 4",
+        variants={
+            "A": {
+                # Cavemother soul?
+                # Pocketcat?
+                # Moonless?
+                # Yellow fluid can be gained here but it is a craftable
+                "Cavern Eggs Soul Stone": LocationData("Soul stone"),
+                "Pocketcat Crate (1)": LocationData("Random Minor Item"),
+                "Pocketcat Crate (2)": LocationData("Random Minor Item"),
+                "Pocketcat Barrel": LocationData("Random Food Item"),
+            },
+            "B": {
+                # Cavemother soul?
+                # Pocketcat?
+                # Moonless?
+                # Yellow fluid can be gained here but it is a craftable
+                "Cavern Eggs Soul Stone": LocationData("Soul stone"),
+                "Pocketcat Crate (1)": LocationData("Random Minor Item"),
+                "Pocketcat Crate (2)": LocationData("Random Minor Item"),
+                "Pocketcat Barrel": LocationData("Random Food Item"),
+            },
+        },
+        connections=["Level 5"],
+    ),
+    RegionData(
         "Staircase",
         locations={
             # Hanging corpse has no loot but moonless marks it
