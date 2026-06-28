@@ -340,8 +340,14 @@ REGIONS = [
                 "Trortur Room Skinning Knife": LocationData("Skinning knife"),
             },
         },
-        connections=["Level 1 - Backyard"],
-        # Add level 2- blood pit when added
+        connections=["Level 1 - Backyard", "Level 2 - Blood pit"],
+    ),
+    RegionData(
+        "Level 2 - Blood pit",
+        locations={
+            # Lizardman
+        },
+        connections=["Level 1 - Hidden backyard", "Level 3 - Prisons", "Level 4"],
     ),
     RegionData(
         "Level 1 - Backyard",
@@ -750,7 +756,7 @@ REGIONS = [
             "Old Mahabre Entrance Dried Mushroom": LocationData("Random Minor Item"),
         },
         # Ancient passage is not an error, its mahabre interiors
-        connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
+        # connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
     ),
     RegionData(
         "Passageway",
@@ -761,7 +767,7 @@ REGIONS = [
             "Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
         },
         # Ancient passage is not an error, its mahabre interiors
-        connections=["Mahabre_inside1", "Center_square"],
+        # connections=["Mahabre_inside1", "Center_square"],
     ),
 ]
 
