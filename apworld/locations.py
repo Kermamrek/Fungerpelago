@@ -700,6 +700,22 @@ REGIONS = [
         connections=["Level 5"],
     ),
     RegionData(
+        "Level 5",
+        # Lizardman lair?
+        variants={
+            "A": {
+
+            },
+            "B": {
+
+            },
+            "C": {
+
+            },
+        },
+        connections=["level6_1", "level6_2"],
+    ),
+    RegionData(
         "Staircase",
         locations={
             # Hanging corpse has no loot but moonless marks it
