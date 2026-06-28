@@ -697,6 +697,28 @@ REGIONS = [
         },
         connections=["Ancient_tomb"],
     ),
+    RegionData(
+        "Ancient_tomb",
+        locations={
+            # Miasma is here, do we need to do things with that?
+            # Chest and maybe enemies need to be added
+            # There's like a million events in this room, maybe I missed something
+            "Locked Room Urn (1)": LocationData("Random Minor Item"),
+            "Locked Room Urn (2)": LocationData("Random Minor Item"),
+            "Left Wing Urn (1)": LocationData("Random Minor Item"),
+            "Left Wing Urn (2)": LocationData("Random Minor Item"),
+        },
+        connections=["Mahabre_tomb", "Ancient_Passageway", "Ancient_tomb_gods"],
+    ),
+    RegionData(
+        "Ancient_tomb_gods",
+        locations={
+            "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
+            "Scroll Storage Room Urn (2)": LocationData("Random Minor Item"),
+            "Scroll Storage Room Urn (3)": LocationData("Random Minor Item"),
+            "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
+        },
+    ),
 ]
 
 
