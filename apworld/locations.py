@@ -704,7 +704,29 @@ REGIONS = [
         # Lizardman lair?
         variants={
             "A": {
-
+                # Lizardmen, Wizards, Salmonsnake soul, old guard Soul
+                # Spirit anchor for S ending?
+                # Nostramus' Chest, bookshelves
+                # Change O LORD GIVE ENLIGHTENMENT hint
+                "Mineshaft Crate": LocationData("Random Minor Item"),
+                "Mineshaft Barrel": LocationData("Random Minor Item"),
+                "Lizardman Room Urn (1)": LocationData("Random Minor Item"),
+                "Lizardman Room Urn (2)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (1)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (2)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (3)": LocationData("Random Minor Item"),
+                "Sealed Hidden Room (Scroll of Combustion)": LocationData("Scroll of combustion"),
+                "Sealed Hidden Room (Scroll of Pyromancy Trick)": LocationData("Scroll of pyromancy trick"),
+                "Minecart": LocationData("Stone"),
+                "Tomb Urn": LocationData("Random Minor Item"),
+                "Alchemy Bookshelf": LocationData("Random Alchemy"),
+                "Alchemy Bookshelf Explosive Vial": LocationData("Explosive vial"),
+                "Book Pages II": LocationData("Book pages II"),
+                # For these torches, add in a way to see what item is on the wall before using Tinderboxes
+                "Torch (1)": LocationData("Torch"),
+                "Torch (2)": LocationData("Torch"),
+                "Torch (3)": LocationData("Torch"),
+                "Torch (4)": LocationData("Torch"),
             },
             "B": {
 
