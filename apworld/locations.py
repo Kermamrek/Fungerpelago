@@ -709,7 +709,8 @@ REGIONS = [
                 # Nostramus' Chest, bookshelves
                 # Change O LORD GIVE ENLIGHTENMENT hint
                 "Mineshaft Crate": LocationData("Random Minor Item"),
-                "Mineshaft Barrel": LocationData("Random Minor Item"),
+                "Mineshaft Barrel": LocationData("Random Food Item"),
+                "Alchemy Room Urn": LocationData("Random Minor Item"),
                 "Lizardman Room Urn (1)": LocationData("Random Minor Item"),
                 "Lizardman Room Urn (2)": LocationData("Random Minor Item"),
                 "Lizardman Room Crate (1)": LocationData("Random Minor Item"),
@@ -729,10 +730,70 @@ REGIONS = [
                 "Torch (4)": LocationData("Torch"),
             },
             "B": {
-
+                # Lizardmen, Wizards, Salmonsnake soul, old guard Soul
+                # Spirit anchor for S ending?
+                # Nostramus' Chest, bookshelves
+                # Change O LORD GIVE ENLIGHTENMENT hint
+                "Mineshaft Crate (1)": LocationData("Random Minor Item"),
+                "Mineshaft Barrel (1)": LocationData("Random Food Item"),
+                "Mineshaft Crate (2)": LocationData("Random Minor Item"),
+                "Mineshaft Barrel (2)": LocationData("Random Food Item"),
+                "Mineshaft Crate (3)": LocationData("Random Minor Item"),
+                "Mineshaft Crate (4)": LocationData("Random Minor Item"),
+                "Mineshaft Barrel (3)": LocationData("Random Food Item"),
+                "Mineshaft Urn (1)": LocationData("Random Minor Item"),
+                "Mineshaft Urn (2)": LocationData("Random Minor Item"),
+                "Alchemy Room Urn": LocationData("Random Minor Item"),
+                "Tomb Urn": LocationData("Random Minor Item"),
+                "Minecart": LocationData("Stone"),
+                "Alchemy Bookshelf": LocationData("Random Alchemy"),
+                "Alchemy Bookshelf Explosive Vial": LocationData("Explosive vial"),
+                "Book Pages II": LocationData("Book pages II"),
+                "Lizardman Room Urn (1)": LocationData("Random Minor Item"),
+                "Lizardman Room Urn (2)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (1)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (2)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (3)": LocationData("Random Minor Item"),
+                "Sealed Hidden Room (Scroll of Combustion)": LocationData("Scroll of combustion"),
+                "Sealed Hidden Room (Scroll of Pyromancy Trick)": LocationData("Scroll of pyromancy trick"),
+                # For these torches, add in a way to see what item is on the wall before using Tinderboxes
+                "Torch (1)": LocationData("Torch"),
+                "Torch (2)": LocationData("Torch"),
+                "Torch (3)": LocationData("Torch"),
+                "Torch (4)": LocationData("Torch"),
             },
             "C": {
-
+                # Lizardmen, Wizards, Salmonsnake soul, old guard Soul
+                # Spirit anchor for S ending?
+                # Nostramus' Chest, bookshelves
+                # Change O LORD GIVE ENLIGHTENMENT hint
+                "Mineshaft Crate (1)": LocationData("Random Minor Item"),
+                "Mineshaft Barrel (1)": LocationData("Random Food Item"),
+                "Mineshaft Crate (2)": LocationData("Random Minor Item"),
+                "Mineshaft Crate (3)": LocationData("Random Minor Item"),
+                "Mineshaft Barrel (2)": LocationData("Random Food Item"),
+                "Mineshaft Barrel (3)": LocationData("Random Food Item"),
+                "Mineshaft Barrel (4)": LocationData("Random Food Item"),
+                "Mineshaft Barrel (5)": LocationData("Random Food Item"),
+                "Mineshaft Barrel (6)": LocationData("Random Food Item"),
+                "Mineshaft Barrel (7)": LocationData("Random Food Item"),
+                "Alchemy Room Urn": LocationData("Random Minor Item"),
+                "Alchemy Bookshelf": LocationData("Random Alchemy"),
+                "Alchemy Bookshelf Explosive Vial": LocationData("Explosive vial"),
+                "Book Pages II": LocationData("Book pages II"),
+                "Minecart": LocationData("Stone"),
+                "Lizardman Room Urn (1)": LocationData("Random Minor Item"),
+                "Lizardman Room Urn (2)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (1)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (2)": LocationData("Random Minor Item"),
+                "Lizardman Room Crate (3)": LocationData("Random Minor Item"),
+                "Sealed Hidden Room (Scroll of Combustion)": LocationData("Scroll of combustion"),
+                "Sealed Hidden Room (Scroll of Pyromancy Trick)": LocationData("Scroll of pyromancy trick"),
+                # For these torches, add in a way to see what item is on the wall before using Tinderboxes
+                "Torch (1)": LocationData("Torch"),
+                "Torch (2)": LocationData("Torch"),
+                "Torch (3)": LocationData("Torch"),
+                "Torch (4)": LocationData("Torch"),
             },
         },
         connections=["level6_1", "level6_2"],
