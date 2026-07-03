@@ -719,6 +719,7 @@ REGIONS = [
                 "Sealed Hidden Room (Scroll of Combustion)": LocationData("Scroll of combustion"),
                 "Sealed Hidden Room (Scroll of Pyromancy Trick)": LocationData("Scroll of pyromancy trick"),
                 "Minecart": LocationData("Stone"),
+                "Minecart (2)": LocationData("Stone"),
                 "Tomb Urn": LocationData("Random Minor Item"),
                 "Alchemy Bookshelf": LocationData("Random Alchemy"),
                 "Alchemy Bookshelf Explosive Vial": LocationData("Explosive vial"),
@@ -746,6 +747,7 @@ REGIONS = [
                 "Alchemy Room Urn": LocationData("Random Minor Item"),
                 "Tomb Urn": LocationData("Random Minor Item"),
                 "Minecart": LocationData("Stone"),
+                "Minecart (2)": LocationData("Stone"),
                 "Alchemy Bookshelf": LocationData("Random Alchemy"),
                 "Alchemy Bookshelf Explosive Vial": LocationData("Explosive vial"),
                 "Book Pages II": LocationData("Book pages II"),
@@ -782,6 +784,7 @@ REGIONS = [
                 "Alchemy Bookshelf Explosive Vial": LocationData("Explosive vial"),
                 "Book Pages II": LocationData("Book pages II"),
                 "Minecart": LocationData("Stone"),
+                "Minecart (2)": LocationData("Stone"),
                 "Lizardman Room Urn (1)": LocationData("Random Minor Item"),
                 "Lizardman Room Urn (2)": LocationData("Random Minor Item"),
                 "Lizardman Room Crate (1)": LocationData("Random Minor Item"),
@@ -796,8 +799,104 @@ REGIONS = [
                 "Torch (4)": LocationData("Torch"),
             },
         },
-        connections=["level6_1", "level6_2"],
+        connections=["level6_1A", "level6_2A"],
     ),
+    RegionData(
+        "level6_1A",
+        locations={
+            # add Enemies, shopkeeper
+            "Entrance Urn (1)": LocationData("Random Minor Item"),
+            "Entrance Urn (2)": LocationData("Random Minor Item"),
+            "Entrance Urn (3)": LocationData("Random Minor Item"),
+            "Entrance Urn (4)": LocationData("Random Minor Item"),
+            "Entrance Urn (5)": LocationData("Random Minor Item"),
+            "Entrance Barrel (1)": LocationData("Random Food Item"),
+            "Entrance Barrel (2)": LocationData("Random Food Item"),
+            "Entrance Barrel (3)": LocationData("Random Food Item"),
+            # There is a fourth barrel but I think it is unobtainable
+            "Entrance Crate": LocationData("Random Minor Item"),
+            "Village Crate (1)": LocationData("Random Minor Item"),
+            # Village Pocketcat Crate is only moved when pocketcat moves? does it share a switch with another crate?
+            "Village Pocketcat Crate": LocationData("Random Minor Item"),
+            "Village Barrel (1)": LocationData("Random Food Item"),
+            "Village Barrel (2)": LocationData("Random Food Item"),
+            "Village Barrel (3)": LocationData("Random Food Item"),
+            "Village Barrel (4)": LocationData("Random Food Item"),
+            "Village Barrel (5)": LocationData("Random Food Item"),
+            # Unobtainable urn near chest?
+            "Village Urn (1)": LocationData("Random Minor Item"),
+            "Village Urn (2)": LocationData("Random Minor Item"),
+            "Village Urn (3)": LocationData("Random Minor Item"),
+            "Village Urn (4)": LocationData("Random Minor Item"),
+            "Village Urn (5)": LocationData("Random Minor Item"),
+            "Village Urn (6)": LocationData("Random Minor Item"),
+            "Village Crate (2)": LocationData("Random Minor Item"),
+            # For these torches, add in a way to see what item is on the wall before using Tinderboxes
+            "Torch (1)": LocationData("Torch"),
+            "Torch (2)": LocationData("Torch"),
+            "Torch (3)": LocationData("Torch"),
+            "Torch (4)": LocationData("Torch"),
+        },
+        # "level6_2_Crash",
+        connections=["level6_2A", "god_of_the_depths", "huts_village"],
+    ),
+    RegionData(
+        "god_of_the_depths",
+        locations={
+            # Has no items, what do we do?
+        },
+        # "Level8_A"
+        connections=["huts_village"],
+    ),
+    RegionData(
+        "huts_village",
+        locations={
+            # add Chests, enemies, etc
+            "Hut Urn (1)": LocationData("Random Minor Item"),
+            "Hut Urn (2)": LocationData("Random Minor Item"),
+            "Hut Urn (3)": LocationData("Random Minor Item"),
+            "Hut Urn (4)": LocationData("Random Minor Item"),
+            "Hut Urn (5)": LocationData("Random Minor Item"),
+            "Hut Urn (6)": LocationData("Random Minor Item"),
+            "Hut Urn (7)": LocationData("Random Minor Item"),
+            "Hut Urn (8)": LocationData("Random Minor Item"),
+            "Hut Urn (9)": LocationData("Random Minor Item"),
+            "Hut Urn (10)": LocationData("Random Minor Item"),
+            "Hut Urn (11)": LocationData("Random Minor Item"),
+            "Hut Urn (12)": LocationData("Random Minor Item"),
+            "Hut Urn (13)": LocationData("Random Minor Item"),
+            "Rope": LocationData("Rope"),
+            "Lucky Coin": LocationData("Lucky coin"),
+            "Hut Crate (1)": LocationData("Random Minor Item"),
+            "Hut Crate (2)": LocationData("Random Minor Item"),
+            "Hut Crate (3)": LocationData("Random Minor Item"),
+            "Hut Crate (4)": LocationData("Random Minor Item"),
+            "Hut Barrel (1)": LocationData("Random Food Item"),
+            "Hut Barrel (2)": LocationData("Random Food Item"),
+            # Change Cube of Depths investigate to say what it is and where its from. Already added the template, just need to finish it when we know variables
+            "Cube of Depths": LocationData("Cube of depths"),
+        },
+    ),
+    RegionData(
+        "level6_2A",
+        locations={
+            # Add chests, ghosts?
+            # What do we do with blue sin? can't people just savescum it? add a trigger that only checks once you escape with it?
+            # For the time being blue sin has been excluded, will add when figure out what to do with it
+            # Remember, a lot of the crates and such here are empty
+            "Minecart": LocationData("Stone"),
+            "Diary of an Unknown Guard": LocationData("Diary of an unknown guard"),
+            "Shark Teeth": LocationData("Shark teeth"),
+        },
+        connections=["level7_A"],
+    ),
+    # RegionData(
+    #     "level6_2_Crash",
+    #     locations={
+    #
+    #     },
+    #     connections=["level7_A"],
+    # ),
     RegionData(
         "Staircase",
         locations={
