@@ -347,7 +347,7 @@ REGIONS = [
         locations={
             # Lizardman
         },
-        connections=["Level 1 - Hidden backyard", "Level 3 - Prisons", "Level 4"],
+        connections=["Level 1 - Hidden backyard", "Level 3 - Prisons", "Level 4 - Caverns"],
     ),
     RegionData(
         "Level 1 - Backyard",
@@ -674,7 +674,7 @@ REGIONS = [
         connections=["Staircase"],
     ),
     RegionData(
-        "Level 4",
+        "Level 4 - Caverns",
         variants={
             "A": {
                 # Cavemother soul?
@@ -697,10 +697,10 @@ REGIONS = [
                 "Pocketcat Barrel": LocationData("Random Food Item"),
             },
         },
-        connections=["Level 5"],
+        connections=["Level 5 - Mines"],
     ),
     RegionData(
-        "Level 5",
+        "Level 5 - Mines",
         # Lizardman lair?
         variants={
             "A": {
@@ -799,10 +799,10 @@ REGIONS = [
                 "Torch (4)": LocationData("Torch"),
             },
         },
-        connections=["level6_1A", "level6_2A"],
+        connections=["Level 6 - Mines", "Level 6 - Mines (2)"],
     ),
     RegionData(
-        "level6_1A",
+        "Level 6 - Mines",
         locations={
             # add Enemies, shopkeeper
             "Entrance Urn (1)": LocationData("Random Minor Item"),
@@ -837,19 +837,19 @@ REGIONS = [
             "Torch (3)": LocationData("Torch"),
             "Torch (4)": LocationData("Torch"),
         },
-        # "level6_2_Crash",
-        connections=["level6_2A", "god_of_the_depths", "huts_village"],
+        # "Level 6 - Mines (Cave-in)",
+        connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Village Huts"],
     ),
     RegionData(
-        "god_of_the_depths",
+        "Level 6 - Altar of darkness",
         locations={
             # Has no items, what do we do?
         },
-        # "Level8_A"
+        # "Level 8 - The gauntlet"
         connections=["huts_village"],
     ),
     RegionData(
-        "huts_village",
+        "Level 6 - Village Huts",
         locations={
             # add Chests, enemies, etc
             "Hut Urn (1)": LocationData("Random Minor Item"),
@@ -878,7 +878,7 @@ REGIONS = [
         },
     ),
     RegionData(
-        "level6_2A",
+        "Level 6 - Mines (2)",
         locations={
             # Add chests, ghosts?
             # What do we do with blue sin? can't people just savescum it? add a trigger that only checks once you escape with it?
@@ -888,10 +888,10 @@ REGIONS = [
             "Diary of an Unknown Guard": LocationData("Diary of an unknown guard"),
             "Shark Teeth": LocationData("Shark teeth"),
         },
-        connections=["level7_A"],
+        connections=["Level 7 - Catacombs"],
     ),
     # RegionData(
-    #     "level6_2_Crash",
+    #     "Level 6 - Mines (Cave-in)",
     #     locations={
     #
     #     },
@@ -906,10 +906,10 @@ REGIONS = [
             "Chair Room Crate (2)": LocationData("Random Minor Item"),
             "Chair Room Barrel": LocationData("Random Food Item"),
         },
-        connections=["level7_A"],
+        connections=["Level 7 - Catacombs"],
     ),
     RegionData(
-        "level7_A",
+        "Level 7 - Catacombs",
         locations={
             # Enemies need to be added still
             # Enki is here, not sure if stuff needs to be done with him
@@ -925,10 +925,10 @@ REGIONS = [
             "East Hallway Barrel (1)": LocationData("Random Food Item"),
             "East Hallway Barrel (2)": LocationData("Random Food Item"),
         },
-        connections=["Ancient_tomb"],
+        connections=["Ancient city - The Tomb of the Gods"],
     ),
     RegionData(
-        "Ancient_tomb",
+        "Ancient city - The Tomb of the Gods",
         locations={
             # Miasma is here, do we need to do things with that?
             # Chest and maybe enemies need to be added
@@ -938,10 +938,10 @@ REGIONS = [
             "Left Wing Urn (1)": LocationData("Random Minor Item"),
             "Left Wing Urn (2)": LocationData("Random Minor Item"),
         },
-        connections=["Mahabre_tomb", "Ancient_Passageway", "Ancient_tomb_gods"],
+        connections=["Ma'habre - The Tomb of the Gods", "Ancient city - Passageway", "The Tomb of the Gods - Level 2"],
     ),
     RegionData(
-        "Ancient_tomb_gods",
+        "The Tomb of the Gods - Level 2",
         locations={
             "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
             "Scroll Storage Room Urn (2)": LocationData("Random Minor Item"),
@@ -950,7 +950,7 @@ REGIONS = [
         },
     ),
     RegionData(
-        "Mahabre_tomb",
+        "Ma'habre - The Tomb of the Gods",
         locations={
             # Chest and maybe enemies need to be added
             "Locked Room Urn (1)": LocationData("Random Minor Item"),
@@ -958,10 +958,10 @@ REGIONS = [
             "Left Wing Urn (1)": LocationData("Random Minor Item"),
             "Left Wing Urn (2)": LocationData("Random Minor Item"),
         },
-        connections=["Passageway", "Mahabre_tomb_gods"],
+        connections=["Ma'habre - Passageway", "The Tomb of the Gods - Level 2"],
     ),
     RegionData(
-        "Mahabre_tomb_gods",
+        "The Tomb of the Gods - Level 2",
         locations={
             # Tons of bookshelves that need to be added, and lady of moon?
             "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
@@ -971,7 +971,7 @@ REGIONS = [
         },
     ),
     RegionData(
-        "Ancient_Passageway",
+        "Ancient city - Passageway",
         locations={
             "Old Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
             "Old Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
@@ -983,7 +983,7 @@ REGIONS = [
         # connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
     ),
     RegionData(
-        "Passageway",
+        "Ma'habre - Passageway",
         locations={
             "Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
             "Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
