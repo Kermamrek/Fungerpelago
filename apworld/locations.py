@@ -837,8 +837,7 @@ REGIONS = [
             "Torch (3)": LocationData("Torch"),
             "Torch (4)": LocationData("Torch"),
         },
-        # "Level 6 - Mines (Cave-in)",
-        connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Village Huts"],
+        connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Mines (Cave-in)", "Level 6 - Village Huts"],
     ),
     RegionData(
         "Level 6 - Altar of darkness",
@@ -888,15 +887,34 @@ REGIONS = [
             "Diary of an Unknown Guard": LocationData("Diary of an unknown guard"),
             "Shark Teeth": LocationData("Shark teeth"),
         },
-        connections=["Level 7 - Catacombs"],
+        connections=["Level 7 - Catacombs", "Level 6 - Mines (Cave-in)"],
     ),
-    # RegionData(
-    #     "Level 6 - Mines (Cave-in)",
-    #     locations={
-    #
-    #     },
-    #     connections=["level7_A"],
-    # ),
+    RegionData(
+        "Level 6 - Mines (Cave-in)",
+        locations={
+            # Something to consider is that the player has to have a specific item to access this area, which is completely optional
+            # I've added this area in as completely normal for now, but maybe we should treat it differently?
+            # Consider adding blue sin here instead of mines (2) to prevent savescumming
+            # Add lizardman, ghost loot(?)
+            # I believe all of the items here have the same trigger as the non-cave in version, not sure how to handle that.
+            # For now, they have not been added to here or RPGMaker side
+            # "Minecart": LocationData("Stone"),
+            # "Diary of an Unknown Guard": LocationData("Diary of an unknown guard"),
+            # "Shark Teeth": LocationData("Shark teeth"),
+            "Eastern Silk Robes": LocationData("Eastern silk robes"),
+            "Jingasa Kabuto": LocationData("Jingasa kabuto"),
+            "Charm of the Yggaegetsu": LocationData("Charm of the yggaegetsu"),
+            "Cave Blue Herb (1)": LocationData("Blue herb"),
+            "Cave Blue Herb (2)": LocationData("Blue herb"),
+            "Cave Blue Herb (3)": LocationData("Blue herb"),
+            "Cave Red Herb (1)": LocationData("Red herb"),
+            "Cave Red Herb (2)": LocationData("Red herb"),
+            "Cave Green Herb (1)": LocationData("Green herb"),
+            "Cave Green Herb (2)": LocationData("Green herb"),
+            "Cave Green Herb (3)": LocationData("Green herb"),
+        },
+        connections=["Level 7 - Catacombs", "deeper_thicket"],
+    ),
     RegionData(
         "Staircase",
         locations={
