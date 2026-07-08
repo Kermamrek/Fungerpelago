@@ -12,6 +12,7 @@ Items:
 * Should we give the player 3 torches or so if they start in Terror & Starvation/Hard Mode? Or at least make it an option?
 * Book of enlightenment does not work in hard mode. We might be able to remove it from the item pools when hard mode is not being played, but would something more interesting be a better option? Can we let the player use it as a sort of archipelago hint similar to an empty scroll text input?
 * In the mines levels, add a way to see what item is there before using the tinderbox. That way you can decide if you want to sacrifice the item or not (could this be savescummed? can we prevent that?)
+* Crow mauler?
 
 Shops:
 
