@@ -998,7 +998,27 @@ REGIONS = [
             "Old Mahabre Entrance Dried Mushroom": LocationData("Random Minor Item"),
         },
         # Ancient passage is not an error, its mahabre interiors
-        # connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
+        # connections=["Ancient_inside1", "Ancient_passage", "Ancient city - Center square"],
+    ),
+    RegionData(
+        "Ancient city - Center square",
+        locations={
+            # Pocketcat
+            # Treasure chest that is empty? I don't remember whats there
+            # I think one urn near pocketcat is inaccessible, didn't add it
+            "Giant Statue Crate (1)": LocationData("Random Minor Item"),
+            "Giant Statue Crate (2)": LocationData("Random Minor Item"),
+            "Broken Statue Crate (1)": LocationData("Random Minor Item"),
+            "Broken Statue Crate (2)": LocationData("Random Minor Item"),
+            "Broken Statue Crate (3)": LocationData("Random Minor Item"),
+            "Broken Statue Urn (1)": LocationData("Random Minor Item"),
+            "Broken Statue Urn (2)": LocationData("Random Minor Item"),
+            "Statue Dried Mushroom": LocationData("Dried mushroom"),
+            "Temple Entrance Crate (1)": LocationData("Random Minor Item"),
+            "Temple Entrance Urn (1)": LocationData("Random Minor Item"),
+            "Temple Entrance Urn (2)": LocationData("Random Minor Item"),
+        },
+        # connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)"],
     ),
     RegionData(
         "Ma'habre - Passageway",
