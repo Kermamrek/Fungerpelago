@@ -998,7 +998,44 @@ REGIONS = [
             "Old Mahabre Entrance Dried Mushroom": LocationData("Random Minor Item"),
         },
         # Ancient passage is not an error, its mahabre interiors
-        # connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
+        connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
+    ),
+    RegionData(
+        "Ancient_inside1",
+        locations={
+            # Cage scene? not sure what it does
+            # Gaunt Knight
+            # Chests, one of them you can like climb over some rubble or something?
+            # Bookshelves
+            # Snatcher enemies
+            "Inside Ancient Mahabre Urn (Near Knight - 1)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Near Knight - 2)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Near Knight - 3)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Near Knight - 4)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Near Knight - 1)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Near Knight - 2)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Chest Room)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Bookshelf Room - 1)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Bookshelf Room - 2)": LocationData("Random Minor Item"),
+            "Ancient Mahabre Prison Coin": LocationData("Lucky coin"),
+            "Ancient Mahabre Prison Urn": LocationData("Random Minor Item"),
+            "Upstairs Ancient Passage Crate (1)": LocationData("Random Minor Item"),
+            "Upstairs Ancient Passage Crate (2)": LocationData("Random Minor Item"),
+            "Upstairs Ancient Passage Urn": LocationData("Random Minor Item"),
+        },
+        # connections=["Ancient_passage", "Ancient_Center_square"],
+    ),
+    RegionData(
+        "Ancient city - Old passage",
+        locations={
+            "Blue Demon": LocationData("Blue demon powder"),
+            # NOTE: if the renaming script is used, these aren't inside the old passage with the key
+            "Ancient Mahabre Explosive Vial": LocationData("Explosive vial"),
+            "Book Pages III": LocationData("Book pages III"),
+            "Ancient Mahabre Bookshelf": LocationData("Random Minor Book (Ancient)"),
+            "Ancient Mahabre Alchemy (1)": LocationData("Random Alchemy"),
+            "Ancient Mahabre Alchemy (2)": LocationData("Random Alchemy"),
+        },
     ),
     RegionData(
         "Ma'habre - Passageway",
