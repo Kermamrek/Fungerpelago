@@ -998,32 +998,7 @@ REGIONS = [
             "Old Mahabre Entrance Dried Mushroom": LocationData("Random Minor Item"),
         },
         # Ancient passage is not an error, its mahabre interiors
-        connections=["Ancient_inside1", "Ancient_passage", "Ancient_Center_square"],
-    ),
-    RegionData(
-        "Ancient_inside1",
-        locations={
-            # Cage scene? not sure what it does
-            # Gaunt Knight
-            # Chests, one of them you can like climb over some rubble or something?
-            # Bookshelves
-            # Snatcher enemies
-            "Inside Ancient Mahabre Urn (Near Knight - 1)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Near Knight - 2)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Near Knight - 3)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Near Knight - 4)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Near Knight - 1)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Near Knight - 2)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Chest Room)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Bookshelf Room - 1)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Bookshelf Room - 2)": LocationData("Random Minor Item"),
-            "Ancient Mahabre Prison Coin": LocationData("Lucky coin"),
-            "Ancient Mahabre Prison Urn": LocationData("Random Minor Item"),
-            "Upstairs Ancient Passage Crate (1)": LocationData("Random Minor Item"),
-            "Upstairs Ancient Passage Crate (2)": LocationData("Random Minor Item"),
-            "Upstairs Ancient Passage Urn": LocationData("Random Minor Item"),
-        },
-        # connections=["Ancient_passage", "Ancient_Center_square"],
+        connections=["Ancient city - Inside (1)", "Ancient city - Old passage", "Ancient city - Center square"],
     ),
     RegionData(
         "Ancient city - Old passage",
@@ -1055,7 +1030,72 @@ REGIONS = [
             "Temple Entrance Urn (1)": LocationData("Random Minor Item"),
             "Temple Entrance Urn (2)": LocationData("Random Minor Item"),
         },
-        # connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)"],
+        connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)"],
+    ),
+    RegionData(
+        "Ancient city - Inside (1)",
+        locations={
+            # Cage scene? not sure what it does
+            # Gaunt Knight
+            # Chests, one of them you can like climb over some rubble or something?
+            # Bookshelves
+            # Snatcher enemies
+            "Inside Ancient Mahabre Urn (Near Knight - 1)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Near Knight - 2)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Near Knight - 3)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Near Knight - 4)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Near Knight - 1)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Near Knight - 2)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Urn (Chest Room)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Bookshelf Room - 1)": LocationData("Random Minor Item"),
+            "Inside Ancient Mahabre Crate (Bookshelf Room - 2)": LocationData("Random Minor Item"),
+            "Ancient Mahabre Prison Coin": LocationData("Lucky coin"),
+            "Ancient Mahabre Prison Urn": LocationData("Random Minor Item"),
+            "Upstairs Ancient Passage Crate (1)": LocationData("Random Minor Item"),
+            "Upstairs Ancient Passage Crate (2)": LocationData("Random Minor Item"),
+            "Upstairs Ancient Passage Urn": LocationData("Random Minor Item"),
+        },
+        # connections=["Ancient_passage", "Ancient_Center_square"],
+    ),
+    RegionData(
+        "Ancient city - Temple district",
+        locations={
+
+        },
+        connections=["Ancient city - Back alleys", "Grand library"],
+    ),
+    RegionData(
+        "Ancient city - Back alleys",
+        locations={
+
+        },
+        connections=["Ancient city - Back alleys"],
+    ),
+    RegionData(
+        "Grand library",
+        locations={
+
+        },
+        connections=["Grand library - Inner sanctum"],
+    ),
+    RegionData(
+        "Ancient city - Inside (2)",
+        locations={
+
+        },
+    ),
+    RegionData(
+        "Ancient city - Downtown",
+        locations={
+
+        },
+        connections=["Ancient city - The Tower of Endless"],
+    ),
+    RegionData(
+        "Ancient city - The Tower of Endless",
+        locations={
+
+        },
     ),
     RegionData(
         "Ma'habre - Passageway",
