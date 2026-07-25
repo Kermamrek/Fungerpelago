@@ -1060,16 +1060,9 @@ REGIONS = [
     RegionData(
         "Ancient city - Temple district",
         locations={
-
+            # The urns here share data between past mahabre and present mahabre?
         },
         connections=["Ancient city - Back alleys", "Grand library"],
-    ),
-    RegionData(
-        "Ancient city - Back alleys",
-        locations={
-
-        },
-        connections=["Ancient city - Back alleys"],
     ),
     RegionData(
         "Grand library",
@@ -1077,6 +1070,38 @@ REGIONS = [
 
         },
         connections=["Grand library - Inner sanctum"],
+    ),
+    RegionData(
+        "Grand library - Inner sanctum",
+        locations={
+
+        },
+    ),
+    RegionData(
+        "Ancient city - Back alleys",
+        locations={
+
+        },
+        connections=["Ancient city - Underground cave", "Temple of Torment - Level 1 (Ancient)"],
+    ),
+    RegionData(
+        "Temple of Torment - Level 1 (Ancient)",
+        locations={
+
+        },
+        connections=["Temple of Torment - Level 2 (Ancient)"],
+    ),
+    RegionData(
+        "Ancient city - Underground cave",
+        locations={
+
+        },
+    ),
+    RegionData(
+        "Temple of Torment - Level 2 (Ancient)",
+        locations={
+
+        },
     ),
     RegionData(
         "Ancient city - Inside (2)",
