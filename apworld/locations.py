@@ -1112,14 +1112,67 @@ REGIONS = [
     RegionData(
         "Ancient city - Downtown",
         locations={
-
+            #chests need to be done
+            "Lower Downtown Crate (1)": LocationData("Random Minor Item"),
+            "Lower Downtown Crate (2)": LocationData("Random Minor Item"),
+            "Lower Downtown Crate (3)": LocationData("Random Minor Item"),
+            "Lower Downtown Crate (4)": LocationData("Random Minor Item"),
+            "Lower Downtown Crate (5)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (1)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (2)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (3)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (4)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (5)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (6)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (7)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (8)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (9)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (10)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (11)": LocationData("Random Minor Item"),
+            "Lower Downtown Urn (12)": LocationData("Random Minor Item"),
+            #Only stuff on the "upper level" have the shared variables
+            #1408
+            "Upper Downtown Crate (1)": LocationData("Random Minor Item"),
+            #1409
+            "Upper Downtown Crate (2)": LocationData("Random Minor Item"),
+            #1288
+            "Upper Downtown Crate (3)": LocationData("Random Minor Item"),
+            #2352
+            "Ancient Passage Downtown Crate": LocationData("Random Minor Item"),
+            #Not given a variable for some reason?
+            "Ancient Passage Downtown Urn": LocationData("Random Minor Item"),
+            #1410
+            "Upper Downtown Urn (1)": LocationData("Random Minor Item"),
+            #1411
+            "Upper Downtown Urn (2)": LocationData("Random Minor Item"),
+            #1412
+            "Upper Downtown Urn (3)": LocationData("Random Minor Item"),
+            #1413
+            "Upper Downtown Urn (4)": LocationData("Random Minor Item"),
+            #1414
+            "Upper Downtown Urn (5)": LocationData("Random Minor Item"),
         },
         connections=["Ancient city - The Tower of Endless"],
     ),
     RegionData(
         "Ancient city - The Tower of Endless",
         locations={
-
+            #1421
+            "Tower of the Endless Crate (1)": LocationData("Random Minor Item"),
+            #1420
+            "Tower of the Endless Crate (2)": LocationData("Random Minor Item"),
+            #1419
+            "Tower of the Endless Crate (3)": LocationData("Random Minor Item"),
+            #1418
+            "Tower of the Endless Crate (4)": LocationData("Random Minor Item"),
+            #1415
+            "Tower of the Endless Urn (1)": LocationData("Random Minor Item"),
+            #1416
+            "Tower of the Endless Urn (2)": LocationData("Random Minor Item"),
+            #1417
+            "Tower of the Endless Urn (3)": LocationData("Random Minor Item"),
+            #1998
+            "Tower of the Endless Barrel": LocationData("Random Food Item"),
         },
     ),
     RegionData(
