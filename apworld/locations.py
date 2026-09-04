@@ -1080,7 +1080,40 @@ REGIONS = [
     RegionData(
         "Ancient city - Back alleys",
         locations={
-
+            "Alley Blue Herb (1)": LocationData("Blue herb"),
+            "Alley Blue Herb (2)": LocationData("Blue herb"),
+            "Alley Blue Herb (3)": LocationData("Blue herb"),
+            "Alley Blue Herb (4)": LocationData("Blue herb"),
+            "Alley Green Herb": LocationData("Green herb"),
+            "Alley Red Herb": LocationData("Red herb"),
+            "Alley Soul Stone": LocationData("Soul Stone"),
+            "Alley Lucky Coin": LocationData("Lucky Coin"),
+            #2007
+            "Alley Barrel (1)": LocationData("Random Food Item"),
+            #2008
+            "Alley Barrel (2)": LocationData("Random Food Item"),
+            #1439
+            "Alley Crate (1)": LocationData("Random Minor Item"),
+            #1440
+            "Alley Crate (2)": LocationData("Random Minor Item"),
+            #1441
+            "Alley Crate (3)": LocationData("Random Minor Item"),
+            #1442
+            "Alley Crate (4)": LocationData("Random Minor Item"),
+            #1443
+            "Alley Crate (5)": LocationData("Random Minor Item"),
+            #1444
+            "Alley Crate (6)": LocationData("Random Minor Item"),
+            #This doesnt have one
+            "Alley Crate (7)": LocationData("Random Minor Item"),
+            #1446
+            "Alley Urn (1)": LocationData("Random Minor Item"),
+            #1448
+            "Alley Urn (2)": LocationData("Random Minor Item"),
+            #1445
+            "Alley Urn (3)": LocationData("Random Minor Item"),
+            #1438
+            "Alley Urn (4)": LocationData("Random Minor Item"),
         },
         connections=["Ancient city - Underground cave", "Temple of Torment - Level 1 (Ancient)"],
     ),
