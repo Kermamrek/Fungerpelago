@@ -1127,7 +1127,20 @@ REGIONS = [
     RegionData(
         "Ancient city - Underground cave",
         locations={
-
+            "Sergal Spear": LocationData("Sergal spear"),
+            "Ancient Cave Urn (1)": LocationData("Random Minor Item"),
+            "Ancient Cave Urn (2)": LocationData("Random Minor Item"),
+            "Ancient Cave Urn (3)": LocationData("Random Minor Item"),
+            "Ancient Cave Urn (4)": LocationData("Random Minor Item"),
+            "Ancient Cave Urn (5)": LocationData("Random Minor Item"),
+            "Ancient Cave Urn (6)": LocationData("Random Minor Item"),
+            "Ancient Cave Urn (7)": LocationData("Random Minor Item"),
+            "Ancient Cave Crate": LocationData("Random Minor Item"),
+            "Ancient Cave Barrel (1)": LocationData("Random Minor Item"),
+            "Ancient Cave Barrel (2)": LocationData("Random Minor Item"),
+            "Ancient Cave Barrel (3)": LocationData("Random Minor Item"),
+            "Ancient Cave Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
+            "Ancient Cave Bookshelf (2)": LocationData("Random Minor Book (Ancient)"),
         },
     ),
     RegionData(
