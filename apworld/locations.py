@@ -1120,7 +1120,10 @@ REGIONS = [
     RegionData(
         "Temple of Torment - Level 1 (Ancient)",
         locations={
-
+            "Ancient Temple of Torment Urn (1)": LocationData("Random Minor Item"),
+            #1523
+            "Ancient Temple of Torment Urn (2)": LocationData("Random Minor Item"),
+            #1524
         },
         connections=["Temple of Torment - Level 2 (Ancient)"],
     ),
@@ -1145,14 +1148,33 @@ REGIONS = [
     ),
     RegionData(
         "Temple of Torment - Level 2 (Ancient)",
+        #Chest, Bookshelf
         locations={
-
+            "Ancient Temple of Torment Urn (3)": LocationData("Random Minor Item"),
+            #1526
+            "Ancient Temple of Torment Urn (4)": LocationData("Random Minor Item"),
+            #1525
+            "Ancient Temple of Torment Urn (5)": LocationData("Random Minor Item"),
+            #1527
+            "Ancient Temple of Torment Urn (6)": LocationData("Random Minor Item"),
+            #1528
+            "Ancient Temple of Torment Urn (7)": LocationData("Random Minor Item"),
+            #1529
+            "Ancient Temple of Torment Soul Stone": LocationData("Random Minor Item"),
         },
     ),
     RegionData(
         "Ancient city - Inside (2)",
+        #Chest needs to be done, maybe bed
         locations={
-
+            "Ancient Mural Building Urn (1)": LocationData("Random Minor Item"),
+            #1474
+            "Ancient Mural Building Urn (2)": LocationData("Random Minor Item"),
+            #1473
+            "Ancient Mural Building Red Herb": LocationData("Red herb"),
+            "Ancient Mural Building Blue Herb (1)": LocationData("Blue herb"),
+            "Ancient Mural Building Blue Herb (2)": LocationData("Blue herb"),
+            "Mystical Beast War Scythe": LocationData("War scythe"),
         },
     ),
     RegionData(
