@@ -837,7 +837,7 @@ REGIONS = [
             "Torch (3)": LocationData("Torch"),
             "Torch (4)": LocationData("Torch"),
         },
-        connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Mines (Cave-in)", "Level 6 - Village Huts"],
+        connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Mines (Cave-in)", "Level 6 - Village Huts", "Level 8 - The gauntlet"],
     ),
     RegionData(
         "Level 6 - Altar of darkness",
@@ -1298,6 +1298,43 @@ REGIONS = [
         },
         # Ancient passage is not an error, its mahabre interiors
         # connections=["Mahabre_inside1", "Center_square"],
+    ),
+    RegionData(
+        "Level 8 - The gauntlet",
+        locations={
+            #Chest coin flip needs to be added, enemies as well
+            "Gauntlet Urn (1)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (2)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (3)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (4)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (5)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (6)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (7)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (8)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (9)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (10)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (11)": LocationData("Random Minor Item"),
+        },
+        connections=["Level 9 - The gauntlet"],
+    ),
+    RegionData(
+        "Level 9 - The gauntlet",
+        #8_2_A
+        locations={
+            #enemies and one urn I think is inaccessible
+            "Gauntlet Urn (12)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (13)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (14)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (15)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (16)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (17)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (18)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (19)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (20)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (21)": LocationData("Random Minor Item"),
+            "Gauntlet Urn (22)": LocationData("Random Minor Item"),
+
+        },
     ),
 ]
 
