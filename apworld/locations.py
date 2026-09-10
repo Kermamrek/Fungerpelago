@@ -1066,8 +1066,45 @@ REGIONS = [
     ),
     RegionData(
         "Grand library",
+        #Enemies? Some bookcases are complex and need recoding as well. "Torn instruction"?
         locations={
-
+            "Grand Library (Left Wing) Urn (1)": LocationData("Random Minor Item"),
+            #1457
+            "Grand Library (Left Wing) Urn (2)": LocationData("Random Minor Item"),
+            #1455
+            "Grand Library (Left Wing) Urn (3)": LocationData("Random Minor Item"),
+            #1456
+            "Grand Library (Left Wing) Table": LocationData("Random Alchemy"),
+            #1629
+            "Grand Library (Right Wing) Urn (1)": LocationData("Random Minor Item"),
+            #1453
+            "Grand Library (Right Wing) Urn (2)": LocationData("Random Minor Item"),
+            #1454
+            #There's a crate in the right side of the main wing with switch 1458 that I don't think is accessible
+            "Grand Library (Upstairs) Urn (1)": LocationData("Random Minor Item"),
+            #1450
+            "Grand Library (Upstairs) Urn (2)": LocationData("Random Minor Item"),
+            #1451
+            "Grand Library (Upstairs) Urn (3)": LocationData("Random Minor Item"),
+            #1452
+            "Grand Library (Downstairs) Urn": LocationData("Random Minor Item"),
+            #1449
+            "Grand Library Crate": LocationData("Random Minor Item"),
+            #1459
+            "Grand Library Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
+            #1627
+            "Grand Library Bookshelf (2)": LocationData("Random Minor Book (Ancient)"),
+            #1618
+            "Grand Library Bookshelf (3)": LocationData("Random Minor Book (Ancient)"),
+            #1620
+            "Grand Library Bookshelf (4)": LocationData("Random Minor Book (Ancient)"),
+            #1621
+            "Grand Library Bookshelf (5)": LocationData("Random Minor Book (Ancient)"),
+            #1622
+            "Grand Library Bookshelf (6)": LocationData("Random Minor Book (Ancient)"),
+            #1624
+            "Grand Library Bookshelf (7)": LocationData("Random Minor Book (Ancient)"),
+            #1628
         },
         connections=["Grand library - Inner sanctum"],
     ),
