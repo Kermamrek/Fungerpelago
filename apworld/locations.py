@@ -1110,8 +1110,16 @@ REGIONS = [
     ),
     RegionData(
         "Grand library - Inner sanctum",
+        # Coin flip bookshelves
         locations={
-
+            "Inner Sanctum Urn (1)": LocationData("Random Minor Item"),
+            #1460
+            "Inner Sanctum Urn (2)": LocationData("Random Minor Item"),
+            #1461
+            "Inner Sanctum Urn (3)": LocationData("Random Minor Item"),
+            #1462
+            "Inner Sanctum Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
+            #1718
         },
     ),
     RegionData(
