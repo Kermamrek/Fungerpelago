@@ -945,6 +945,18 @@ REGIONS = [
         },
         connections=["Ancient city - The Tomb of the Gods"],
     ),
+    #==========MAHABRE==========
+    # From here on out, things get a little complicated
+    # Mahabre and Ancient Mahabre both share items through vars, every item has been marked down as what var it corresponds to
+    # However, there are exceptions, and they honestly feel random and completely arbitrary at times
+    # Here is a checklist of things left to do/sync up, since the regiondata won't display here:
+
+    # The Tomb of the Gods: DONE, completely lucked out that I named things the same
+    # The Tomb of the Gods - Level 2: DONE, bookshelves still need to be added though
+    # Passageway:
+    # Center square:
+    # Old passage:
+    # Grand Library: DONE
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -952,42 +964,36 @@ REGIONS = [
             # Chest and maybe enemies need to be added
             # There's like a million events in this room, maybe I missed something
             "Locked Room Urn (1)": LocationData("Random Minor Item"),
+            #2300
             "Locked Room Urn (2)": LocationData("Random Minor Item"),
+            #2299
             "Left Wing Urn (1)": LocationData("Random Minor Item"),
+            #2321
             "Left Wing Urn (2)": LocationData("Random Minor Item"),
+            #2298
         },
-        connections=["Ma'habre - The Tomb of the Gods", "Ancient city - Passageway", "The Tomb of the Gods - Level 2"],
+        connections=["Ancient city - Passageway", "The Tomb of the Gods - Level 2"],
     ),
     RegionData(
         "The Tomb of the Gods - Level 2",
         locations={
             "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
+            #2328
             "Scroll Storage Room Urn (2)": LocationData("Random Minor Item"),
+            #2322
             "Scroll Storage Room Urn (3)": LocationData("Random Minor Item"),
+            #2326
             "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
+            #2327
         },
     ),
-    RegionData(
-        "Ma'habre - The Tomb of the Gods",
-        locations={
-            # Chest and maybe enemies need to be added
-            "Locked Room Urn (1)": LocationData("Random Minor Item"),
-            "Locked Room Urn (2)": LocationData("Random Minor Item"),
-            "Left Wing Urn (1)": LocationData("Random Minor Item"),
-            "Left Wing Urn (2)": LocationData("Random Minor Item"),
-        },
-        connections=["Ma'habre - Passageway", "The Tomb of the Gods - Level 2"],
-    ),
-    RegionData(
-        "The Tomb of the Gods - Level 2",
-        locations={
-            # Tons of bookshelves that need to be added, and lady of moon?
-            "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
-            "Scroll Storage Room Urn (2)": LocationData("Random Minor Item"),
-            "Scroll Storage Room Urn (3)": LocationData("Random Minor Item"),
-            "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
-        },
-    ),
+    # RegionData(
+    #     "The Tomb of the Gods - Level 2",
+    #     locations={
+    #         # Tons of bookshelves that need to be added, and lady of moon?
+    #
+    #     },
+    # ),
     RegionData(
         "Ancient city - Passageway",
         locations={
@@ -1066,45 +1072,47 @@ REGIONS = [
     ),
     RegionData(
         "Grand library",
-        #Enemies? Some bookcases are complex and need recoding as well. "Torn instruction"?
+        #Enemies? Some bookcases are complex and need recoding as well. "Torn instruction"? Enki?
         locations={
             "Grand Library (Left Wing) Urn (1)": LocationData("Random Minor Item"),
-            #1457
+            #1457 d
             "Grand Library (Left Wing) Urn (2)": LocationData("Random Minor Item"),
-            #1455
+            #1455 d
             "Grand Library (Left Wing) Urn (3)": LocationData("Random Minor Item"),
-            #1456
+            #1456 d
             "Grand Library (Left Wing) Table": LocationData("Random Alchemy"),
-            #1629
+            #1629 d
             "Grand Library (Right Wing) Urn (1)": LocationData("Random Minor Item"),
-            #1453
+            #1453 d
             "Grand Library (Right Wing) Urn (2)": LocationData("Random Minor Item"),
-            #1454
+            #1454 d
             #There's a crate in the right side of the main wing with switch 1458 that I don't think is accessible
             "Grand Library (Upstairs) Urn (1)": LocationData("Random Minor Item"),
-            #1450
+            #1450 d
             "Grand Library (Upstairs) Urn (2)": LocationData("Random Minor Item"),
-            #1451
+            #1451 d
             "Grand Library (Upstairs) Urn (3)": LocationData("Random Minor Item"),
-            #1452
+            #1452 d
             "Grand Library (Downstairs) Urn": LocationData("Random Minor Item"),
-            #1449
+            #1449 d
             "Grand Library Crate": LocationData("Random Minor Item"),
-            #1459
+            #1459 d
             "Grand Library Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
-            #1627
+            #1627 d
             "Grand Library Bookshelf (2)": LocationData("Random Minor Book (Ancient)"),
-            #1618
+            #1618 d
             "Grand Library Bookshelf (3)": LocationData("Random Minor Book (Ancient)"),
-            #1620
+            #1620 d
             "Grand Library Bookshelf (4)": LocationData("Random Minor Book (Ancient)"),
-            #1621
+            #1621 d
             "Grand Library Bookshelf (5)": LocationData("Random Minor Book (Ancient)"),
-            #1622
+            #1622 d
             "Grand Library Bookshelf (6)": LocationData("Random Minor Book (Ancient)"),
-            #1624
+            #1624 d
             "Grand Library Bookshelf (7)": LocationData("Random Minor Book (Ancient)"),
-            #1628
+            #1628 d
+            #Past exclusive items start here
+            "Grand Library (Past) Alchemy Bookshelf": LocationData("Random Alchemy"),
         },
         connections=["Grand library - Inner sanctum"],
     ),
