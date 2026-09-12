@@ -949,6 +949,7 @@ REGIONS = [
     # From here on out, things get a little complicated
     # Mahabre and Ancient Mahabre both share items through vars, every item has been marked down as what var it corresponds to
     # However, there are exceptions, and they honestly feel random and completely arbitrary at times
+    # "d" next to variable indicates that it is done and double checked
     # Here is a checklist of things left to do/sync up, since the regiondata won't display here:
 
     # The Tomb of the Gods: DONE, completely lucked out that I named things the same
@@ -957,6 +958,7 @@ REGIONS = [
     # Center square:
     # Old passage:
     # Grand Library: DONE
+    # Inner Sanctum: DONE
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -964,13 +966,13 @@ REGIONS = [
             # Chest and maybe enemies need to be added
             # There's like a million events in this room, maybe I missed something
             "Locked Room Urn (1)": LocationData("Random Minor Item"),
-            #2300
+            #2300 d
             "Locked Room Urn (2)": LocationData("Random Minor Item"),
-            #2299
+            #2299 d
             "Left Wing Urn (1)": LocationData("Random Minor Item"),
-            #2321
+            #2321 d
             "Left Wing Urn (2)": LocationData("Random Minor Item"),
-            #2298
+            #2298 d
         },
         connections=["Ancient city - Passageway", "The Tomb of the Gods - Level 2"],
     ),
@@ -978,13 +980,13 @@ REGIONS = [
         "The Tomb of the Gods - Level 2",
         locations={
             "Scroll Storage Room Urn (1)": LocationData("Random Minor Item"),
-            #2328
+            #2328 d
             "Scroll Storage Room Urn (2)": LocationData("Random Minor Item"),
-            #2322
+            #2322 d
             "Scroll Storage Room Urn (3)": LocationData("Random Minor Item"),
-            #2326
+            #2326 d
             "Scroll Storage Room Urn (4)": LocationData("Random Minor Item"),
-            #2327
+            #2327 d
         },
     ),
     # RegionData(
@@ -1121,13 +1123,16 @@ REGIONS = [
         # Coin flip bookshelves
         locations={
             "Inner Sanctum Urn (1)": LocationData("Random Minor Item"),
-            #1460
+            #1460 d
             "Inner Sanctum Urn (2)": LocationData("Random Minor Item"),
-            #1461
+            #1461 d
             "Inner Sanctum Urn (3)": LocationData("Random Minor Item"),
-            #1462
+            #1462 d
             "Inner Sanctum Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
-            #1718
+            #1718 d
+            #Past exclusive items start here
+            "Inner Sanctum (Past) Bookshelf": LocationData("Random Minor Book (Ancient)"),
+            "Inner Sanctum (Past) Soul Stone": LocationData("Soul stone"),
         },
     ),
     RegionData(
