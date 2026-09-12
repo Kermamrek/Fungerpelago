@@ -959,6 +959,7 @@ REGIONS = [
     # Old passage:
     # Grand Library: DONE
     # Inner Sanctum: DONE
+
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -1177,11 +1178,12 @@ REGIONS = [
     ),
     RegionData(
         "Temple of Torment - Level 1 (Ancient)",
+        # Boss that spawns here?
         locations={
             "Ancient Temple of Torment Urn (1)": LocationData("Random Minor Item"),
-            #1523
+            #1523 d
             "Ancient Temple of Torment Urn (2)": LocationData("Random Minor Item"),
-            #1524
+            #1524 d
         },
         connections=["Temple of Torment - Level 2 (Ancient)"],
     ),
