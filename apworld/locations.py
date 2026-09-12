@@ -955,13 +955,15 @@ REGIONS = [
     # The Tomb of the Gods: DONE, completely lucked out that I named things the same
     # The Tomb of the Gods - Level 2: DONE, bookshelves still need to be added though
     # Passageway: DONE
-    # Center square:
+    # Center square: DONE
     # Old passage:
     # Back Alleys:
+    # Temple District: 
     # Grand Library: DONE
     # Inner Sanctum: DONE
     # Temple of Torment L1: DONE
     # Temple of Torment L2:
+    # Tower of the Endless: DONE
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -1310,22 +1312,22 @@ REGIONS = [
     RegionData(
         "Ancient city - The Tower of Endless",
         locations={
-            #1421
             "Tower of the Endless Crate (1)": LocationData("Random Minor Item"),
-            #1420
+            #1421 d
             "Tower of the Endless Crate (2)": LocationData("Random Minor Item"),
-            #1419
+            #1420 d
             "Tower of the Endless Crate (3)": LocationData("Random Minor Item"),
-            #1418
+            #1419 d
             "Tower of the Endless Crate (4)": LocationData("Random Minor Item"),
-            #1415
+            #1418 d
             "Tower of the Endless Urn (1)": LocationData("Random Minor Item"),
-            #1416
+            #1415 d
             "Tower of the Endless Urn (2)": LocationData("Random Minor Item"),
-            #1417
+            #1416 d
             "Tower of the Endless Urn (3)": LocationData("Random Minor Item"),
-            #1998
+            #1417 d
             "Tower of the Endless Barrel": LocationData("Random Food Item"),
+            #1998 d
         },
     ),
     RegionData(
