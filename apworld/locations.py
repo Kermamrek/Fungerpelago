@@ -954,12 +954,13 @@ REGIONS = [
 
     # The Tomb of the Gods: DONE, completely lucked out that I named things the same
     # The Tomb of the Gods - Level 2: DONE, bookshelves still need to be added though
-    # Passageway:
+    # Passageway: DONE
     # Center square:
     # Old passage:
     # Grand Library: DONE
     # Inner Sanctum: DONE
-
+    # Temple of Torment L1: DONE
+    # Temple of Torment L2:
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -1000,11 +1001,15 @@ REGIONS = [
     RegionData(
         "Ancient city - Passageway",
         locations={
-            "Old Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
-            "Old Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
-            "Old Mahabre Entrance Urn (3)": LocationData("Random Minor Item"),
-            "Old Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
-            "Old Mahabre Entrance Dried Mushroom": LocationData("Random Minor Item"),
+            "Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
+            # 1425 d
+            "Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
+            # 1424 d
+            "Mahabre Entrance Urn (3)": LocationData("Random Minor Item"),
+            # 1423 d
+            "Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
+            # 1422 d
+            "Mahabre Entrance (Past) Dried Mushroom": LocationData("Random Minor Item"),
         },
         # Ancient passage is not an error, its mahabre interiors
         connections=["Ancient city - Inside (1)", "Ancient city - Old passage", "Ancient city - Center square"],
@@ -1302,17 +1307,6 @@ REGIONS = [
             #1998
             "Tower of the Endless Barrel": LocationData("Random Food Item"),
         },
-    ),
-    RegionData(
-        "Ma'habre - Passageway",
-        locations={
-            "Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
-            "Mahabre Entrance Urn (2)": LocationData("Random Minor Item"),
-            "Mahabre Entrance Urn (3)": LocationData("Random Minor Item"),
-            "Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
-        },
-        # Ancient passage is not an error, its mahabre interiors
-        # connections=["Mahabre_inside1", "Center_square"],
     ),
     RegionData(
         "Level 8 - The gauntlet",
