@@ -958,12 +958,13 @@ REGIONS = [
     # Center square: DONE
     # Old passage:
     # Back Alleys:
-    # Temple District: 
+    # Temple District:
     # Grand Library: DONE
     # Inner Sanctum: DONE
     # Temple of Torment L1: DONE
     # Temple of Torment L2:
     # Tower of the Endless: DONE
+    # Inside 2: DONE
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -1235,7 +1236,7 @@ REGIONS = [
     ),
     RegionData(
         "Temple of Torment - Level 2 (Ancient)",
-        #Chest, Bookshelf
+        #Chest, Bookshelf, btw there are like 5 versions of this map
         locations={
             "Ancient Temple of Torment Urn (3)": LocationData("Random Minor Item"),
             #1526
@@ -1252,16 +1253,24 @@ REGIONS = [
     ),
     RegionData(
         "Ancient city - Inside (2)",
-        #Chest needs to be done, maybe bed
+        #Chest needs to be done, maybe bed, enemies in past, rename ancient urns
         locations={
             "Ancient Mural Building Urn (1)": LocationData("Random Minor Item"),
-            #1474
+            #1474 d
             "Ancient Mural Building Urn (2)": LocationData("Random Minor Item"),
-            #1473
+            #1473 d
             "Ancient Mural Building Red Herb": LocationData("Red herb"),
             "Ancient Mural Building Blue Herb (1)": LocationData("Blue herb"),
             "Ancient Mural Building Blue Herb (2)": LocationData("Blue herb"),
             "Mystical Beast War Scythe": LocationData("War scythe"),
+            #past items start here
+            "Mural Building Urn (3)": LocationData("Random Minor Item"),
+            "Mural Building Urn (4)": LocationData("Random Minor Item"),
+            "Mural Building Urn (5)": LocationData("Random Minor Item"),
+            "Mural Building Urn (6)": LocationData("Random Minor Item"),
+            "Mural Building Urn (7)": LocationData("Random Minor Item"),
+            "Mural Building Urn (8)": LocationData("Random Minor Item"),
+            "Mural Building Lucky Coin": LocationData("Lucky Coin"),
         },
     ),
     RegionData(
