@@ -957,6 +957,7 @@ REGIONS = [
     # Passageway: DONE
     # Center square:
     # Old passage:
+    # Back Alleys:
     # Grand Library: DONE
     # Inner Sanctum: DONE
     # Temple of Torment L1: DONE
@@ -1033,16 +1034,35 @@ REGIONS = [
             # Treasure chest that is empty? I don't remember whats there
             # I think one urn near pocketcat is inaccessible, didn't add it
             "Giant Statue Crate (1)": LocationData("Random Minor Item"),
+            #1319 d
             "Giant Statue Crate (2)": LocationData("Random Minor Item"),
+            #1320 d
+            #maybe rename these broken statue crates as the statue isn't broken in the past
             "Broken Statue Crate (1)": LocationData("Random Minor Item"),
+            #1405 d
             "Broken Statue Crate (2)": LocationData("Random Minor Item"),
+            #1406 d
             "Broken Statue Crate (3)": LocationData("Random Minor Item"),
+            #1404 d
             "Broken Statue Urn (1)": LocationData("Random Minor Item"),
+            #1402 d
             "Broken Statue Urn (2)": LocationData("Random Minor Item"),
+            #1403 d
             "Statue Dried Mushroom": LocationData("Dried mushroom"),
             "Temple Entrance Crate (1)": LocationData("Random Minor Item"),
+            #1395 d
             "Temple Entrance Urn (1)": LocationData("Random Minor Item"),
+            #1400 d
             "Temple Entrance Urn (2)": LocationData("Random Minor Item"),
+            #1398 d
+            #Past items start Here
+            "Temple Entrance Urn (3)": LocationData("Random Minor Item"),
+            "Broken Statue Crate (4)": LocationData("Random Minor Item"),
+            "Broken Statue Urn (3)": LocationData("Random Minor Item"),
+            #1401 - two urns have the exact same designation, so only one is possible to get
+            "Center Square Barrel (1)": LocationData("Random Food Item"),
+            "Center Square Barrel (2)": LocationData("Random Food Item"),
+            "Center Square Barrel (3)": LocationData("Random Food Item"),
         },
         connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)"],
     ),
