@@ -965,6 +965,7 @@ REGIONS = [
     # Temple of Torment L2: DONE
     # Tower of the Endless: DONE
     # Inside 2: DONE
+    # Inside 1:
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
@@ -1013,7 +1014,7 @@ REGIONS = [
             # 1423 d
             "Mahabre Entrance Urn (4)": LocationData("Random Minor Item"),
             # 1422 d
-            "Mahabre Entrance (Past) Dried Mushroom": LocationData("Random Minor Item"),
+            "Mahabre Entrance (Past) Dried Mushroom": LocationData("Dried mushroom"),
         },
         # Ancient passage is not an error, its mahabre interiors
         connections=["Ancient city - Inside (1)", "Ancient city - Old passage", "Ancient city - Center square"],
@@ -1096,8 +1097,53 @@ REGIONS = [
     ),
     RegionData(
         "Ancient city - Temple district",
+        #Enemies, buried chest, shopkeeper
         locations={
-            # The urns here share data between past mahabre and present mahabre?
+            "Temple District Urn (1)": LocationData("Random Minor Item"),
+            #1437
+            "Temple District Urn (2)": LocationData("Random Minor Item"),
+            #1436
+            "Temple District Urn (3)": LocationData("Random Minor Item"),
+            #1435
+            "Temple District Urn (4)": LocationData("Random Minor Item"),
+            #1429
+            "Temple District Urn (5)": LocationData("Random Minor Item"),
+            #1430
+            "Temple District Urn (6)": LocationData("Random Minor Item"),
+            #1431
+            "Temple District Urn (7)": LocationData("Random Minor Item"),
+            #1432
+            "Temple District Crate (1)": LocationData("Random Minor Item"),
+            #1633
+            "Temple District Crate (2)": LocationData("Random Minor Item"),
+            #1632
+            "Temple District Crate (3)": LocationData("Random Minor Item"),
+            #1631
+            "Temple District Crate (4)": LocationData("Random Minor Item"),
+            #1434
+            "Temple District Crate (5)": LocationData("Random Minor Item"),
+            #1433
+            "Temple District Dried Mushroom (1)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (2)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (3)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (4)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (5)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (6)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (7)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (8)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (9)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (10)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (11)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (12)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (13)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (14)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (15)": LocationData("Dried mushroom"),
+            "Temple District Dried Mushroom (16)": LocationData("Dried mushroom"),
+            "Temple District Blue Herb (1)": LocationData("Blue herb"),
+            "Temple District Blue Herb (2)": LocationData("Blue herb"),
+            "Temple District Red Herb (1)": LocationData("Red herb"),
+            "Temple District Red Herb (2)": LocationData("Red herb"),
+
         },
         connections=["Ancient city - Back alleys", "Grand library"],
     ),
