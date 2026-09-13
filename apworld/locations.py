@@ -956,13 +956,13 @@ REGIONS = [
     # The Tomb of the Gods - Level 2: DONE, bookshelves still need to be added though
     # Passageway: DONE
     # Center square: DONE
-    # Old passage:
+    # Old passage: does this exist in past?
     # Back Alleys: DONE
     # Temple District:
     # Grand Library: DONE
     # Inner Sanctum: DONE
     # Temple of Torment L1: DONE
-    # Temple of Torment L2:
+    # Temple of Torment L2: DONE
     # Tower of the Endless: DONE
     # Inside 2: DONE
     RegionData(
@@ -1210,9 +1210,9 @@ REGIONS = [
         "Temple of Torment - Level 1 (Ancient)",
         # Boss that spawns here?
         locations={
-            "Ancient Temple of Torment Urn (1)": LocationData("Random Minor Item"),
+            "Temple of Torment Urn (1)": LocationData("Random Minor Item"),
             #1523 d
-            "Ancient Temple of Torment Urn (2)": LocationData("Random Minor Item"),
+            "Temple of Torment Urn (2)": LocationData("Random Minor Item"),
             #1524 d
         },
         connections=["Temple of Torment - Level 2 (Ancient)"],
@@ -1239,18 +1239,19 @@ REGIONS = [
     RegionData(
         "Temple of Torment - Level 2 (Ancient)",
         #Chest, Bookshelf, btw there are like 5 versions of this map
+        # each D is one map done
         locations={
-            "Ancient Temple of Torment Urn (3)": LocationData("Random Minor Item"),
-            #1526
-            "Ancient Temple of Torment Urn (4)": LocationData("Random Minor Item"),
-            #1525
-            "Ancient Temple of Torment Urn (5)": LocationData("Random Minor Item"),
-            #1527
-            "Ancient Temple of Torment Urn (6)": LocationData("Random Minor Item"),
-            #1528
-            "Ancient Temple of Torment Urn (7)": LocationData("Random Minor Item"),
-            #1529
-            "Ancient Temple of Torment Soul Stone": LocationData("Random Minor Item"),
+            "Temple of Torment Urn (3)": LocationData("Random Minor Item"),
+            #1526 d d d d d d
+            "Temple of Torment Urn (4)": LocationData("Random Minor Item"),
+            #1525 d d d d d d
+            "Temple of Torment Urn (5)": LocationData("Random Minor Item"),
+            #1527 d d d d d d
+            "Temple of Torment Urn (6)": LocationData("Random Minor Item"),
+            #1528 d d d d d d
+            "Temple of Torment Urn (7)": LocationData("Random Minor Item"),
+            #1529 d d d d d d
+            "Temple of Torment Soul Stone": LocationData("Random Minor Item"),
         },
     ),
     RegionData(
