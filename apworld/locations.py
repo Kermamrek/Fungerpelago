@@ -957,7 +957,7 @@ REGIONS = [
     # Passageway: DONE
     # Center square: DONE
     # Old passage:
-    # Back Alleys:
+    # Back Alleys: DONE
     # Temple District:
     # Grand Library: DONE
     # Inner Sanctum: DONE
@@ -1166,6 +1166,7 @@ REGIONS = [
     ),
     RegionData(
         "Ancient city - Back alleys",
+        #enemies
         locations={
             "Alley Blue Herb (1)": LocationData("Blue herb"),
             "Alley Blue Herb (2)": LocationData("Blue herb"),
@@ -1175,32 +1176,33 @@ REGIONS = [
             "Alley Red Herb": LocationData("Red herb"),
             "Alley Soul Stone": LocationData("Soul Stone"),
             "Alley Lucky Coin": LocationData("Lucky Coin"),
-            #2007
             "Alley Barrel (1)": LocationData("Random Food Item"),
-            #2008
+            #2007 d
             "Alley Barrel (2)": LocationData("Random Food Item"),
-            #1439
+            #2008 d
             "Alley Crate (1)": LocationData("Random Minor Item"),
-            #1440
+            #1439 d
             "Alley Crate (2)": LocationData("Random Minor Item"),
-            #1441
+            #1440 d
             "Alley Crate (3)": LocationData("Random Minor Item"),
-            #1442
+            #1441 d
             "Alley Crate (4)": LocationData("Random Minor Item"),
-            #1443
+            #1442 d
             "Alley Crate (5)": LocationData("Random Minor Item"),
-            #1444
+            #1443 d
             "Alley Crate (6)": LocationData("Random Minor Item"),
+            #1444 d
+            "Alley Crate (Present)": LocationData("Random Minor Item"),
             #This doesnt have one
-            "Alley Crate (7)": LocationData("Random Minor Item"),
-            #1446
+            "Alley Crate (Past)": LocationData("Random Minor Item"),
             "Alley Urn (1)": LocationData("Random Minor Item"),
-            #1448
+            #1446 d
             "Alley Urn (2)": LocationData("Random Minor Item"),
-            #1445
+            #1448 d
             "Alley Urn (3)": LocationData("Random Minor Item"),
-            #1438
+            #1445 d
             "Alley Urn (4)": LocationData("Random Minor Item"),
+            #1438 d
         },
         connections=["Ancient city - Underground cave", "Temple of Torment - Level 1 (Ancient)"],
     ),
