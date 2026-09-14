@@ -1165,7 +1165,13 @@ REGIONS = [
             "Temple District Red Herb (2)": LocationData("Red herb"),
 
         },
-        connections=["Ancient city - Back alleys", "Grand library"],
+        connections=["Ancient city - Back alleys", "Grand library", "Ma'habre - Pit of enlightenment"],
+    ),
+    RegionData(
+        "Ma'habre - Pit of enlightenment",
+        locations={
+            "Achieve Enlightenment": LocationData("Book of enlightenment"),
+        },
     ),
     RegionData(
         "Grand library",
