@@ -1070,7 +1070,23 @@ REGIONS = [
             "Center Square Barrel (2)": LocationData("Random Food Item"),
             "Center Square Barrel (3)": LocationData("Random Food Item"),
         },
-        connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)"],
+        connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)", "Golden Temple"],
+    ),
+    RegionData(
+        "Golden Temple",
+        locations={
+            "Golden Temple Urn (1)": LocationData("Random Minor Item"),
+            #1753 d
+            "Golden Temple Urn (2)": LocationData("Random Minor Item"),
+            #1756 d
+            "Golden Temple Urn (3)": LocationData("Random Minor Item"),
+            #1754 d
+            "Golden Temple Urn (4)": LocationData("Random Minor Item"),
+            #1755 d
+            "Golden Temple Urn (5)": LocationData("Random Minor Item"),
+            #1757 d
+            "King's Passage Key": LocationData("King's passage key"),
+        },
     ),
     RegionData(
         "Ancient city - Inside (1)",
