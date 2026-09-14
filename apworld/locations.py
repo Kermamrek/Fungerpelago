@@ -965,7 +965,9 @@ REGIONS = [
     # Temple of Torment L2: DONE
     # Tower of the Endless: DONE
     # Inside 2: DONE
-    # Inside 1:
+    # Inside 1: DONE
+    # Mahabre book: haven't added yet, how does this work?
+    # Dream: Haven't added yet, need to consider how to implement this
     RegionData(
         "Ancient city - The Tomb of the Gods",
         locations={
