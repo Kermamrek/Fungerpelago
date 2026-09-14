@@ -1117,32 +1117,32 @@ REGIONS = [
     ),
     RegionData(
         "Ancient city - Temple district",
-        #Enemies, buried chest, shopkeeper
+        #Enemies, buried chest, balcony chest, shopkeeper
         locations={
             "Temple District Urn (1)": LocationData("Random Minor Item"),
-            #1437
+            #1437 d
             "Temple District Urn (2)": LocationData("Random Minor Item"),
-            #1436
+            #1436 d
             "Temple District Urn (3)": LocationData("Random Minor Item"),
-            #1435
+            #1435 d
             "Temple District Urn (4)": LocationData("Random Minor Item"),
-            #1429
+            #1429 d
             "Temple District Urn (5)": LocationData("Random Minor Item"),
-            #1430
+            #1430 d
             "Temple District Urn (6)": LocationData("Random Minor Item"),
-            #1431
+            #1431 d
             "Temple District Urn (7)": LocationData("Random Minor Item"),
-            #1432
+            #1432 d
             "Temple District Crate (1)": LocationData("Random Minor Item"),
-            #1633
+            #1633 d
             "Temple District Crate (2)": LocationData("Random Minor Item"),
-            #1632
+            #1632 d
             "Temple District Crate (3)": LocationData("Random Minor Item"),
-            #1631
+            #1631 d
             "Temple District Crate (4)": LocationData("Random Minor Item"),
-            #1434
+            #1434 d
             "Temple District Crate (5)": LocationData("Random Minor Item"),
-            #1433
+            #1433 d
             "Temple District Dried Mushroom (1)": LocationData("Dried mushroom"),
             "Temple District Dried Mushroom (2)": LocationData("Dried mushroom"),
             "Temple District Dried Mushroom (3)": LocationData("Dried mushroom"),
