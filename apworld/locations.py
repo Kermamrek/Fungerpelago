@@ -1077,21 +1077,39 @@ REGIONS = [
             # Gaunt Knight
             # Chests, one of them you can like climb over some rubble or something?
             # Bookshelves
-            # Snatcher enemies
-            "Inside Ancient Mahabre Urn (Near Knight - 1)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Near Knight - 2)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Near Knight - 3)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Near Knight - 4)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Near Knight - 1)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Near Knight - 2)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Urn (Chest Room)": LocationData("Random Minor Item"),
-            "Inside Ancient Mahabre Crate (Bookshelf Room - 1)": LocationData("Random Minor Item"),
+            # enemies
+            "Inside Mahabre Urn (Near Knight - 1)": LocationData("Random Minor Item"),
+            #1465 d
+            "Inside Mahabre Urn (Near Knight - 2)": LocationData("Random Minor Item"),
+            #1466 d
+            "Inside Mahabre Urn (Near Knight - 3)": LocationData("Random Minor Item"),
+            #1467 d
+            "Inside Mahabre Urn (Near Knight - 4)": LocationData("Random Minor Item"),
+            #1468 d
+            "Inside Mahabre Crate (Near Knight - 1)": LocationData("Random Minor Item"),
+            #1470 d
+            "Inside Mahabre Crate (Near Knight - 2)": LocationData("Random Minor Item"),
+            #1469 d
+            "Inside Mahabre Urn (Chest Room)": LocationData("Random Minor Item"),
+            #1463 d
+            "Inside Mahabre Crate (Bookshelf Room - 1)": LocationData("Random Minor Item"),
+            #1471 d
             "Inside Ancient Mahabre Crate (Bookshelf Room - 2)": LocationData("Random Minor Item"),
+            #1472 d
             "Ancient Mahabre Prison Coin": LocationData("Lucky coin"),
             "Ancient Mahabre Prison Urn": LocationData("Random Minor Item"),
+            #1464, but I don't think you can get here in the past
             "Upstairs Ancient Passage Crate (1)": LocationData("Random Minor Item"),
             "Upstairs Ancient Passage Crate (2)": LocationData("Random Minor Item"),
             "Upstairs Ancient Passage Urn": LocationData("Random Minor Item"),
+            #Past items start here
+            "Past Mahabre Chest Room Coin": LocationData("Lucky coin"),
+            "Inside Mahabre Urn (Near Figurine - 1)": LocationData("Random Minor Item"),
+            "Inside Mahabre Urn (Near Figurine - 2)": LocationData("Random Minor Item"),
+            #I think this is inaccessible
+            # "Inside Mahabre Urn (Near Figurine - 3)": LocationData("Random Minor Item"),
+            "Inside Mahabre Crate (Near Figurine)": LocationData("Random Minor Item"),
+            "Inside Mahabre Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
         },
         # connections=["Ancient_passage", "Ancient_Center_square"],
     ),
