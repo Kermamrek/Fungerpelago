@@ -5,7 +5,7 @@ fear&hunger/**/*.*
 !fear&hunger/www/js/libs/seedrandom.js
 !fear&hunger/www/js/plugins/Fungerpelago.js
 !fear&hunger/www/js/plugins.js
-!fear&hunger/www/img/pictures/fungerpelago_splash.png
+!fear&hunger/www/img/pictures/fungerpelago_splash.rpgmvp
 !fear&hunger/www/index.html
 !fear&hunger/www/package.json
 !fear&hunger/www/data/CommonEvents.json
