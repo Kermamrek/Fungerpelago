@@ -943,7 +943,7 @@ REGIONS = [
             "East Hallway Barrel (1)": LocationData("Random Food Item"),
             "East Hallway Barrel (2)": LocationData("Random Food Item"),
         },
-        connections=["Ancient city - The Tomb of the Gods"],
+        connections=["Ma'habre - The Tomb of the Gods"],
     ),
     #==========MAHABRE==========
     # From here on out, things get a little complicated
@@ -969,7 +969,7 @@ REGIONS = [
     # Mahabre book: haven't added yet, how does this work?
     # Dream: Haven't added yet, need to consider how to implement this
     RegionData(
-        "Ancient city - The Tomb of the Gods",
+        "Ma'habre - The Tomb of the Gods",
         locations={
             # Miasma is here, do we need to do things with that?
             # Chest and maybe enemies need to be added
@@ -1184,7 +1184,7 @@ REGIONS = [
         connections=["Ma'habre - Back alleys", "Grand library", "Ma'habre - Pit of enlightenment"],
     ),
     RegionData(
-        "Ma'habre - Pit of enlightenment",
+        "Grand hall",
         locations={
             "Achieve Enlightenment": LocationData("Book of enlightenment"),
         },
@@ -1292,10 +1292,10 @@ REGIONS = [
             "Alley Urn (4)": LocationData("Random Minor Item"),
             #1438 d
         },
-        connections=["Ancient city - Underground cave", "Temple of Torment - Level 1 (Ancient)"],
+        connections=["Ancient city - Underground cave", "Temple of Torment - Level 1"],
     ),
     RegionData(
-        "Temple of Torment - Level 1 (Ancient)",
+        "Temple of Torment - Level 1",
         # Boss that spawns here?
         locations={
             "Temple of Torment Urn (1)": LocationData("Random Minor Item"),
@@ -1303,7 +1303,7 @@ REGIONS = [
             "Temple of Torment Urn (2)": LocationData("Random Minor Item"),
             #1524 d
         },
-        connections=["Temple of Torment - Level 2 (Ancient)"],
+        connections=["Temple of Torment - Level 2"],
     ),
     RegionData(
         "Ancient city - Underground cave",
@@ -1325,7 +1325,7 @@ REGIONS = [
         },
     ),
     RegionData(
-        "Temple of Torment - Level 2 (Ancient)",
+        "Temple of Torment - Level 2",
         #Chest, Bookshelf, btw there are like 5 versions of this map
         # each D is one map done
         locations={
