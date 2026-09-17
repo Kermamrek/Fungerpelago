@@ -983,7 +983,7 @@ REGIONS = [
             "Left Wing Urn (2)": LocationData("Random Minor Item"),
             #2298 d
         },
-        connections=["Ancient city - Passageway", "The Tomb of the Gods - Level 2"],
+        connections=["Ma'habre - Passageway", "The Tomb of the Gods - Level 2"],
     ),
     RegionData(
         "The Tomb of the Gods - Level 2",
@@ -1006,7 +1006,7 @@ REGIONS = [
     #     },
     # ),
     RegionData(
-        "Ancient city - Passageway",
+        "Ma'habre - Passageway",
         locations={
             "Mahabre Entrance Urn (1)": LocationData("Random Minor Item"),
             # 1425 d
@@ -1019,7 +1019,7 @@ REGIONS = [
             "Mahabre Entrance (Past) Dried Mushroom": LocationData("Dried mushroom"),
         },
         # Ancient passage is not an error, its mahabre interiors
-        connections=["Ancient city - Inside (1)", "Ancient city - Old passage", "Ancient city - Center square"],
+        connections=["Ancient city - Inside (1)", "Ancient city - Old passage", "Ma'habre - Center square"],
     ),
     RegionData(
         "Ancient city - Old passage",
@@ -1034,7 +1034,7 @@ REGIONS = [
         },
     ),
     RegionData(
-        "Ancient city - Center square",
+        "Ma'habre - Center square",
         locations={
             # Pocketcat
             # Treasure chest that is empty? I don't remember whats there
@@ -1070,10 +1070,10 @@ REGIONS = [
             "Center Square Barrel (2)": LocationData("Random Food Item"),
             "Center Square Barrel (3)": LocationData("Random Food Item"),
         },
-        connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)", "Golden Temple"],
+        connections=["Ancient city - Downtown", "Ancient city - Inside (1)", "Ancient city - Inside (2)", "Golden Temple - Inside"],
     ),
     RegionData(
-        "Golden Temple",
+        "Golden Temple - Inside",
         locations={
             "Golden Temple Urn (1)": LocationData("Random Minor Item"),
             #1753 d
@@ -1132,7 +1132,7 @@ REGIONS = [
         # connections=["Ancient_passage", "Ancient_Center_square"],
     ),
     RegionData(
-        "Ancient city - Temple district",
+        "Ma'habre - Temple district",
         #Enemies, buried chest, balcony chest, shopkeeper
         locations={
             "Temple District Urn (1)": LocationData("Random Minor Item"),
@@ -1181,7 +1181,7 @@ REGIONS = [
             "Temple District Red Herb (2)": LocationData("Red herb"),
 
         },
-        connections=["Ancient city - Back alleys", "Grand library", "Ma'habre - Pit of enlightenment"],
+        connections=["Ma'habre - Back alleys", "Grand library", "Ma'habre - Pit of enlightenment"],
     ),
     RegionData(
         "Ma'habre - Pit of enlightenment",
@@ -1253,7 +1253,7 @@ REGIONS = [
         },
     ),
     RegionData(
-        "Ancient city - Back alleys",
+        "Ma'habre - Back alleys",
         #enemies
         locations={
             "Alley Blue Herb (1)": LocationData("Blue herb"),
@@ -1407,10 +1407,10 @@ REGIONS = [
             #1414
             "Upper Downtown Urn (5)": LocationData("Random Minor Item"),
         },
-        connections=["Ancient city - The Tower of Endless"],
+        connections=["Ma'habre - The Tower of Endless"],
     ),
     RegionData(
-        "Ancient city - The Tower of Endless",
+        "Ma'habre - The Tower of Endless",
         locations={
             "Tower of the Endless Crate (1)": LocationData("Random Minor Item"),
             #1421 d
