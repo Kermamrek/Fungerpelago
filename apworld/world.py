@@ -35,7 +35,7 @@ class FungerWorld(World):
             for location_name, location_data in region_data.locations.items():
                 location_name_to_id[f"{region_data.name}: {location_name}"] = location_data.id
         else:
-            for variant_name, locations in region_data.variants.items():
+            for variant_name, locations in region_data.variants:
                 for location_name, location_data in locations.items():
                     location_name_to_id[f"{region_data.name} ({variant_name}): {location_name}"] = location_data.id
 

@@ -340,15 +340,16 @@ REGIONS = [
                 "Trortur Room Skinning Knife": LocationData("Skinning knife"),
             },
         },
-        connections=["Level 1 - Backyard", "Level 2 - Blood pit"],
+        connections=["Level 1 - Backyard"],
+        # Add blood pit once lizardman is implemented
     ),
-    RegionData(
-        "Level 2 - Blood pit",
-        locations={
-            # Lizardman
-        },
-        connections=["Level 1 - Hidden backyard", "Level 3 - Prisons", "Level 4 - Caverns"],
-    ),
+    # RegionData(
+    #     "Level 2 - Blood pit",
+    #     locations={
+    #         # Lizardman
+    #     },
+    #     connections=["Level 1 - Hidden backyard", "Level 3 - Prisons", "Level 4 - Caverns"],
+    # ),
     RegionData(
         "Level 1 - Backyard",
         locations={
@@ -839,14 +840,14 @@ REGIONS = [
         },
         connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Mines (Cave-in)", "Level 6 - Village Huts", "Level 8 - The gauntlet"],
     ),
-    RegionData(
-        "Level 6 - Altar of darkness",
-        locations={
-            # Has no items, what do we do?
-        },
-        # "Level 8 - The gauntlet"
-        connections=["huts_village"],
-    ),
+    # RegionData(
+    #     "Level 6 - Altar of darkness",
+    #     locations={
+    #         # plan to add lever here for traps
+    #     },
+    #     # "Level 8 - The gauntlet"
+    #     connections=["huts_village"],
+    # ),
     RegionData(
         "Level 6 - Village Huts",
         locations={
@@ -958,7 +959,7 @@ REGIONS = [
     # Center square: DONE
     # Old passage: does this exist in past?
     # Back Alleys: DONE
-    # Temple District:
+    # Temple District: DONE
     # Grand Library: DONE
     # Inner Sanctum: DONE
     # Temple of Torment L1: DONE
