@@ -838,7 +838,8 @@ REGIONS = [
             "Torch (3)": LocationData("Torch"),
             "Torch (4)": LocationData("Torch"),
         },
-        connections=["Level 6 - Mines (2)", "Level 6 - Altar of darkness", "Level 6 - Mines (Cave-in)", "Level 6 - Village Huts", "Level 8 - The gauntlet"],
+        connections=["Level 6 - Mines (2)", "Level 6 - Mines (Cave-in)", "Level 6 - Village Huts", "Level 8 - The gauntlet"],
+        # add altar of darkness when trap added
     ),
     # RegionData(
     #     "Level 6 - Altar of darkness",
