@@ -89,7 +89,7 @@ class FungerWorld(World):
         id = data.id
 
         if name == "Torch" and (
-            self.options.DifficultyChoice.terror_and_starvation or self.options.DifficultyChoice.hard_mode
+            self.options.difficulty.option_terror_and_starvation or self.options.difficulty.option_hard_mode
         ):
             classification = ItemClassification.progression
 

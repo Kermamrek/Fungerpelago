@@ -24,7 +24,7 @@ ITEMS = {
     "Random Scroll Item": ItemData(ItemClassification.useful, 5008),  # Common Event 149
     "Random Rare Book (Ancient)": ItemData(ItemClassification.useful, 5009),  # Common Event 178
     "Random Minor Book (Ancient)": ItemData(ItemClassification.filler, 5010),  # Common Event 179, despite being ancient I think every book here is useless
-    "Soul Stone": ItemData(ItemClassification.useful, 2115),  # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
+    "Soul stone": ItemData(ItemClassification.useful, 2115),  # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
     "Random Weapon": ItemData(ItemClassification.useful, 5011),  # Common Event 238
     "Random Minor Weapon": ItemData(ItemClassification.useful, 5012),  # Common Event 239
     "Nights Random Item": ItemData(ItemClassification.filler, 5013),  # Common Event 250 TODO: look at where this is used? Probably Dungeon Nights and can be ignored
@@ -86,6 +86,7 @@ ITEMS = {
     "Captain's diary 3": ItemData(ItemClassification.filler, 2082),
     "Book of Fears": ItemData(ItemClassification.useful, 2098),
     "Buckman's letter": ItemData(ItemClassification.filler, 2181),
+    "Diary of an unknown guard": ItemData(ItemClassification.filler, 2157),
 
     # WEAPONS
     "Short sword": ItemData(ItemClassification.useful, 1001),  # Gaunt knight drop
@@ -116,7 +117,7 @@ ITEMS = {
     "Cavewolf paw": ItemData(ItemClassification.useful, 26),
     "Ring of wraiths": ItemData(ItemClassification.useful, 29),
     "Monocle": ItemData(ItemClassification.useful, 50),
-    "Charm of the Yggaegetsu": ItemData(ItemClassification.useful, 58),
+    "Charm of the yggaegetsu": ItemData(ItemClassification.useful, 58),
 
     # STORE ITEMS
     "Sorceror's stone": ItemData(ItemClassification.useful, 27),
@@ -157,6 +158,7 @@ ITEMS = {
     "Scroll of combustion": ItemData(ItemClassification.useful, 2160),  # Secret hideout loot
     "Rotten meat": ItemData(ItemClassification.filler | ItemClassification.trap, 2021),
     "Cloth fragment": ItemData(ItemClassification.useful | ItemClassification.filler, 2008),
+    "Stone": ItemData(ItemClassification.filler, 2084),
 
     # "Random Blood Magic": Common Event 29 - probably not an item
     # "Greater Blood Magic": Common Event 97 - probably not an item

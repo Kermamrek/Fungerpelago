@@ -444,18 +444,18 @@ REGIONS = [
         "Level 2 - Basement",
         variants={
             "A": {
-                "Rune Room Dried Mushroom (West)": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (North)": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (Northeast)": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (East)": LocationData("Dried Mushroom"),
-                "Hallway Dried Mushroom": LocationData("Dried Mushroom"),
+                "Rune Room Dried Mushroom (West)": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (North)": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (Northeast)": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (East)": LocationData("Dried mushroom"),
+                "Hallway Dried Mushroom": LocationData("Dried mushroom"),
                 "Miasma": LocationData("Miasma"),
                 "Rune Room Barrel (1)": LocationData("Random Food Item"),
                 "Rune Room Barrel (2)": LocationData("Random Food Item"),
                 "Rune Room Barrel (3)": LocationData("Random Food Item"),
                 "Rune Room Crate": LocationData("Random Minor Item"),
-                "Rune Room Blue Herb": LocationData("Blue Herb"),
-                "Rune Room Green Herb": LocationData("Green Herb"),
+                "Rune Room Blue Herb": LocationData("Blue herb"),
+                "Rune Room Green Herb": LocationData("Green herb"),
                 "Keg Room Barrel (Left)": LocationData("Random Food Item"),
                 "Keg Room Barrel (Right)": LocationData("Random Food Item"),
                 # Note: Change the description text/pickup text for this one?
@@ -471,11 +471,11 @@ REGIONS = [
                 # TODO: Armour racks/Weapon Racks/the chest are not common events. They have not been added in because of that, fix them first
             },
             "B": {
-                "Entryway Dried Mushroom": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (Southwest)": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (West)": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (Northeast)": LocationData("Dried Mushroom"),
-                "Rune Room Dried Mushroom (East)": LocationData("Dried Mushroom"),
+                "Entryway Dried Mushroom": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (Southwest)": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (West)": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (Northeast)": LocationData("Dried mushroom"),
+                "Rune Room Dried Mushroom (East)": LocationData("Dried mushroom"),
                 "Rune Room Blue Herb": LocationData("Blue herb"),
                 "Hallway Blue Herb": LocationData("Blue herb"),
                 "Hallway Green Herb": LocationData("Green herb"),
@@ -492,9 +492,9 @@ REGIONS = [
                 "Armory Hallway Crate (7)": LocationData("Random Minor Item"),
                 "Centre Hallway Crate (1)": LocationData("Random Minor Item"),
                 "Centre Hallway Crate (2)": LocationData("Random Minor Item"),
-                "Moss Hallway Dried Mushroom (1)": LocationData("Dried Mushroom"),
-                "Moss Hallway Dried Mushroom (2)": LocationData("Dried Mushroom"),
-                "Moss Hallway Dried Mushroom (3)": LocationData("Dried Mushroom"),
+                "Moss Hallway Dried Mushroom (1)": LocationData("Dried mushroom"),
+                "Moss Hallway Dried Mushroom (2)": LocationData("Dried mushroom"),
+                "Moss Hallway Dried Mushroom (3)": LocationData("Dried mushroom"),
                 "Right Hallway Crate": LocationData("Random Minor Item"),
                 # TODO: Armour racks/Weapon Racks/the chest are not common events. They have not been added in because of that, fix them first
             },
@@ -524,11 +524,11 @@ REGIONS = [
             "Moss Room Barrel (1)": LocationData("Random Food Item"),
             "Moss Room Barrel (2)": LocationData("Random Food Item"),
             "Moss Room Barrel (3)": LocationData("Random Food Item"),
-            "Moss Room Dried Mushroom": LocationData("Dried Mushroom"),
-            "Shakespeare Room Dried Mushroom (1)": LocationData("Dried Mushroom"),
-            "Shakespeare Room Dried Mushroom (2)": LocationData("Dried Mushroom"),
-            "Shakespeare Room Dried Mushroom (3)": LocationData("Dried Mushroom"),
-            "Shakespeare Room Dried Mushroom (4)": LocationData("Dried Mushroom"),
+            "Moss Room Dried Mushroom": LocationData("Dried mushroom"),
+            "Shakespeare Room Dried Mushroom (1)": LocationData("Dried mushroom"),
+            "Shakespeare Room Dried Mushroom (2)": LocationData("Dried mushroom"),
+            "Shakespeare Room Dried Mushroom (3)": LocationData("Dried mushroom"),
+            "Shakespeare Room Dried Mushroom (4)": LocationData("Dried mushroom"),
             "Shakespeare Room Barrel (1)": LocationData("Random Food Item"),
             "Shakespeare Room Barrel (2)": LocationData("Random Food Item"),
             "Shakespeare Room Barrel (3)": LocationData("Random Food Item"),
@@ -915,7 +915,8 @@ REGIONS = [
             "Cave Green Herb (2)": LocationData("Green herb"),
             "Cave Green Herb (3)": LocationData("Green herb"),
         },
-        connections=["Level 7 - Catacombs", "deeper_thicket"],
+        connections=["Level 7 - Catacombs"],
+        # deeper_thicket?
     ),
     RegionData(
         "Staircase",
@@ -1183,7 +1184,7 @@ REGIONS = [
             "Temple District Red Herb (2)": LocationData("Red herb"),
 
         },
-        connections=["Ma'habre - Back alleys", "Grand library", "Ma'habre - Pit of enlightenment"],
+        connections=["Ma'habre - Back alleys", "Grand library", "Grand hall"],
     ),
     RegionData(
         "Grand hall",
@@ -1264,8 +1265,8 @@ REGIONS = [
             "Alley Blue Herb (4)": LocationData("Blue herb"),
             "Alley Green Herb": LocationData("Green herb"),
             "Alley Red Herb": LocationData("Red herb"),
-            "Alley Soul Stone": LocationData("Soul Stone"),
-            "Alley Lucky Coin": LocationData("Lucky Coin"),
+            "Alley Soul Stone": LocationData("Soul stone"),
+            "Alley Lucky Coin": LocationData("Lucky coin"),
             "Alley Barrel (1)": LocationData("Random Food Item"),
             #2007 d
             "Alley Barrel (2)": LocationData("Random Food Item"),
@@ -1341,7 +1342,7 @@ REGIONS = [
             #1528 d d d d d d
             "Temple of Torment Urn (7)": LocationData("Random Minor Item"),
             #1529 d d d d d d
-            "Temple of Torment Soul Stone": LocationData("Random Minor Item"),
+            "Temple of Torment Soul Stone": LocationData("Soul stone"),
         },
     ),
     RegionData(
@@ -1363,7 +1364,7 @@ REGIONS = [
             "Mural Building Urn (6)": LocationData("Random Minor Item"),
             "Mural Building Urn (7)": LocationData("Random Minor Item"),
             "Mural Building Urn (8)": LocationData("Random Minor Item"),
-            "Mural Building Lucky Coin": LocationData("Lucky Coin"),
+            "Mural Building Lucky Coin": LocationData("Lucky coin"),
         },
     ),
     RegionData(
