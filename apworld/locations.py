@@ -340,8 +340,8 @@ REGIONS = [
                 "Trortur Room Skinning Knife": LocationData("Skinning knife"),
             },
         },
-        connections=["Level 1 - Backyard"],
-        # Add blood pit once lizardman is implemented
+        connections=["Level 1 - Backyard", "Level 4 - Caverns"],
+        # Add blood pit once lizardman is implemented, then remove Caverns
     ),
     # RegionData(
     #     "Level 2 - Blood pit",
@@ -1132,7 +1132,7 @@ REGIONS = [
             "Inside Mahabre Crate (Near Figurine)": LocationData("Random Minor Item"),
             "Inside Mahabre Bookshelf (1)": LocationData("Random Minor Book (Ancient)"),
         },
-        # connections=["Ancient_passage", "Ancient_Center_square"],
+        connections=["Ma'habre - Temple district", "Ma'habre - The Tower of Endless"],
     ),
     RegionData(
         "Ma'habre - Temple district",
