@@ -1,8 +1,12 @@
+URGENT:
+* Fix randomization on items (so they are the same every time)
+* Implement proper name/server entry
+* Clean up fungerpelago plugin, its a lot of crap from the person I forked it from and it should at least make some level of sense to people reading it
+
 Considerations:
 
 * How does saving work?
 * How do endings work? Should the player have to choose what ending they need to get to release all checks before they start the game? If not, runs could last a total of 10 minutes by getting the legarde escape ending.
-* Should barrels, crates, etc, have their "opened" sprites backported from 2 or new sprites added to indicated they've been checked? This could potentially be a lot of work but would be a lot less annoying for players. Maybe a mod already does this?
 * How does randomization of items work? The current idea is to have the "RANDOM FOOD ITEM", "RANDOM BOOK", etc sent instead of sending specific items. But how can we ensure that the player receives the exact same roll every time so they don't have drastically different gameplay experiences upon relaunching the game? Should another method be taken instead?
 * How do coin flips work? I think it would be funny if sending something that would send a coin flip check (bookcase, etc), but how do we ensure that this coinflip stays saved? Should it be seeded and predetermined (but the player wouldn't know)
 * Dream rondon loot? Currently ignored it, but should it be a toggle? It's completely missable (however there is other missable items that we added and the game is short enough)
