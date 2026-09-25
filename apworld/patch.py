@@ -1,3 +1,6 @@
+import json
+import os
+
 # To set the variant ID, we need to go to the start map (Map010.json) and make the event properly set the variables
 # The "code" to do this is 122. That is the event code for "control variables"
 # The parameters are as follows: [first_var_id, last_var_id, operation, type, value]
@@ -31,3 +34,20 @@
 
 # Additionally there are more random variables that affect other things, which can be found in fortress intro.
 # Will look into those if they become a problem.
+
+#def patch_variants(world, multiworld, player) -> None:
+with open("C:/Program Files (x86)/Steam/steamapps/common/Fear & Hunger/www/data/Map010.json") as f:
+    variants = [121, 350, 122, 123, 126, 127, 128, 133, 134]
+    try:
+        map_data = json.load(f)
+        # Page 6 of the common event EV001, where all the variables are stored
+        map_data_2 = map_data["events"][1]["pages"][5]["list"]
+        for e in map_data_2:
+            if e["code"] == 122:
+                if e["parameters"][0] in variants:
+                    print(json.dumps(e["parameters"], indent=4))
+    except Exception as e:
+        print(f"{e}")
+        os.system("pause")
+    #print(json.dumps(map_data_2, indent=4))
+    os.system("pause")
