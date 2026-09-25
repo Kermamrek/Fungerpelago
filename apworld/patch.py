@@ -1,5 +1,6 @@
 import json
 import os
+import random
 
 # To set the variant ID, we need to go to the start map (Map010.json) and make the event properly set the variables
 # The "code" to do this is 122. That is the event code for "control variables"
@@ -36,6 +37,8 @@ import os
 # Will look into those if they become a problem.
 
 #def patch_variants(world, multiworld, player) -> None:
+archipelago_room_seed = 67
+random.seed(archipelago_room_seed)
 with open("C:/Program Files (x86)/Steam/steamapps/common/Fear & Hunger/www/data/Map010.json") as f:
     variants = [121, 350, 122, 123, 126, 127, 128, 133, 134]
     try:
@@ -44,8 +47,23 @@ with open("C:/Program Files (x86)/Steam/steamapps/common/Fear & Hunger/www/data/
         map_data_2 = map_data["events"][1]["pages"][5]["list"]
         for e in map_data_2:
             if e["code"] == 122:
+                # Check if var is in the variant list
                 if e["parameters"][0] in variants:
-                    print(json.dumps(e["parameters"], indent=4))
+                    # Exclude the "if Set_D" events, only include the currently randomised ones
+                    if e["parameters"][3] == 2:
+                        # I know this isn't actually changing anything in map data, just for show right now
+                        e["parameters"][3] = 0
+                        match e["parameters"][4]:
+                            case 121:
+                                e["parameters"][4] = random.randint(1, 4)
+                            case 123:
+                                e["parameters"][4] = random.randint(1, 3)
+                            case 128:
+                                e["parameters"][4] = random.randint(1, 3)
+                            case _:
+                                e["parameters"][4] = random.randint(1, 2)
+
+                        print(json.dumps(e["parameters"], indent=4))
     except Exception as e:
         print(f"{e}")
         os.system("pause")
