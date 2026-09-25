@@ -1,5 +1,4 @@
 import json
-import os
 import random
 
 # To set the variant ID, we need to go to the start map (Map010.json) and make the event properly set the variables
@@ -66,6 +65,3 @@ with open("C:/Program Files (x86)/Steam/steamapps/common/Fear & Hunger/www/data/
                         print(json.dumps(e["parameters"], indent=4))
     except Exception as e:
         print(f"{e}")
-        os.system("pause")
-    #print(json.dumps(map_data_2, indent=4))
-    os.system("pause")
