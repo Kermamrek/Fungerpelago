@@ -3,6 +3,7 @@
 
 from collections.abc import Mapping
 from typing import Any
+import json
 
 # Imports of base Archipelago modules must be absolute.
 from BaseClasses import ItemClassification, Region
@@ -43,13 +44,13 @@ class FungerWorld(World):
 
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
-    # TODO: Look into what "region" is best to use, is it the main menu or the first screen?
     origin_region_name = "Fortress"
 
     def create_regions(self) -> None:
         regions = [Region(region_data.name, self.player, self.multiworld) for region_data in REGIONS]
         self.multiworld.regions += regions
 
+        funger_json = { "Variants":{}, "Options":{}}
         for region_data in REGIONS:
             region = self.get_region(region_data.name)
 
@@ -60,6 +61,7 @@ class FungerWorld(World):
             region_name = region_data.name
             if region_data.variants:
                 variant = self.random.choice(list(region_data.variants.keys()))
+                funger_json["Variants"][region_name] = variant
                 region_data.locations = region_data.variants[variant]
                 region_name = f"{region_data.name} ({variant})"
 
@@ -69,6 +71,12 @@ class FungerWorld(World):
                     for location_name, location_data in region_data.locations.items()
                 }
             )
+
+        #Probably put this in its own function, just writing this out here for now
+        funger_json["Options"]["Character"] = str(self.options.character)
+
+        with open('fungerpelago_data.json', 'w', encoding='utf-8') as f:
+            json.dump(funger_json, f, ensure_ascii=False, indent=4)
 
         # create_events(self)
 
