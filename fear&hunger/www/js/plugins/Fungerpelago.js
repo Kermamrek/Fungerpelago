@@ -10,6 +10,7 @@ const sendListVarID = 414; //outgoing item names are pushed to this variable to 
 const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event itemGetEventID.
 const runItemSendSwitchID = 3585; //same
 const randomItemResultID = 415;
+const fungerDataNotFound = 3586; //if the fungerpelago_data.json file isn't found, abort fungerpelago character select
 
 // I don't know enough about RPGMaker javascript to know if this is optional or not, remove if optional
 const fs = require('fs');
@@ -268,6 +269,7 @@ fungerDataLoad = function() {
 		const fungerData = JSON.parse(fs.readFileSync(fungerPath, 'utf8'));
 	} else {
 		console.log("Fungerpelago data not found")
+		$gameSwitches.setValue(fungerDataNotFound,1);
 	}
 }
 
