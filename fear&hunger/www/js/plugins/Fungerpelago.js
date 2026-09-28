@@ -264,11 +264,53 @@ fungerDataLoad = function() {
 	const basePath = process.cwd();
 	const fungerPath = path.join(basePath, 'fungerpelago_data.json');
 	console.log("Looking for file at path:" + fungerPath);
+
 	if(fs.existsSync(fungerPath)) {
-		console.log("Fungerpelago data found. Reading...")
+		console.log("Fungerpelago data found. Reading...");
 		const fungerData = JSON.parse(fs.readFileSync(fungerPath, 'utf8'));
+		var variantLength = Object.keys(fungerData.Variants).length;
+
+		for(let i = 0; i < variantLength; i++) {
+			switch(fungerData.Variants[i]){
+				case "Level 1 - Entrance":
+					//RanLevel1_1
+					$gameVariables.setValue(121, 1);
+					break;
+				//case "Level 1 - Courtyard":
+					//I believe this is connected to Entrance for what value it has
+					//break;
+				case "Level 1 - Inner hall":
+					//RanLevel1_3
+					$gameVariables.setValue(123, 1);
+					break;
+				case "Level 2 - Basement":
+					//Basement_2_variable
+					$gameVariables.setValue(350, 1);
+					break;
+				case "Level 3 - Prisons":
+					//RanLevel3
+					$gameVariables.setValue(126, 1);
+					break;
+				case "Level 3 - Thicket":
+					//RanThicket2
+					$gameVariables.setValue(133, 1);
+					break;
+				case "Level 4 - Thicket":
+					//RanThicket3
+					$gameVariables.setValue(134, 1);
+					break;
+				case "Level 4 - Caverns":
+					//RanLevel4
+					$gameVariables.setValue(127, 1);
+					break;
+				case "Level 5 - Mines":
+					//RanLevel5
+					$gameVariables.setValue(128, 1);
+					break;
+			}
+		}
 	} else {
-		console.log("Fungerpelago data not found")
+		console.log("Fungerpelago data not found");
 		$gameSwitches.setValue(fungerDataNotFound,1);
 	}
 }

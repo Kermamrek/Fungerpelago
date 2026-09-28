@@ -56,7 +56,7 @@ maps = [
 
     ("Level 4 - Thicket", "thicket_3_B", 046),
 
-    
+
     # ("Level 7 - Catacombs", "level7_A", 024),
     # ("Ma'habre - The bridge", "Mahabre1_1_A", 026),
     # ("Ma'habre - Downtown", "Mahabre1_2_A", 027),
