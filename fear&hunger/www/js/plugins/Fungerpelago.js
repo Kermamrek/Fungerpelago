@@ -11,6 +11,10 @@ const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event item
 const runItemSendSwitchID = 3585; //same
 const randomItemResultID = 415;
 
+// I don't know enough about RPGMaker javascript to know if this is optional or not, remove if optional
+const fs = require('fs');
+const path = require('path');
+
 // switchName = { //if you want a check to flip a switch, put it in here
 // 	362: "OpenPhrase123",
 // 	363: "test2"
@@ -253,6 +257,18 @@ Rando.itemDoubleCheck = function(){
 
 getRand = function(drop, max) {
 	return Math.floor(drop * max) + 1;
+}
+
+fungerDataLoad = function() {
+	const basePath = process.cwd();
+	const fungerPath = path.join(basePath, 'fungerpelago_data.json');
+	console.log("Looking for file at path:" + fungerPath);
+	if(fs.existsSync(fungerPath)) {
+		console.log("Fungerpelago data found. Reading...")
+		const fungerData = JSON.parse(fs.readFileSync(fungerPath, 'utf8'));
+	} else {
+		console.log("Fungerpelago data not found")
+	}
 }
 
 fungerRandomizeItem = function(itemType) {
