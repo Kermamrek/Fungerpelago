@@ -268,54 +268,56 @@ fungerDataLoad = function() {
 	if(fs.existsSync(fungerPath)) {
 		console.log("Fungerpelago data found. Reading...");
 		const fungerData = JSON.parse(fs.readFileSync(fungerPath, 'utf8'));
-		const variantMap = {"A": 1, "B": 2, "C": 3, "D": 4}
-
+		// If variant letter is A, set the internal var to 1, etc...
+		const variantMap = {"A": 1, "B": 2, "C": 3, "D": 4};
+		// Have to do variantList like this because idk javascript
+		const variantList = Object.keys(fungerData.Variants);
 		try {
-			for(var i in fungerData.Variants) {
-				switch(fungerData.Variants[i]){
+			for(var i in variantList) {
+				switch(variantList[i]){
 					case "Level 1 - Entrance":
-						console.log(i)
 						//RanLevel1_1
-						$gameVariables.setValue(121, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(121, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
+						// If you want to double check the internal var, uncomment this
+						//console.log($gameVariables.value(121))
 						break;
 					//case "Level 1 - Courtyard":
-						//I believe this is connected to Entrance for what value it has
-						//break;
+						// I believe this is connected to Entrance for what value it has
 					case "Level 1 - Inner hall":
 						//RanLevel1_3
-						$gameVariables.setValue(123, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(123, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 					case "Level 2 - Basement":
 						//Basement_2_variable
-						$gameVariables.setValue(350, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(350, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 					case "Level 3 - Prisons":
 						//RanLevel3
-						$gameVariables.setValue(126, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(126, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 					case "Level 3 - Thicket":
 						//RanThicket2
-						$gameVariables.setValue(133, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(133, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 					case "Level 4 - Thicket":
 						//RanThicket3
-						$gameVariables.setValue(134, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(134, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 					case "Level 4 - Caverns":
 						//RanLevel4
-						$gameVariables.setValue(127, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(127, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 					case "Level 5 - Mines":
 						//RanLevel5
-						$gameVariables.setValue(128, variantMap[fungerData.Variants[i]]);
-						console.log("Set " + i + "to " + fungerData.Variants[i]);
+						$gameVariables.setValue(128, variantMap[fungerData.Variants[variantList[i]]]);
+						console.log("Set " + variantList[i] + " to " + fungerData.Variants[variantList[i]]);
 						break;
 				}
 			}
