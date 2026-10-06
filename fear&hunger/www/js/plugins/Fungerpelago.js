@@ -1,5 +1,4 @@
 // TODO: Update these to funger values
-const gameName = "Fear & Hunger";
 const URLVarID = 408; //archipelago URL variable ID
 const codeVarID = 409; //archipelago 5 digits variable ID
 const slotVarID = 410; //archipelago slot name variable ID
@@ -46,9 +45,8 @@ Rando.openApClient = function(){
 		console.log(content);
 	});
 
-
-	//client.login($gameVariables.value(URLVarID) + $gameVariables.value(codeVarID), $gameVariables.value(slotVarID), gameName)
-	client.login("ws://localhost", "Kerma", "Fear & Hunger")
+	//client.login("ws://localhost", "Kerma", "Fear & Hunger")
+	client.login($gameVariables.value(URLVarID) + $gameVariables.value(codeVarID), $gameVariables.value(slotVarID), "Fear & Hunger")
     .then(() => console.log("Connected to the Archipelago server!"))
     .catch(console.error);
 	Rando.initializeItemArray();
