@@ -455,7 +455,8 @@ REGIONS = [
                 "Rune Room Barrel (3)": LocationData("Random Food Item"),
                 "Rune Room Crate": LocationData("Random Minor Item"),
                 "Rune Room Blue Herb": LocationData("Blue herb"),
-                "Rune Room Green Herb": LocationData("Green herb"),
+                "Hallway Blue Herb": LocationData("Blue herb"),
+                "Hallway Green Herb": LocationData("Green herb"),
                 "Keg Room Barrel (Left)": LocationData("Random Food Item"),
                 "Keg Room Barrel (Right)": LocationData("Random Food Item"),
                 # Note: Change the description text/pickup text for this one?
