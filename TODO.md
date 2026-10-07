@@ -1,7 +1,9 @@
 URGENT:
 * Fix randomization on items (so they are the same every time)
 * Implement proper name/server entry
-* Clean up fungerpelago plugin, its a lot of crap from the person I forked it from and it should at least make some level of sense to people reading it
+* Clean up fungerpelago plugin
+* Fix display for random items so you always know what you're getting. Additionally, getting stuff like blue herbs from barrels and crates says "nothing left here"
+
 
 Considerations:
 

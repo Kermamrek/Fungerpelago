@@ -10,6 +10,7 @@ const runItemGetSwitchID = 3584; //if this switch is flipped, autorun event item
 const runItemSendSwitchID = 3585; //same
 const randomItemResultID = 415;
 const fungerDataNotFound = 3586; //if the fungerpelago_data.json file isn't found, abort fungerpelago character select
+const gameName = "Fear & Hunger";
 
 // I don't know enough about RPGMaker javascript to know if this is optional or not, remove if optional
 const fs = require('fs');
@@ -46,9 +47,15 @@ Rando.openApClient = function(){
 	});
 
 	//client.login("ws://localhost", "Kerma", "Fear & Hunger")
-	client.login($gameVariables.value(URLVarID) + $gameVariables.value(codeVarID), $gameVariables.value(slotVarID), "Fear & Hunger")
-    .then(() => console.log("Connected to the Archipelago server!"))
-    .catch(console.error);
+	if ($gameVariables.value(codeVarID) == "Skip") {
+		client.login($gameVariables.value(URLVarID), $gameVariables.value(slotVarID), gameName)
+			.then(() => console.log("Connected to the Archipelago server!"))
+			.catch(console.error);
+	} else {
+		client.login($gameVariables.value(URLVarID) + $gameVariables.value(codeVarID), $gameVariables.value(slotVarID), gameName)
+	    .then(() => console.log("Connected to the Archipelago server!"))
+	    .catch(console.error);
+	}
 	Rando.initializeItemArray();
 
 
@@ -394,7 +401,7 @@ gain = function(item) {//Run this as a script in game with the location name as 
 			}
 		}
 		console.log("sent location " + item + " with ID " + get);
-		//Ask the client to send the item in question; If it's a Silver Daze item, the client will send it to us.
+		//Ask the client to send the item in question
 		//We can do this by storing all of the items that are received by the player in an array, then checking every couple frames if that item has been sent/received.
 		//This will prevent duplicates, as well as "duds" that don't send, if the player loses connection with the client.
 		//If the game isn't Archipelago, then we'll give the item to the player through normal means.
