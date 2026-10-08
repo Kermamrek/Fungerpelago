@@ -1478,6 +1478,8 @@ class FungerLocation(Location):
     game = "Fear & Hunger"
 
 
+# This is largely taken from APQuest, we will need to create events for the flipside and possibly mahabre book (blue sin as well?). Anything that is "one way" and creates missable items
+
 # def create_events(world: FungerWorld) -> None:
 #     # Sometimes, the player may perform in-game actions that allow them to progress which are not related to Items.
 #     # In our case, the player must press a button in the top left room to open the final boss door.

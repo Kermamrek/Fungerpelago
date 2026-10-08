@@ -1,8 +1,12 @@
 URGENT:
 * Fix randomization on items (so they are the same every time)
 * Implement proper name/server entry
-* Clean up fungerpelago plugin
+* Clean up fungerpelago plugin more, most of the old code from previous repos have been cleaned but could use some extra clarification
 * Fix display for random items so you always know what you're getting. Additionally, getting stuff like blue herbs from barrels and crates says "nothing left here"
+* I've noticed that getting items sent to you all at once (IE, when you continue a game or potentially if you got sent multiple things at once) bugs out and only sends one. This was obvious when I looted 4 rooms fully, died, then respawned and noticed that I only had 6 items total. I think the dialogue box is causing this with `Random ____ item` specifically, as things that are just generic items you get successfully. The message box blocks even you getting one item depending on if you get one when you wake up. Hard to phrase correctly, but for example if you sleep and wake up in the prison bed there will be a message box saying "you didn't get very good sleep" or something and that will block you from even getting the first random item. This is a bit of a larger issue because I was actually planning on "fixing" the non-random items you get by having them properly give dialogue boxes, but now dialogue boxes seem pretty bugged and an alternative solution might be needed. At first I was thinking a queue system, but not sure what the best way to program that would be and it would create an alternative problem where dying after doing a huge portion of the game and continuing would make you have to mash through 30 dialogue boxes. In some extreme cases I could see this creating a death loop where the dogs maul you to death at the start before you're even allowed to move. So might be worth figuring out ways to avoid this sort of thing
+
+Following items I noticed weren't added:
+* Table with list of inmates and random item (captain's room) (C, but could be more)
 
 
 Considerations:
