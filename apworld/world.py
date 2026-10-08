@@ -60,8 +60,14 @@ class FungerWorld(World):
 
             region_name = region_data.name
             if region_data.variants:
-                variant = self.random.choice(list(region_data.variants.keys()))
-                funger_json["Variants"][region_name] = variant
+                if region_name == "Level 1 - Courtyard":
+                    if funger_json["Variants"]["Level 1 - Entrance"] == "A":
+                        funger_json["Variants"][region_name] = "A"
+                    else:
+                        funger_json["Variants"][region_name] = "B"
+                else:
+                    variant = self.random.choice(list(region_data.variants.keys()))
+                    funger_json["Variants"][region_name] = variant
                 region_data.locations = region_data.variants[variant]
                 region_name = f"{region_data.name} ({variant})"
 
