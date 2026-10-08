@@ -15,5 +15,7 @@ All files relating to the APWorld are in `apworld`, and all files relating to th
 
 Since this is an extremely buggy very unfinished beta, further install instructions and a release will be made at a later date.
 
+Once you make your options file it will also generate `fungerpelago_data.json` in the root folder of archipelago, put that in the root folder of Fear & Hunger.
+
 # Changes
 Right now changes are hosted on [CHANGES.md](https://github.com/Kermamrek/Fungerpelago/blob/main/CHANGES.md), however this may change in the future
