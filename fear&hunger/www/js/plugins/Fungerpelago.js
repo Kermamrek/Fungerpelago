@@ -291,6 +291,16 @@ fungerDataLoad = function() {
 						break;
 				}
 			}
+			//These all need to be set, but they aren't randomized. I assume its because they might have cancelled variants for them during dev
+			$gameVariables.setValue(124, 1);
+			$gameVariables.setValue(125, 1);
+			$gameVariables.setValue(129, 1);
+			$gameVariables.setValue(130, 1);
+			$gameVariables.setValue(131, 1);
+			$gameVariables.setValue(132, 1);
+			$gameVariables.setValue(135, 1);
+			$gameVariables.setValue(136, 1);
+			$gameVariables.setValue(208, 1);
 		} catch(err) {
 			console.error(err);
 		}
