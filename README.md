@@ -11,5 +11,9 @@ Both guides are roughly the same, pick whatever you prefer.
 If you wish to enable the console to diagnose bugs, you can do so by editing `rpg_managers.js`:
 https://forums.rpgmakerweb.com/threads/open-console-after-deployment.99531/#post-895451
 
+All files relating to the APWorld are in `apworld`, and all files relating to the Fear & Hunger mod are in `fear&hunger`.
+
+Since this is an extremely buggy very unfinished beta, further install instructions and a release will be made at a later date.
+
 # Changes
-Fungerpelago
+Right now changes are hosted on [CHANGES.md](https://github.com/Kermamrek/Fungerpelago/blob/main/CHANGES.md), however this may change in the future
