@@ -9,6 +9,7 @@ fear&hunger/**/*.*
 !fear&hunger/www/img/pictures/fungerpelago_splash.rpgmvp
 !fear&hunger/www/index.html
 !fear&hunger/www/package.json
+!fear&hunger/www/data/Actors.json
 !fear&hunger/www/data/CommonEvents.json
 !fear&hunger/www/data/MapInfos.json
 !fear&hunger/www/data/System.json
