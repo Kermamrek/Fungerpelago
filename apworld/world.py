@@ -89,6 +89,44 @@ class FungerWorld(World):
     def set_rules(self) -> None:
         rules.set_all_rules(self)
 
+    def randomize_common(self, name: str) -> str:
+        # Default to Torch if something goes wrong
+        item = "Torch"
+        if name == "Random Minor Item":
+            # Multiple of the same item are not errors, some items are just weighted higher
+            choices = ["Tinderbox x5", "Cloth fragment", "Glass vial", "Tobacco x2", "Pipe", "Opium powder",
+                "Bottle of whiskey", "Nitroglycerin powder", "Red vial", "Ale", "Pinecone", "Small key",
+                "Blue vial", "Nothing", "Stick", "Blue vial", "Ale", "Red vial", "Cloth hood", "Leather helmet",
+                "Oil", "Silver coin x5", "Dirt x5", "Iron arrow", "White vial", "Quill", "Water vial",
+                "Wooden buckler", "Explosive vial", "Bear trap", "Purifying talisman", "Red herb", "Blue herb",
+                "Green herb", "Silver coin x12", "Silver coin x6", "Silver coin x3", "Raw meat", "Bonesaw",
+                "Throwing knife", "Worm juice", "Throwing dart", "Random Rare Item", "Random Rare Item",
+                "Lucky coin", "Torch", "Tinderbox x5", "Cloth fragment and Stick"]
+            # These choices are given a 50% chance to reroll, same as base funger
+            # Some are even rarer than that, green herb is 1/5, lucky coin is 1/3
+            rare_choices = ["Opium powder", "Bottle of whiskey", "Red vial", "Small key", "Purifying talisman",
+                "Green herb", "Lucky coin"]
+            item = self.random.choice(choices)
+            while item in rare_choices:
+                if item == "Green herb":
+                    if self.random.randrange(1,5) == 1:
+                        break
+                    else:
+                        item = self.random.choice(choices)
+                if item == "Lucky coin":
+                    if self.random.randrange(1,3) == 1:
+                        break
+                    else:
+                        item = self.random.choice(choices)
+                else:
+                    if self.random.randrange(1,2) == 1:
+                        break
+                    else:
+                        item = self.random.choice(choices)
+        # Don't elif, since random minor item can turn into random rare item
+        
+        return item
+
     def create_items(self) -> None:
         items = [
             self.create_item(location_data.item_name)
@@ -101,6 +139,15 @@ class FungerWorld(World):
         data = ITEMS[name]
         classification = data.classification
         id = data.id
+
+
+        random_types = ["Random Minor Item", "Random Minor Book", "Random Food Item", "Random Minor Book (Ancient)",
+             "Random Alchemy"]
+        # coinflip items: "Random Scroll Item", "Random Good Armor", "Random Rare Item", "Random Rare Book",
+        #   "Random Rare Book (Ancient)", "Random Weapon", "Random Minor Weapon"(?),
+        # Haven't added any enemy loot either
+        # if name in random_types:
+
 
         if name == "Torch" and (
             self.options.difficulty.option_terror_and_starvation or self.options.difficulty.option_hard_mode
