@@ -33,6 +33,39 @@ ITEMS = {
     "Lord of Flies Loot": ItemData(ItemClassification.useful, 5016),  # Common Event 255
     "Yellow Mage Loot": ItemData(ItemClassification.useful, 5017),  # Common Event 256
 
+    # ITEMS FOUND IN "RANDOM ___ ITEM"
+    # "Glass vial": ItemData(ItemClassification.filler, ),
+    # "Pipe": ItemData(ItemClassification.filler, ),
+    # "Nitroglycerin powder": ItemData(ItemClassification.filler, ),
+    # "Red vial": ItemData(ItemClassification.useful, ),
+    # "Ale": ItemData(ItemClassification.filler, ),
+    # "Small key": ItemData(ItemClassification.useful, ),
+    # "Cloth hood": ItemData(ItemClassification.filler, ),
+    # "Leather helmet": ItemData(ItemClassification.filler, ),
+    # "Oil": ItemData(ItemClassification.filler, ),
+    # "White vial": ItemData(ItemClassification.filler, ),
+    # "Water vial": ItemData(ItemClassification.filler, ),
+    # "Wooden buckler": ItemData(ItemClassification.filler, ),
+    # "Bear trap": ItemData(ItemClassification.filler, ),
+    # "Raw meat": ItemData(ItemClassification.filler, ),
+    # "Throwing knife": ItemData(ItemClassification.filler, ),
+    # "Worm juice": ItemData(ItemClassification.filler, ),
+    # "Throwing dart": ItemData(ItemClassification.filler, ),
+
+
+    # MULTIPLES
+    # "Tinderbox x5": ItemData(ItemClassification.filler, ),
+    # "Tobacco x2": ItemData(ItemClassification.filler, ),
+    # "Silver coin x5": ItemData(ItemClassification.filler, ),
+    # "Dirt x5": ItemData(ItemClassification.filler, ),
+    # "Silver coin x12": ItemData(ItemClassification.filler, ),
+    # "Silver coin x6": ItemData(ItemClassification.filler, ),
+    # "Silver coin x3": ItemData(ItemClassification.filler, ),
+    # "Cloth fragment and Stick": ItemData(ItemClassification.filler, ),
+
+    # NOTHING
+    "Nothing": ItemData(ItemClassification.filler, ),
+
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
     # FIXED ITEMS
     "Torch": ItemData(ItemClassification.useful, 2005),  # Ones on the cave walls
