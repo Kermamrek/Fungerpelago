@@ -217,8 +217,8 @@ class FungerWorld(World):
         # coinflip items: "Random Scroll Item", "Random Good Armor", "Random Rare Item", "Random Rare Book",
         #   "Random Rare Book (Ancient)", "Random Weapon", "Random Minor Weapon"(?),
         # Haven't added any enemy loot either
-        if name in random_types:
-            name = randomize_common(name)
+        # if name in random_types:
+        #     name = randomize_common(name)
 
 
         if name == "Torch" and (
