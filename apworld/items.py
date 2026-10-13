@@ -64,7 +64,7 @@ ITEMS = {
     # "Cloth fragment and Stick": ItemData(ItemClassification.filler, ),
 
     # NOTHING
-    "Nothing": ItemData(ItemClassification.filler, ),
+    # "Nothing": ItemData(ItemClassification.filler, ),
 
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
     # FIXED ITEMS
