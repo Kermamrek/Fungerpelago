@@ -123,8 +123,79 @@ class FungerWorld(World):
                         break
                     else:
                         item = self.random.choice(choices)
-        # Don't elif, since random minor item can turn into random rare item
-        
+        # Don't else, since random minor item can turn into random rare item, etc
+        if name == "Random Minor Book":
+            choices = ["Recipes of the 15th century", "Poems of love and torment", "Ma'havre",
+                "Studies of Gro-goroth I", "The Fellowship ch.1", "Studies of Alll-mer I",
+                "Studies of Slyvian I", "Assassin's handbook I", "Nothing", "Creation of life",
+                "The Tale of the Pocketcat II", "The Tale of the Pocketcat I", "Blood & Flower magic I",
+                "Torn page", "Anathomia", "The Fellowship ch.2", "Book of Fears", "Pinecone pig instructions",
+                "The Penance Knights"]
+            item = self.random.choice(choices)
+        if name == "Random Food Item":
+            choices = ["Eggs x2", "Dried meat", "Wheat flour", "Rotten meat", "Moldy bread", "Cheese",
+                "Carrots x2", "Cabbage", "Tomato x2", "Dried mushroom x2", "Salami", "Blueberries",
+                "Raw meat", "Turnip"]
+            # Has a 1/4 chance to give rotten food
+            if self.options.difficulty.option_terror_and_starvation:
+                terror_choices = ["Rotten Egg", "Rotten Turnip", "Rotten Meatpie", "Rotten Vegetable pie",
+                    "Rotten Cabbage", "Rotten Tomato", "Rotten Carrot", "Rotten Blueberries", "Rotten Meat"]
+                if self.random.randrange(1,4) == 1:
+                    item = self.random.choice(terror_choices)
+                else:
+                    item = self.random.choice(choices)
+            # Has a 1/6 chance of giving nothing
+            elif self.options.difficulty.option_hard_mode:
+                if self.random.randrange(1,6) == 1:
+                    item = "Nothing"
+                else:
+                    item = self.random.choice(choices)
+            else:
+                item = self.random.choice(choices)
+        if name == "Random Minor Book (Ancient)":
+            # Tale of the Pocketcat II only is given if party has I, but not a huge deal
+            choices = ["The Fellowship ch.2 (Original)", "Poems of love and torment",
+                "The Fellowship ch.1 (Original)", "Studies of Gro-goroth I", "Anathomia",
+                "Studies of Alll-mer I", "Studies of Slyvian I", "Natural doctrine I", "Nothing",
+                "Natural doctrine II", "The Tale of the Pocketcat II", "The Tale of the Pocketcat I",
+                "Blood & Flower magic I", "Book of Fears"]
+            item = self.random.choice(choices)
+        if name == "Random Alchemy":
+            choices = ["Black vial", "Glass vials x3", "Blue vial", "White vial x2", "Purple vial",
+                "Red vial", "Green vial", "Light blue vial", "Orange vial", "Explosive vial"]
+            item = self.random.choice(choices)
+        # This is only gotten to if rolled in minor random item
+        if name == "Random Rare Item":
+            choices = ["Light blue vial x2", "Explosive vial", "Bear trap", "Iron arrow x3", "Iron mace",
+                "Long sword", "Iron spear", "Short bow", "Empty scroll", "Spider shield",
+                "Eagle crest shield", "Plate mail", "Fur armor", "Soul stone", "Ring of the still-blood",
+                "Sorcerer's stone", "Silver coin x35", "Thorned ring", "Random Scroll Item", "Trench coat",
+                "Ring of wraiths", "Cursed iron mace", "Cursed short sword", "Soul devour necklace",
+                "Monocle", "Eyeglasses", "Eastern perfume", "Shark teeth", "Morning star", "Bone shears",
+                "War scythe"]
+            rare_choices = ["Soul stone", "Cursed iron mace", "Cursed short sword"]
+            item = self.random.choice(choices)
+            while item in rare_choices:
+                if item == "Soul stone":
+                    if self.random.randrange(1,5) == 1:
+                        break
+                    else:
+                        item = self.random.choice(choices)
+                else:
+                    if self.random.randrange(1,3) == 1:
+                        break
+                    else:
+                        item = self.random.choice(choices)
+        # This is only gotten to if rolled in random rare item
+        if name == "Random Scroll Item":
+            choices = ["Scroll of thievery", "Scroll of the highwaymen", "Scroll of lockpicking",
+                "Scroll of fencing", "Scroll of the swordsman", "Scroll of the general",
+                "Scroll of the wizards", "Scroll of the dark mage", "Scroll of the wildman",
+                "Scroll of marksmanship", "Scroll of berserk", "Scroll of the long sword",
+                "Scroll of pyromancy trick", "Scroll of the black arts",
+                "Scroll of the church of healing", "Scroll of the church of Sylvian",
+                "Scroll of the leeches", "Empty scroll"]
+            item = self.random.choice(choices)
         return item
 
     def create_items(self) -> None:
