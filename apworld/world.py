@@ -127,7 +127,7 @@ class FungerWorld(World):
         if name == "Random Minor Book":
             choices = ["Recipes of the 15th century", "Poems of love and torment", "Ma'havre",
                 "Studies of Gro-goroth I", "The Fellowship ch.1", "Studies of Alll-mer I",
-                "Studies of Slyvian I", "Assassin's handbook I", "Nothing", "Creation of life",
+                "Studies of Sylvian I", "Assassin's handbook I", "Nothing", "Creation of life",
                 "The Tale of the Pocketcat II", "The Tale of the Pocketcat I", "Blood & Flower magic I",
                 "Torn page", "Anathomia", "The Fellowship ch.2", "Book of Fears", "Pinecone pig instructions",
                 "The Penance Knights"]
