@@ -142,7 +142,8 @@ Rando.checkForItems = function(){
 				if (get == 3000){
 					randomItemGet();
 				}
-				if (get > 5000){
+				//this is being phased out slowly, randomization does not persist properly
+				if (get > 5000 && get < 6000){
 					fungerRandomizeItem(get);
 				}
 				$gameSwitches.setValue(runItemGetSwitchID,true);
@@ -179,7 +180,7 @@ Rando.checkForItems = function(){
 							Rando.itemDoubleCheck();
 						}
 					}
-					if (get > 5000){
+					if (get > 5000 && get < 6000){
 						fungerRandomizeItem(get);
 					}
 			}
@@ -220,7 +221,7 @@ Rando.itemDoubleCheck = function(){
 				$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 			}
 		}
-		if (get > 5000){
+		if (get > 5000 && get < 6000){
 			fungerRandomizeItem(get);
 		}
 	})
@@ -313,21 +314,9 @@ fungerDataLoad = function() {
 fungerRandomizeItem = function(itemType) {
 	// The common events listed are only for reference, since this function replaces them more or less
 
-	// TODO: make seeded randomizer with this var, the seed for archipelago is client.room.seedName
-	// Right now the seeded randomizer work is commented out, at some point it will be reintroduced
-
-	// rng = new Math.seedrandom(client.room.seedName);
-	// drop = rng();
-	// roll = 0;
-	// itemResult = 0;
-
 	switch(itemType){
 		// Random Minor Item - Common Event 23
 		case 5001:
-			// This contains the seeded randomizer work as well, copy and paste as needed to other cases, changing the max number
-			// $gameVariables._data[itemListVarID].push(getRand(drop, 48));
-
-			// SceneManager.pop();
 			$gameTemp.reserveCommonEvent(23);
 			break;
 		// Random Minor Book - Common Event 25
