@@ -162,6 +162,9 @@ Rando.checkForItems = function(){
 					$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
 					$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 				}
+				if (get == 9999){
+					console.log(The player found nothing...)
+				}
 				$gameSwitches.setValue(runItemGetSwitchID,true);
 				$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 			} else {
@@ -210,6 +213,9 @@ Rando.checkForItems = function(){
 						$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 						$gamePlayer.APItemsReceived[playerId][item.locationId] = false;
 						Rando.itemDoubleCheck();
+					}
+					if (get == 9999){
+						console.log(The player found nothing...)
 					}
 			}
 	});
@@ -266,6 +272,9 @@ Rando.itemDoubleCheck = function(){
 			$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
 			$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 			$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
+		}
+		if (get == 9999){
+			console.log(The player found nothing...)
 		}
 	})
 }
