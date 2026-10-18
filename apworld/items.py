@@ -49,9 +49,9 @@ ITEMS = {
     "Wooden buckler": ItemData(ItemClassification.filler, 16),
     "Bear trap": ItemData(ItemClassification.filler, 2076),
     "Raw meat": ItemData(ItemClassification.filler, 2152),
-    "Throwing knife": ItemData(ItemClassification.filler, 169),
-    "Worm juice": ItemData(ItemClassification.filler, 171),
-    "Throwing dart": ItemData(ItemClassification.filler, 182),
+    "Throwing knife": ItemData(ItemClassification.filler, 2169),
+    "Worm juice": ItemData(ItemClassification.filler, 2171),
+    "Throwing dart": ItemData(ItemClassification.filler, 2182),
     "Pinecone": ItemData(ItemClassification.filler, 2026),
 
     "Poems of love and torment": ItemData(ItemClassification.filler, 2004),

@@ -163,7 +163,7 @@ Rando.checkForItems = function(){
 					$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 				}
 				if (get == 9999){
-					console.log(The player found nothing...)
+					console.log("The player found nothing...")
 				}
 				$gameSwitches.setValue(runItemGetSwitchID,true);
 				$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
@@ -215,7 +215,7 @@ Rando.checkForItems = function(){
 						Rando.itemDoubleCheck();
 					}
 					if (get == 9999){
-						console.log(The player found nothing...)
+						console.log("The player found nothing...")
 					}
 			}
 	});
@@ -274,7 +274,7 @@ Rando.itemDoubleCheck = function(){
 			$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 		}
 		if (get == 9999){
-			console.log(The player found nothing...)
+			console.log("The player found nothing...")
 		}
 	})
 }
@@ -283,7 +283,7 @@ getRand = function(drop, max) {
 	return Math.floor(drop * max) + 1;
 }
 
-function getMultiplesNumber(item) {
+getMultiplesNumber = function(item) {
 	var finalNumber = '';
 	for (var i = item.length - 1 ; 1 >= 0 ; i--){
 		var char = item[i];
