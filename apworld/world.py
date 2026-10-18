@@ -127,6 +127,8 @@ class FungerWorld(World):
                         break
                     else:
                         item = self.random.choice(choices)
+            if item == "Random Rare Item":
+                name = "Random Rare Item"
         # Don't else, since random minor item can turn into random rare item, etc
         if name == "Random Minor Book":
             choices = ["Recipes of the 15th century", "Poems of love and torment", "Ma'havre",
@@ -190,6 +192,8 @@ class FungerWorld(World):
                         break
                     else:
                         item = self.random.choice(choices)
+            if item == "Random Scroll Item":
+                name = "Random Scroll Item"
         # This is only gotten to if rolled in random rare item
         if name == "Random Scroll Item":
             choices = ["Scroll of thievery", "Scroll of the highwaymen", "Scroll of lockpicking",
