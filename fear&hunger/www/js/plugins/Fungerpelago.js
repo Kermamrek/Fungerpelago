@@ -104,7 +104,7 @@ Rando.initializeItemGameArray = function(player){
 
 Rando.checkForItems = function(){
 	client.items.received.forEach((item) => {
-		//console.log(item);
+		//console.log(item.name.length);
 			var playerId = item.receiver;
 			Rando.initializeItemArray();
 			Rando.initializeItemGameArray(playerId);
@@ -159,7 +159,7 @@ Rando.checkForItems = function(){
 				}
 				// Multiples: 6001 - 6999
 				if (get > 6000 && get < 7000){
-					$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
+					$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item.name));
 					$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 				}
 				if (get == 9999){
@@ -209,7 +209,7 @@ Rando.checkForItems = function(){
 						Rando.itemDoubleCheck();
 					}
 					if (get > 6000 && get < 7000){
-						$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
+						$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item.name));
 						$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 						$gamePlayer.APItemsReceived[playerId][item.locationId] = false;
 						Rando.itemDoubleCheck();
@@ -269,7 +269,7 @@ Rando.itemDoubleCheck = function(){
 			$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 		}
 		if (get > 6000 && get < 7000){
-			$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
+			$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item.name));
 			$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 			$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 		}
@@ -290,9 +290,10 @@ getMultiplesNumber = function(item) {
 		if (char == "x"){
 			break;
 		} else {
-			finalNumber = item[char] + finalNumber;
+			finalNumber = item[i] + finalNumber;
 		}
 	}
+	//console.log(finalNumber);
 	return Number(finalNumber);
 }
 
