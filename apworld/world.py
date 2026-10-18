@@ -63,11 +63,14 @@ class FungerWorld(World):
                 if region_name == "Level 1 - Courtyard":
                     if funger_json["Variants"]["Level 1 - Entrance"] == "A":
                         funger_json["Variants"][region_name] = "A"
+                        variant = "A"
                     else:
                         funger_json["Variants"][region_name] = "B"
+                        variant = "B"
                 else:
                     variant = self.random.choice(list(region_data.variants.keys()))
                     funger_json["Variants"][region_name] = variant
+                print(f"{region_name} is {variant}")
                 region_data.locations = region_data.variants[variant]
                 region_name = f"{region_data.name} ({variant})"
 
@@ -92,6 +95,7 @@ class FungerWorld(World):
     def randomize_common(self, name: str) -> str:
         # Default to Torch if something goes wrong
         item = "Torch"
+        print(f"randomizing common item: {name}")
         if name == "Random Minor Item":
             # Multiple of the same item are not errors, some items are just weighted higher
             choices = ["Tinderbox x5", "Cloth fragment", "Glass vial", "Tobacco x2", "Pipe", "Opium powder",
@@ -139,7 +143,7 @@ class FungerWorld(World):
             # Has a 1/4 chance to give rotten food
             if self.options.difficulty.option_terror_and_starvation:
                 terror_choices = ["Rotten Egg", "Rotten Turnip", "Rotten Meatpie", "Rotten Vegetable pie",
-                    "Rotten Cabbage", "Rotten Tomato", "Rotten Carrot", "Rotten Blueberries", "Rotten Meat"]
+                    "Rotten Cabbage", "Rotten Tomato", "Rotten Carrot", "Rotten Blueberries", "Rotten meat"]
                 if self.random.randrange(1,4) == 1:
                     item = self.random.choice(terror_choices)
                 else:
@@ -156,7 +160,7 @@ class FungerWorld(World):
             # Tale of the Pocketcat II only is given if party has I, but not a huge deal
             choices = ["The Fellowship ch.2 (Original)", "Poems of love and torment",
                 "The Fellowship ch.1 (Original)", "Studies of Gro-goroth I", "Anathomia",
-                "Studies of Alll-mer I", "Studies of Slyvian I", "Natural doctrine I", "Nothing",
+                "Studies of Alll-mer I", "Studies of Sylvian I", "Natural doctrine I", "Nothing",
                 "Natural doctrine II", "The Tale of the Pocketcat II", "The Tale of the Pocketcat I",
                 "Blood & Flower magic I", "Book of Fears"]
             item = self.random.choice(choices)
@@ -196,6 +200,7 @@ class FungerWorld(World):
                 "Scroll of the church of healing", "Scroll of the church of Sylvian",
                 "Scroll of the leeches", "Empty scroll"]
             item = self.random.choice(choices)
+        print(f"{name} has become {item}.")
         return item
 
     def create_items(self) -> None:
@@ -207,19 +212,17 @@ class FungerWorld(World):
         self.multiworld.itempool += items
 
     def create_item(self, name: str) -> FungerItem:
-        data = ITEMS[name]
-        classification = data.classification
-        id = data.id
-
-
         random_types = ["Random Minor Item", "Random Minor Book", "Random Food Item", "Random Minor Book (Ancient)",
              "Random Alchemy"]
         # coinflip items: "Random Scroll Item", "Random Good Armor", "Random Rare Item", "Random Rare Book",
         #   "Random Rare Book (Ancient)", "Random Weapon", "Random Minor Weapon"(?),
         # Haven't added any enemy loot either
-        # if name in random_types:
-        #     name = randomize_common(name)
+        if name in random_types:
+            name = self.randomize_common(name)
 
+        data = ITEMS[name]
+        classification = data.classification
+        id = data.id
 
         if name == "Torch" and (
             self.options.difficulty.option_terror_and_starvation or self.options.difficulty.option_hard_mode

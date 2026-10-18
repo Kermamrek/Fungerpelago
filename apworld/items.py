@@ -52,6 +52,7 @@ ITEMS = {
     "Throwing knife": ItemData(ItemClassification.filler, 169),
     "Worm juice": ItemData(ItemClassification.filler, 171),
     "Throwing dart": ItemData(ItemClassification.filler, 182),
+    "Pinecone": ItemData(ItemClassification.filler, 2026),
 
     "Poems of love and torment": ItemData(ItemClassification.filler, 2004),
     "Ma'havre": ItemData(ItemClassification.filler, 2023),
