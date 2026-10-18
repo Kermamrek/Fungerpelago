@@ -135,29 +135,31 @@ ITEMS = {
     "Scroll of the leeches": ItemData(ItemClassification.useful, 2177),
 
     # MULTIPLES
-    # "Tinderbox x5": ItemData(ItemClassification.filler, ),
-    # "Tobacco x2": ItemData(ItemClassification.filler, ),
-    # "Silver coin x5": ItemData(ItemClassification.filler, ),
-    # "Dirt x5": ItemData(ItemClassification.filler, ),
-    # "Silver coin x12": ItemData(ItemClassification.filler, ),
-    # "Silver coin x6": ItemData(ItemClassification.filler, ),
-    # "Silver coin x3": ItemData(ItemClassification.filler, ),
-    # "Cloth fragment and Stick": ItemData(ItemClassification.filler, ),
-    #
-    # "Eggs x2": ItemData(ItemClassification.filler, ),
-    # "Carrots x2": ItemData(ItemClassification.filler, ),
-    # "Tomato x2": ItemData(ItemClassification.filler, ),
-    # "Dried mushroom x2": ItemData(ItemClassification.filler, ),
-    #
-    # "Glass vials x3": ItemData(ItemClassification.filler, ),
-    # "White vial x2": ItemData(ItemClassification.filler, ),
-    #
-    # "Light blue vial x2": ItemData(ItemClassification.filler, ),
-    # "Iron arrow x3": ItemData(ItemClassification.filler, ),
-    # "Silver coin x35": ItemData(ItemClassification.filler, ),
+    "Tinderbox x5": ItemData(ItemClassification.filler, 6007),
+    "Tobacco x2": ItemData(ItemClassification.filler, 6074),
+    # Fundementally does not matter these have the same value, as the function looks at the name
+    "Silver coin x5": ItemData(ItemClassification.filler, 6059),
+    "Silver coin x12": ItemData(ItemClassification.filler, 6059),
+    "Silver coin x6": ItemData(ItemClassification.filler, 6059),
+    "Silver coin x3": ItemData(ItemClassification.filler, 6059),
+    "Dirt x5": ItemData(ItemClassification.filler, 6058),
+    # Special case since its two different items
+    "Cloth fragment and Stick": ItemData(ItemClassification.filler, 6000),
+
+    "Eggs x2": ItemData(ItemClassification.filler, 6015),
+    "Carrots x2": ItemData(ItemClassification.filler, 6042),
+    "Tomato x2": ItemData(ItemClassification.filler, 6064),
+    "Dried mushroom x2": ItemData(ItemClassification.filler, 6065),
+
+    "Glass vials x3": ItemData(ItemClassification.filler, 6009),
+    "White vial x2": ItemData(ItemClassification.filler, 6052),
+
+    "Light blue vial x2": ItemData(ItemClassification.filler, 6067),
+    "Iron arrow x3": ItemData(ItemClassification.filler, 6075),
+    "Silver coin x35": ItemData(ItemClassification.filler, 6059),
 
     # NOTHING
-    # "Nothing": ItemData(ItemClassification.filler, ),
+    "Nothing": ItemData(ItemClassification.filler, 9999),
 
     # NOTE: there may be more loot tables, since there's way more enemy types- double check?
     # FIXED ITEMS

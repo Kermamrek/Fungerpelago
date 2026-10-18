@@ -112,26 +112,32 @@ Rando.checkForItems = function(){
 				var get = item.id;
 				//console.log("Getting Item");
 				$gameParty._receivedItemName = 0;
+				// Armour 0 - 999
 				if (get < 1000){
 					$gameParty.gainItem($dataArmors[get], 1);
 					$gameParty._receivedItemName = $dataArmors[get].name;
-					$gameVariables._data[itemListVarID].push($dataArmors[get].name);//if you wanta symbol to appear in these, add "'[' + $dataArmors[get].iconIndex + ']' + "here
+					//for symbols, add "'[' + $dataArmors[get].iconIndex + ']' + " in the line below
+					$gameVariables._data[itemListVarID].push($dataArmors[get].name);
 				}
+				// Weapons: 1001-1999
 				if (get > 1000 && get < 2000){
 					$gameParty.gainItem($dataWeapons[get - 1000], 1);
 					$gameParty._receivedItemName = $dataWeapons[get - 1000].name;
 					$gameVariables._data[itemListVarID].push($dataWeapons[get - 1000].name);
 				}
+				// Items: 2001 - 2999
 				if (get > 2000 && get < 3000){
 					$gameParty.gainItem($dataItems[get - 2000], 1);
 					$gameParty._receivedItemName = $dataItems[get - 2000].name;
 					$gameVariables._data[itemListVarID].push($dataItems[get - 2000].name);
 				}
-				if (get > 3000 && get < 4000){//fix also give item if switch corosponds to item
+				// Switches: 3001 - 3999
+				if (get > 3000 && get < 4000){
 					$gameSwitches.setValue(get - 3000,true);
 					$gameParty._receivedItemName = switchName[get - 3000];
 					$gameVariables._data[itemListVarID].push(switchName[get - 3000]);
 				}
+				// Actors?: 4001 - 4999
 				if (get > 4000 && get < 5000){
 					if ($gameActors.actor(get_actor_id_skill(get - 4000))){
 						$gameActors.actor(get_actor_id_skill(get - 4000)).learnSkill(get - 4000);
@@ -145,6 +151,16 @@ Rando.checkForItems = function(){
 				//this is being phased out slowly, randomization does not persist properly
 				if (get > 5000 && get < 6000){
 					fungerRandomizeItem(get);
+				}
+				// Stick and Cloth
+				if (get == 6000){
+					$gameParty.gainItem($dataItems[27], 1);
+					$gameParty.gainItem($dataItems[8], 1);
+				}
+				// Multiples: 6001 - 6999
+				if (get > 6000 && get < 7000){
+					$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
+					$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
 				}
 				$gameSwitches.setValue(runItemGetSwitchID,true);
 				$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
@@ -183,10 +199,27 @@ Rando.checkForItems = function(){
 					if (get > 5000 && get < 6000){
 						fungerRandomizeItem(get);
 					}
+					if (get == 6000){
+						$gameParty.gainItem($dataItems[27], 1);
+						$gameParty.gainItem($dataItems[8], 1);
+						$gamePlayer.APItemsReceived[playerId][item.locationId] = false;
+						Rando.itemDoubleCheck();
+					}
+					if (get > 6000 && get < 7000){
+						$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
+						$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
+						$gamePlayer.APItemsReceived[playerId][item.locationId] = false;
+						Rando.itemDoubleCheck();
+					}
 			}
 	});
 }
 
+// Truthfully, I do not know if this needs to be retooled for fear and hunger
+// In Silver Daze (where the RPGMaker plugin originated from) i'm unsure if there are no item duplicates
+// itemdoublecheck first looks to see if you have "the item", which is pointless if its something common
+// Maybe look into storing how many items the player has vs how many they should have?
+// This is assuming itemdoublecheck is necessary at all, which I am also not sure about
 Rando.itemDoubleCheck = function(){
 	client.items.received.forEach((item) => {
 		var playerId = item.receiver;
@@ -221,14 +254,37 @@ Rando.itemDoubleCheck = function(){
 				$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 			}
 		}
-		if (get > 5000 && get < 6000){
-			fungerRandomizeItem(get);
+		// if (get > 5000 && get < 6000){
+		// 	fungerRandomizeItem(get);
+		// }
+		if (get == 6000){
+			$gameParty.gainItem($dataItems[27], 1);
+			$gameParty.gainItem($dataItems[8], 1);
+			$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
+		}
+		if (get > 6000 && get < 7000){
+			$gameParty.gainItem($dataItems[get - 6000], getMultiplesNumber(item));
+			$gameVariables._data[itemListVarID].push($dataSkills[get - 6000].name);
+			$gamePlayer.APItemsReceived[playerId][item.locationId] = true;
 		}
 	})
 }
 
 getRand = function(drop, max) {
 	return Math.floor(drop * max) + 1;
+}
+
+function getMultiplesNumber(item) {
+	var finalNumber = '';
+	for (var i = item.length - 1 ; 1 >= 0 ; i--){
+		var char = item[i];
+		if (char == "x"){
+			break;
+		} else {
+			finalNumber = item[i] + finalNumber;
+		}
+	}
+	return Number(finalNumber);
 }
 
 fungerDataLoad = function() {
