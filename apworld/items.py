@@ -14,16 +14,16 @@ class ItemData:
 # fmt: off
 ITEMS = {
     # RANDOM ITEMS
-    "Random Minor Item": ItemData(ItemClassification.filler, 5001),  # Common Event 23
-    "Random Minor Book": ItemData(ItemClassification.useful, 5002),  # Common Event 25, despite being a minor book it contains recipes and pinecone pig
+    # "Random Minor Item": ItemData(ItemClassification.filler, 5001),  # Common Event 23
+    # "Random Minor Book": ItemData(ItemClassification.useful, 5002),  # Common Event 25, despite being a minor book it contains recipes and pinecone pig
     "Random Rare Book": ItemData(ItemClassification.useful, 5003),  # Common Event 26
-    "Random Food Item": ItemData(ItemClassification.filler, 5004),  # Common Event 52
+    # "Random Food Item": ItemData(ItemClassification.filler, 5004),  # Common Event 52
     "Random Rare Item": ItemData(ItemClassification.useful, 5005),  # Common Event 58
-    "Random Alchemy": ItemData(ItemClassification.useful, 5006),  # Common Event 68
+    # "Random Alchemy": ItemData(ItemClassification.useful, 5006),  # Common Event 68
     "Random Good Armor": ItemData(ItemClassification.useful, 5007),  # Common Event 141
     "Random Scroll Item": ItemData(ItemClassification.useful, 5008),  # Common Event 149
     "Random Rare Book (Ancient)": ItemData(ItemClassification.useful, 5009),  # Common Event 178
-    "Random Minor Book (Ancient)": ItemData(ItemClassification.filler, 5010),  # Common Event 179, despite being ancient I think every book here is useless
+    # "Random Minor Book (Ancient)": ItemData(ItemClassification.filler, 5010),  # Common Event 179, despite being ancient I think every book here is useless
     "Soul stone": ItemData(ItemClassification.useful, 2115),  # Common Event 200 ... It's called "Random Great Item" but its just a soul stone
     "Random Weapon": ItemData(ItemClassification.useful, 5011),  # Common Event 238
     "Random Minor Weapon": ItemData(ItemClassification.useful, 5012),  # Common Event 239

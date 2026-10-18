@@ -285,12 +285,12 @@ getRand = function(drop, max) {
 
 getMultiplesNumber = function(item) {
 	var finalNumber = '';
-	for (var i = item.length - 1 ; 1 >= 0 ; i--){
+	for (var i = item.length - 1 ; i >= 0 ; i--){
 		var char = item[i];
 		if (char == "x"){
 			break;
 		} else {
-			finalNumber = item[i] + finalNumber;
+			finalNumber = item[char] + finalNumber;
 		}
 	}
 	return Number(finalNumber);
