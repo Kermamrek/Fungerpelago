@@ -52,7 +52,7 @@ Rando.openApClient = function(){
 			.then(() => console.log("Connected to the Archipelago server!"))
 			.catch(console.error);
 	} else {
-		client.login($gameVariables.value(URLVarID) + $gameVariables.value(codeVarID), $gameVariables.value(slotVarID), gameName)
+		client.login($gameVariables.value(URLVarID) + ":" + $gameVariables.value(codeVarID), $gameVariables.value(slotVarID), gameName)
 	    .then(() => console.log("Connected to the Archipelago server!"))
 	    .catch(console.error);
 	}
