@@ -316,7 +316,7 @@ null,
 {"id":314,"list":[{"code":355,"indent":0,"parameters":["$gameVariables._data[413][0]"]},{"code":101,"indent":0,"parameters":["",0,0,2]},{"code":401,"indent":0,"parameters":["You find \\c[2]\\v[413]\\c[2]!"]},{"code":0,"indent":0,"parameters":[]}],"name":"ARCHIPELAGO_Get","switchId":1,"trigger":0},
 {"id":315,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"ARCHIPELAGO_Send","switchId":1,"trigger":0},
 {"id":316,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
-{"id":317,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":317,"list":[{"code":356,"indent":0,"parameters":["GabText Loading Archipelago..."]},{"code":356,"indent":0,"parameters":["ShowGab"]},{"code":355,"indent":0,"parameters":["Rando.openApClient();"]},{"code":230,"indent":0,"parameters":[240]},{"code":355,"indent":0,"parameters":["client.scout(client.room.allLocations).then((result) => {"]},{"code":655,"indent":0,"parameters":["  $gamePlayer.locationsRaw = Object.assign(result);"]},{"code":655,"indent":0,"parameters":["});"]},{"code":230,"indent":0,"parameters":[120]},{"code":355,"indent":0,"parameters":["console.log(client.room);"]},{"code":355,"indent":0,"parameters":["Rando.initializeLocationScout();"]},{"code":356,"indent":0,"parameters":["GabText Archipelago Loaded!"]},{"code":356,"indent":0,"parameters":["ShowGab"]},{"code":0,"indent":0,"parameters":[]}],"name":"ARCHIPELAGO_init","switchId":3587,"trigger":0},
 {"id":318,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
 {"id":319,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
 {"id":320,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}

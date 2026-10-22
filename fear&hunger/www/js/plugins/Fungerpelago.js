@@ -518,7 +518,9 @@ gain = function(item) {//Run this as a script in game with the location name as 
 			}
 }
 Rando.initializeLocationScout = function(){ //locationScout is basically a way to get all info from any check.
+	// Initialize variables
 	$gameVariables.setValue(414, []);
+
 	$gamePlayer.locationScout = $gamePlayer.locationScout || []
 	$gamePlayer.locationsRaw.forEach((item) => {
          $gamePlayer.locationScout[item.locationId] = {};
@@ -557,6 +559,17 @@ Rando.initializeLocationScout = function(){ //locationScout is basically a way t
 		}
 	})
 	Object.freeze($gamePlayer.locationScout);
+};
+// Initialize every time the player loads the game
+var _Scene_Load_onLoadSuccess = Scene_Load.prototype.onLoadSuccess;
+Scene_Load.prototype.onLoadSuccess = function() {
+		// Call original engine behaviour first
+		_Scene_Load_onLoadSuccess.call(this);
+
+		// This is a bit janky because it stops all game execution until it finishes, but notably
+		// other things like autorunning messages have priority over it.
+		// Is there a better way?
+		$gameTemp.reserveCommonEvent(317);
 };
 
 victory = function(){
