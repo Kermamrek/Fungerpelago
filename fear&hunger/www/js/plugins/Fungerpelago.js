@@ -477,6 +477,7 @@ gain = function(item) {//Run this as a script in game with the location name as 
 			if ($gamePlayer.locationScout[get].receiver.name == undefined){
 				$gameVariables._data[sendListVarID].push($gamePlayer.locationScout[get].name + ' for ' + 'someone else');
 			}else{
+				//console.log($gameVariables._data[sendListVarID]);
 				$gameVariables._data[sendListVarID].push($gamePlayer.locationScout[get].name + ' for ' + $gamePlayer.locationScout[get].receiver.name);
 			}
 			$gameSwitches.setValue(runItemGetSwitchID,true);
@@ -517,6 +518,7 @@ gain = function(item) {//Run this as a script in game with the location name as 
 			}
 }
 Rando.initializeLocationScout = function(){ //locationScout is basically a way to get all info from any check.
+	$gameVariables.setValue(414, []);
 	$gamePlayer.locationScout = $gamePlayer.locationScout || []
 	$gamePlayer.locationsRaw.forEach((item) => {
          $gamePlayer.locationScout[item.locationId] = {};
